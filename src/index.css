@@ -1,8 +1,11 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer components {
   .flashcard {
-    @apply relative w-full max-w-md h-64 cursor-pointer rounded-xl shadow-lg transition-all duration-300;
+    @apply relative w-full max-w-md h-64 cursor-pointer rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl border border-gray-200 hover:border-indigo-200;
   }
   
   .flashcard-inner {

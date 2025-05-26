@@ -10,6 +10,7 @@ const SelectFlashcardsPage: React.FC = () => {
   const navigate = useNavigate();
   const [allWords, setAllWords] = useState<VocabularyWord[]>([]);
   const [selectedWords, setSelectedWords] = useState<string[]>([]);
+  const [flippedCards, setFlippedCards] = useState<Record<string, boolean>>({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [statusFilter, setStatusFilter] = useState<'all' | 'new' | 'learning' | 'mastered'>('all');
@@ -43,6 +44,13 @@ const SelectFlashcardsPage: React.FC = () => {
         return [...prev, wordId];
       }
     });
+  };
+  
+  const handleFlipCard = (wordId: string) => {
+    setFlippedCards(prev => ({
+      ...prev,
+      [wordId]: !prev[wordId]
+    }));
   };
   
   const handleSelectAll = () => {
@@ -189,6 +197,8 @@ const SelectFlashcardsPage: React.FC = () => {
                 word={word}
                 onSelect={() => handleSelectWord(word.id)}
                 isSelected={selectedWords.includes(word.id)}
+                isFlipped={!!flippedCards[word.id]}
+                onFlip={() => handleFlipCard(word.id)}
               />
             </div>
           ))}

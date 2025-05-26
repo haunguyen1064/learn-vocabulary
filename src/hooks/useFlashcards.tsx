@@ -92,10 +92,14 @@ export const useFlashcards = () => {
   
   // Flip card
   const flipCard = useCallback((id: string) => {
-    setFlippedState(prev => ({
-      ...prev,
-      [id]: !prev[id]
-    }));
+
+    setFlippedState(prev => {
+      const newState = {
+        ...prev,
+        [id]: !prev[id]
+      };
+      return newState;
+    });
   }, []);
   
   // Shuffle cards

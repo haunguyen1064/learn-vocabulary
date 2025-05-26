@@ -16,32 +16,44 @@ const Flashcard: React.FC<FlashcardProps> = ({
   onSelect,
   isSelected = false
 }) => {
+  
   return (
     <div className="relative my-4 mx-auto">
       <div 
-        className="flashcard mx-auto" 
-        onClick={onFlip}
+        className={`relative w-full max-w-md h-64 rounded-xl shadow-lg hover:shadow-xl border ${isSelected ? 'border-indigo-500 ring-2 ring-indigo-300' : 'border-gray-200 hover:border-indigo-200'} transition-all duration-300`}
+        onClick={() => {
+          if (onFlip) {
+            onFlip();
+          }
+        }}
+        style={{ cursor: (onFlip) ? 'pointer' : 'default' }}
       >
-        <div className={`flashcard-inner ${isFlipped ? 'transform [transform:rotateY(180deg)]' : ''}`}>
+        <div 
+            className={`relative w-full h-full transition-transform duration-700 ${isFlipped ? 'transform rotate-y-180' : ''}`}
+            style={{ transformStyle: 'preserve-3d' }}
+        
+        >
           {/* Front side of the card */}
-          <div className="flashcard-front">
+          <div className="absolute w-full h-full rounded-xl p-6 flex flex-col justify-center items-center bg-white text-gray-800"
+              style={{ backfaceVisibility: 'hidden' }}>
             <h2 className="text-2xl font-bold mb-2">{word.word}</h2>
             <div className="inline-block px-2 py-1 rounded-full bg-indigo-100 text-indigo-800 text-sm mb-4">
               {word.partOfSpeech}
             </div>
             <p className="text-gray-700">{word.meaning}</p>
             
+            {/* Selection checkbox */}
             {onSelect && (
-              <div 
-                className="absolute top-4 right-4"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onSelect();
-                }}
-              >
-                <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${isSelected ? 'bg-indigo-600 border-indigo-600' : 'border-gray-300'}`}>
+              <div className="absolute top-4 right-4" onClick={(e) => { 
+                e.preventDefault();
+                e.stopPropagation();
+                onSelect(); 
+                }}>
+                <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shadow-sm ${
+                  isSelected ? 'bg-indigo-600 border-indigo-600' : 'bg-white border-gray-300 hover:border-indigo-400'
+                }`}>
                   {isSelected && (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   )}
@@ -51,7 +63,8 @@ const Flashcard: React.FC<FlashcardProps> = ({
           </div>
           
           {/* Back side of the card */}
-          <div className="flashcard-back">
+          <div  className="absolute w-full h-full rounded-xl p-6 flex flex-col justify-center items-center bg-indigo-600 text-white"
+              style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
             <p className="text-lg mb-2">Example:</p>
             <p className="text-white italic">"{word.example}"</p>
           </div>

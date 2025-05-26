@@ -145,7 +145,10 @@ const FlashcardStudyPage: React.FC = () => {
             <Flashcard 
               word={currentWord} 
               isFlipped={isFlipped(currentWord.id)}
-              onFlip={() => flipCard(currentWord.id)}
+              onFlip={() => {
+                flipCard(currentWord.id);
+              }}
+              // No onSelect prop here, so clicking on the card will use onFlip
             />
           </motion.div>
         </div>

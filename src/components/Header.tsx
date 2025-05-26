@@ -7,7 +7,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ title = 'VocaFlash' }) => {
-  const { currentUser, logoutUser } = useAuth();
+  const { currentUser, logoutUser, userData } = useAuth();
   
   return (
     <header className="bg-white shadow">
@@ -39,9 +39,9 @@ const Header: React.FC<HeaderProps> = ({ title = 'VocaFlash' }) => {
         </div>
         
         <div>
-          {currentUser ? (
+          {currentUser && userData ? (
             <div className="flex items-center">
-              <span className="text-sm text-gray-600 mr-4">{currentUser.email}</span>
+              <span className="text-sm text-gray-600 mr-4">{userData.displayName}</span>
               <button 
                 onClick={logoutUser}
                 className="text-sm px-3 py-2 rounded bg-gray-200 hover:bg-gray-300 text-gray-700"

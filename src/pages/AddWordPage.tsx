@@ -71,7 +71,7 @@ const AddWordPage: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      const newWord: Partial<VocabularyWord> = {
+      const newWord: Omit<VocabularyWord, "id"> = {
         word: word.trim(),
         partOfSpeech,
         meaning: meaning.trim(),
@@ -140,8 +140,8 @@ const AddWordPage: React.FC = () => {
               type="text"
               value={word}
               onChange={(e) => setWord(e.target.value)}
-              className={`shadow-sm h-10 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md ${wordExists ? 'border-red-500' : ''}`}
-              placeholder="e.g., serendipity"
+              className={`shadow-sm h-10 px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md ${wordExists ? 'border-red-500' : ''}`}
+              placeholder="e.g., home, car"
               required
             />
             {wordExists && (
@@ -157,7 +157,7 @@ const AddWordPage: React.FC = () => {
               id="part-of-speech"
               value={partOfSpeech}
               onChange={(e) => setPartOfSpeech(e.target.value)}
-              className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+              className="mt-1 block w-full px-3 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
               required
             >
               {partOfSpeechOptions.map(option => (
@@ -177,7 +177,7 @@ const AddWordPage: React.FC = () => {
               value={meaning}
               onChange={(e) => setMeaning(e.target.value)}
               rows={2}
-              className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+              className="shadow-sm px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
               placeholder="The definition of the word"
               required
             />
@@ -192,7 +192,7 @@ const AddWordPage: React.FC = () => {
               value={example}
               onChange={(e) => setExample(e.target.value)}
               rows={2}
-              className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+              className="shadow-sm px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
               placeholder="An example sentence using this word"
               required
             />

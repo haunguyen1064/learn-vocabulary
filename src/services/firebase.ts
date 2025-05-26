@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
 import type { User } from "firebase/auth";
 import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
+import { importToeicVocabulary } from "./vocabularyService";
 
 // Your web app's Firebase configuration from environment variables
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -52,6 +53,14 @@ export const registerWithEmail = async (email: string, password: string, display
       },
       createdAt: new Date()
     });
+    
+    // Import TOEIC vocabulary for the new user
+    try {
+      await importToeicVocabulary(user.uid);
+    } catch (vocabError) {
+      console.error("Error importing TOEIC vocabulary for new user:", vocabError);
+      // Don't throw here - user account creation was successful, vocab import is optional
+    }
     
     return user;
   } catch (error) {

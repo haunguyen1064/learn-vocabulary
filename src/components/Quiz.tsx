@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import type { QuizQuestion } from '../types/vocabulary';
-import { motion } from 'framer-motion';
 
 interface QuizProps {
   questions: QuizQuestion[];

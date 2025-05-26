@@ -10,6 +10,7 @@ const AddWordPage: React.FC = () => {
   
   const [word, setWord] = useState('');
   const [partOfSpeech, setPartOfSpeech] = useState('noun');
+  const [pronunciation, setPronunciation] = useState('');
   const [meaning, setMeaning] = useState('');
   const [example, setExample] = useState('');
   const [existingWords, setExistingWords] = useState<string[]>([]);
@@ -74,6 +75,7 @@ const AddWordPage: React.FC = () => {
       const newWord: Omit<VocabularyWord, "id"> = {
         word: word.trim(),
         partOfSpeech,
+        pronunciation: pronunciation.trim() || undefined,
         meaning: meaning.trim(),
         example: example.trim(),
         status: 'new',
@@ -89,6 +91,7 @@ const AddWordPage: React.FC = () => {
       // Reset form
       setWord('');
       setPartOfSpeech('noun');
+      setPronunciation('');
       setMeaning('');
       setExample('');
       
@@ -169,6 +172,23 @@ const AddWordPage: React.FC = () => {
           </div>
           
           <div className="mb-4">
+            <label htmlFor="pronunciation" className="block text-sm font-medium text-gray-700 mb-1">
+              Pronunciation <span className="text-gray-500 text-xs">(optional)</span>
+            </label>
+            <input
+              id="pronunciation"
+              type="text"
+              value={pronunciation}
+              onChange={(e) => setPronunciation(e.target.value)}
+              className="shadow-sm h-10 px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+              placeholder="e.g., /ʃɪp/, /hoʊm/"
+            />
+            <p className="mt-1 text-xs text-gray-500">
+              Use IPA notation or phonetic spelling
+            </p>
+          </div>
+          
+          <div className="mb-4">
             <label htmlFor="meaning" className="block text-sm font-medium text-gray-700 mb-1">
               Meaning
             </label>
@@ -204,6 +224,7 @@ const AddWordPage: React.FC = () => {
               onClick={() => {
                 setWord('');
                 setPartOfSpeech('noun');
+                setPronunciation('');
                 setMeaning('');
                 setExample('');
               }}

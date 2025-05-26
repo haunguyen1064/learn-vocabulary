@@ -37,10 +37,18 @@ const Flashcard: React.FC<FlashcardProps> = ({
           <div className="absolute w-full h-full rounded-xl p-6 flex flex-col justify-center items-center bg-white text-gray-800"
               style={{ backfaceVisibility: 'hidden' }}>
             <h2 className="text-2xl font-bold mb-2">{word.word}</h2>
+            
+            {/* Pronunciation display */}
+            {word.pronunciation && (
+              <div className="text-gray-500 text-sm mb-2 italic">
+                {word.pronunciation}
+              </div>
+            )}
+            
             <div className="inline-block px-2 py-1 rounded-full bg-indigo-100 text-indigo-800 text-sm mb-4">
               {word.partOfSpeech}
             </div>
-            <p className="text-gray-700">{word.meaning}</p>
+            <p className="text-gray-700 text-center">{word.meaning}</p>
             
             {/* Selection checkbox */}
             {onSelect && (

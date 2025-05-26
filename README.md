@@ -9,6 +9,8 @@ An interactive web application for learning English vocabulary with flashcards, 
 - Quiz mode with multiple-choice questions
 - Spaced repetition system that tracks word mastery
 - Collections for organizing words by status (new, learning, mastered)
+- **Automatic TOEIC vocabulary import**: New users automatically receive 600 TOEIC vocabulary words when they register
+- Batch word import functionality for efficient vocabulary management
 
 ## Setup Instructions
 
@@ -39,4 +41,3 @@ VITE_FIREBASE_APP_ID=your-app-id
 2. Enable Authentication with Email/Password
 3. Create a Firestore database
 4. Set appropriate security rules for your database
- 

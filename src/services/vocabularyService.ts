@@ -1,6 +1,7 @@
 import { db } from "./firebase";
-import { collection, doc, getDocs, getDoc, setDoc, updateDoc, query, where, arrayUnion, arrayRemove, deleteDoc } from "firebase/firestore";
+import { collection, doc, getDocs, getDoc, setDoc, updateDoc, query, where, arrayUnion, arrayRemove, deleteDoc, writeBatch } from "firebase/firestore";
 import type { VocabularyWord, Collection, WordStatus } from "../types/vocabulary";
+import toeicVocabulary from "../assets/toeic/toeic_600_vocabulary.json";
 
 // Collections in Firestore
 const COLLECTIONS_COLLECTION = "collections";
@@ -156,7 +157,7 @@ export const createCollection = async (userId: string, collectionData: Partial<C
   }
 };
 
-export const addWordToCollection = async (userId: string, collectionId: string, wordId: string): Promise<void> => {
+export const addWordToCollection = async (_userId: string, collectionId: string, wordId: string): Promise<void> => {
   try {
     await updateDoc(doc(db, COLLECTIONS_COLLECTION, collectionId), {
       words: arrayUnion(wordId),
@@ -168,7 +169,7 @@ export const addWordToCollection = async (userId: string, collectionId: string, 
   }
 };
 
-export const removeWordFromCollection = async (userId: string, collectionId: string, wordId: string): Promise<void> => {
+export const removeWordFromCollection = async (_userId: string, collectionId: string, wordId: string): Promise<void> => {
   try {
     await updateDoc(doc(db, COLLECTIONS_COLLECTION, collectionId), {
       words: arrayRemove(wordId),
@@ -282,7 +283,7 @@ export const updateUserStudyStats = async (userId: string, statsUpdate: Partial<
         const yesterdayDay = new Date(todayDay);
         yesterdayDay.setDate(yesterdayDay.getDate() - 1);
         
-        if (lastSessionDay < yesterdayDay) {
+        if (lastSessionDay < yesterdayDay.getTime()) {
           // Streak broken, reset to 1
           updatedStats.dailyStreak = 1;
         } else if (lastSessionDay < todayDay) {
@@ -301,6 +302,52 @@ export const updateUserStudyStats = async (userId: string, statsUpdate: Partial<
     });
   } catch (error) {
     console.error("Error updating user study stats:", error);
+    throw error;
+  }
+};
+
+// Batch import functions
+export const addWordsInBatch = async (userId: string, words: Omit<VocabularyWord, "id">[]): Promise<void> => {
+  try {
+    const batch = writeBatch(db);
+    
+    words.forEach((wordData) => {
+      const newWordRef = doc(collection(db, WORDS_COLLECTION));
+      batch.set(newWordRef, { ...wordData, userId });
+    });
+    
+    await batch.commit();
+  } catch (error) {
+    console.error("Error adding words in batch:", error);
+    throw error;
+  }
+};
+
+export const importToeicVocabulary = async (userId: string): Promise<void> => {
+  try {
+    // Transform TOEIC vocabulary data to match our VocabularyWord interface
+    const transformedWords: Omit<VocabularyWord, "id">[] = toeicVocabulary.map((item) => ({
+      word: item.word,
+      partOfSpeech: item.partOfSpeech,
+      pronunciation: item.pronounce, // Store pronunciation in dedicated field
+      meaning: item.meaning,
+      example: item.example,
+      status: "new" as WordStatus,
+      masteryLevel: 0,
+      timesReviewed: 0,
+      timesCorrect: 0
+    }));
+    
+    // Add words in batches (Firestore has a limit of 500 operations per batch)
+    const batchSize = 500;
+    for (let i = 0; i < transformedWords.length; i += batchSize) {
+      const batch = transformedWords.slice(i, i + batchSize);
+      await addWordsInBatch(userId, batch);
+    }
+    
+    console.log(`Successfully imported ${transformedWords.length} TOEIC vocabulary words for user ${userId}`);
+  } catch (error) {
+    console.error("Error importing TOEIC vocabulary:", error);
     throw error;
   }
 };

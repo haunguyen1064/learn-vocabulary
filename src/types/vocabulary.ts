@@ -2,6 +2,7 @@ export interface VocabularyWord {
   id: string;
   word: string;
   partOfSpeech: string; // noun, verb, adjective, etc.
+  pronunciation?: string; // IPA pronunciation, e.g., "/ʃɪp/"
   meaning: string;
   example: string;
   status: WordStatus;

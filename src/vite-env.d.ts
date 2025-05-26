@@ -12,3 +12,21 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
+
+// JSON module declarations
+declare module "*.json" {
+  const value: unknown;
+  export default value;
+}
+
+// Specific type for TOEIC vocabulary
+interface ToeicVocabularyItem {
+  word: string;
+  pronounce: string;
+  meaning: string;
+}
+
+declare module "../assets/toeic/toeic_600_vocabulary.json" {
+  const value: ToeicVocabularyItem[];
+  export default value;
+}

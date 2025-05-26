@@ -103,7 +103,7 @@ const QuizPage: React.FC = () => {
     return quizQuestions;
   };
 
-  const handleAnswer = async (wordId: string, selectedIndex: number) => {
+  const handleAnswer = async (_wordId: string, selectedIndex: number) => {
     const currentQuestion = questions[currentQuestionIndex];
     const isCorrect = selectedIndex === currentQuestion.correctAnswerIndex;
     

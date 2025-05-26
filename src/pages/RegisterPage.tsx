@@ -10,6 +10,7 @@ const RegisterPage: React.FC = () => {
   const [displayName, setDisplayName] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [loadingMessage, setLoadingMessage] = useState('');
   const navigate = useNavigate();
   const { currentUser } = useAuth();
   
@@ -44,15 +45,21 @@ const RegisterPage: React.FC = () => {
     
     setError(null);
     setIsLoading(true);
+    setLoadingMessage('Creating your account...');
     
     try {
       await registerWithEmail(email, password, displayName);
+      setLoadingMessage('Setting up your vocabulary collection...');
+      // The vocabulary import happens automatically in the registerWithEmail function
+      setLoadingMessage('Finalizing setup...');
       navigate('/');
-    } catch (err: any) {
-      setError(err.message || 'Failed to create an account. Please try again.');
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : 'Failed to create an account. Please try again.';
+      setError(errorMessage);
       console.error(err);
     } finally {
       setIsLoading(false);
+      setLoadingMessage('');
     }
   };
 
@@ -136,7 +143,7 @@ const RegisterPage: React.FC = () => {
               disabled={isLoading}
               className={`bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
-              {isLoading ? 'Creating Account...' : 'Register'}
+              {isLoading ? loadingMessage : 'Register'}
             </button>
             <Link to="/login" className="inline-block align-baseline font-bold text-sm text-indigo-600 hover:text-indigo-800">
               Already have an account?

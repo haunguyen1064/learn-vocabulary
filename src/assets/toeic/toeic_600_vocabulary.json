@@ -1,0 +1,4202 @@
+[
+    {
+        "word": "agreement",
+        "pronounce": "/ə'gri.mənt/",
+        "meaning": "một thỏa thuận chung, một hợp đồng",
+        "partOfSpeech": "noun",
+        "example": "The two companies signed a trade agreement."
+    },
+    {
+        "word": "party",
+        "pronounce": "/pa:rti/",
+        "meaning": "một người hoặc một nhóm tham gia vào một hợp đồng",
+        "partOfSpeech": "noun",
+        "example": "Each party must agree to the terms of the contract."
+    },
+    {
+        "word": "provision",
+        "pronounce": "/prǝ vızn/",
+        "meaning": "điều kiện cụ thể trong một hợp đồng",
+        "partOfSpeech": "noun",
+        "example": "The contract contains a provision for late payment penalties."
+    },
+    {
+        "word": "clause",
+        "pronounce": "/klo:z/",
+        "meaning": "một phần trong hợp đồng",
+        "partOfSpeech": "noun",
+        "example": "There is a specific clause in the contract that addresses termination."
+    },
+    {
+        "word": "agree",
+        "pronounce": "/ gri:/",
+        "meaning": "có cùng quan điểm hoặc sự hiểu biết",
+        "partOfSpeech": "verb",
+        "example": "They agreed to meet the following day."
+    },
+    {
+        "word": "obligate",
+        "pronounce": "/'a:bligert/",
+        "meaning": "ràng buộc về mặt pháp lý hoặc đạo đức",
+        "partOfSpeech": "verb",
+        "example": "The contract obligates the company to provide health insurance."
+    },
+    {
+        "word": "sign",
+        "pronounce": "/sain/",
+        "meaning": "viết tên của bạn vào một tài liệu để thể hiện sự chấp thuận",
+        "partOfSpeech": "verb",
+        "example": "Please sign the document at the bottom of the page."
+    },
+    {
+        "word": "resolve",
+        "pronounce": "/rı za:lv/",
+        "meaning": "để tìm một giải pháp",
+        "partOfSpeech": "verb",
+        "example": "They hope to resolve the dispute peacefully."
+    },
+    {
+        "word": "binding",
+        "pronounce": "/'baındın/",
+        "meaning": "yêu cầu về mặt pháp lý",
+        "partOfSpeech": "adjective",
+        "example": "This is a legally binding contract."
+    },
+    {
+        "word": "contractual",
+        "pronounce": "/kən'træktfuǝl/",
+        "meaning": "liên quan đến hợp đồng",
+        "partOfSpeech": "adjective",
+        "example": "She has a contractual obligation to finish the project."
+    },
+    {
+        "word": "legal",
+        "pronounce": "/'li.gl/",
+        "meaning": "được pháp luật cho phép",
+        "partOfSpeech": "adjective",
+        "example": "It is important to seek legal advice before signing any contract."
+    },
+    {
+        "word": "legally",
+        "pronounce": "/li:gəli/",
+        "meaning": "theo cách được pháp luật cho phép",
+        "partOfSpeech": "adverb",
+        "example": "The document was legally binding."
+    },
+    {
+        "word": "market",
+        "pronounce": "/ma:rkıt/",
+        "meaning": "nhu cầu về một sản phẩm",
+        "partOfSpeech": "noun",
+        "example": "There is a large market for organic food."
+    },
+    {
+        "word": "competition",
+        "pronounce": "/ka:mpǝ tin/",
+        "meaning": "hoạt động cạnh tranh",
+        "partOfSpeech": "noun",
+        "example": "There is fierce competition among mobile phone manufacturers."
+    },
+    {
+        "word": "strategy",
+        "pronounce": "/'strætǝdzi/",
+        "meaning": "một kế hoạch hành động",
+        "partOfSpeech": "noun",
+        "example": "The company developed a new marketing strategy to increase sales."
+    },
+    {
+        "word": "customer",
+        "pronounce": "/'kastəmər/",
+        "meaning": "ai đó mua hàng hóa hoặc dịch vụ",
+        "partOfSpeech": "noun",
+        "example": "The customer is always right."
+    },
+    {
+        "word": "advertise",
+        "pronounce": "/'ædvertaız/",
+        "meaning": "để quảng bá một sản phẩm hoặc dịch vụ",
+        "partOfSpeech": "verb",
+        "example": "They advertise their products on television."
+    },
+    {
+        "word": "attract",
+        "pronounce": "/ trækt/",
+        "meaning": "để rút ra bằng cách kháng cáo",
+        "partOfSpeech": "verb",
+        "example": "The new store is trying to attract customers with low prices."
+    },
+    {
+        "word": "consume",
+        "pronounce": "/kən su:m/",
+        "meaning": "sử dụng hoặc mua một sản phẩm",
+        "partOfSpeech": "verb",
+        "example": "People are consuming more and more digital content."
+    },
+    {
+        "word": "market",
+        "pronounce": "/ ma:rkıt/",
+        "meaning": "để quảng bá và bán",
+        "partOfSpeech": "verb",
+        "example": "The company plans to market its new product aggressively."
+    },
+    {
+        "word": "effective",
+        "pronounce": "/1'fektiv/",
+        "meaning": "thành công trong việc tạo ra một kết quả mong muốn",
+        "partOfSpeech": "adjective",
+        "example": "The new advertising campaign was very effective."
+    },
+    {
+        "word": "productive",
+        "pronounce": "/prǝ'dıktıv/",
+        "meaning": "có thể sản xuất số lượng lớn",
+        "partOfSpeech": "adjective",
+        "example": "She had a very productive meeting and achieved all her goals."
+    },
+    {
+        "word": "persuasive",
+        "pronounce": "/per sweısıv/",
+        "meaning": "giỏi thuyết phục người khác",
+        "partOfSpeech": "adjective",
+        "example": "He made a persuasive argument for his proposal."
+    },
+    {
+        "word": "efficiently",
+        "pronounce": "/1'fıfəntli/",
+        "meaning": "theo cách đạt được năng suất tối đa",
+        "partOfSpeech": "adverb",
+        "example": "The team worked efficiently to complete the project on time."
+    },
+    {
+        "word": "warranty",
+        "pronounce": "/ wɔ:renti/",
+        "meaning": "một sự đảm bảo",
+        "partOfSpeech": "noun",
+        "example": "The television comes with a one-year warranty."
+    },
+    {
+        "word": "defect",
+        "pronounce": "/'di:fekt/",
+        "meaning": "một lỗi hoặc sự không hoàn hảo",
+        "partOfSpeech": "noun",
+        "example": "There was a defect in the car's engine."
+    },
+    {
+        "word": "claim",
+        "pronounce": "/klerm/",
+        "meaning": "một nhu cầu cho một cái gì đó do",
+        "partOfSpeech": "noun",
+        "example": "He made a claim on his insurance after the accident."
+    },
+    {
+        "word": "coverage",
+        "pronounce": "/kaveridz/",
+        "meaning": "mức độ mà một cái gì đó được bảo hiểm",
+        "partOfSpeech": "noun",
+        "example": "Does your insurance policy provide coverage for flood damage?"
+    },
+    {
+        "word": "guarantee",
+        "pronounce": "/ gærǝn'ti:/",
+        "meaning": "cam kết về chất lượng sản phẩm",
+        "partOfSpeech": "noun",
+        "example": "The product comes with a money-back guarantee."
+    },
+    {
+        "word": "replace",
+        "pronounce": "/rı' pleis/",
+        "meaning": "thay thế",
+        "partOfSpeech": "verb",
+        "example": "They will replace the faulty item free of charge."
+    },
+    {
+        "word": "refund",
+        "pronounce": "/'ri:fand/",
+        "meaning": "trả lại tiền",
+        "partOfSpeech": "noun",
+        "example": "She received a full refund for the returned goods."
+    },
+    {
+        "word": "repair",
+        "pronounce": "/Γι'ρεг/",
+        "meaning": "để sửa chữa hoặc khôi phục",
+        "partOfSpeech": "verb",
+        "example": "Can you repair this broken watch?"
+    },
+    {
+        "word": "defective",
+        "pronounce": "/dı'fektiv/",
+        "meaning": "có lỗi",
+        "partOfSpeech": "adjective",
+        "example": "The company recalled all defective products."
+    },
+    {
+        "word": "valid",
+        "pronounce": "/vælid/",
+        "meaning": "được chấp nhận về mặt pháp lý",
+        "partOfSpeech": "adjective",
+        "example": "Your passport is no longer valid."
+    },
+    {
+        "word": "expired",
+        "pronounce": "/ık'sparǝrd/",
+        "meaning": "không còn hiệu lực",
+        "partOfSpeech": "adjective",
+        "example": "The warranty on this product has expired."
+    },
+    {
+        "word": "promptly",
+        "pronounce": "/'pra:mptli/",
+        "meaning": "không chậm trễ",
+        "partOfSpeech": "adverb",
+        "example": "Please reply to this email promptly."
+    },
+    {
+        "word": "goal",
+        "pronounce": "/goul/",
+        "meaning": "một mục tiêu hoặc kết quả mong muốn",
+        "partOfSpeech": "noun",
+        "example": "Her main goal is to get a good job."
+    },
+    {
+        "word": "strategy",
+        "pronounce": "/'strætǝdzi/",
+        "meaning": "một kế hoạch hành động",
+        "partOfSpeech": "noun",
+        "example": "The company is developing a new business strategy."
+    },
+    {
+        "word": "forecast",
+        "pronounce": "/ fo:rkæst/",
+        "meaning": "một dự đoán",
+        "partOfSpeech": "noun",
+        "example": "The weather forecast for tomorrow is sunny."
+    },
+    {
+        "word": "resource",
+        "pronounce": "/ ri:sors/",
+        "meaning": "một cổ phiếu hoặc nguồn cung cấp",
+        "partOfSpeech": "noun",
+        "example": "The country is rich in natural resources."
+    },
+    {
+        "word": "forecast",
+        "pronounce": "/'fo:rkæst/",
+        "meaning": "để dự đoán tương lai",
+        "partOfSpeech": "verb",
+        "example": "Economists forecast a rise in inflation."
+    },
+    {
+        "word": "plan",
+        "pronounce": "/plæn/",
+        "meaning": "quyết định và sắp xếp",
+        "partOfSpeech": "verb",
+        "example": "They plan to travel to Europe next year."
+    },
+    {
+        "word": "analyze",
+        "pronounce": "/'ænəlaız/",
+        "meaning": "để kiểm tra chi tiết",
+        "partOfSpeech": "verb",
+        "example": "The scientists will analyze the data carefully."
+    },
+    {
+        "word": "assess",
+        "pronounce": "/ǝses/",
+        "meaning": "để đánh giá hoặc ước tính",
+        "partOfSpeech": "verb",
+        "example": "We need to assess the impact of the new policy."
+    },
+    {
+        "word": "strategic",
+        "pronounce": "/strǝ'ti:dzık/",
+        "meaning": "liên quan đến kế hoạch dài hạn",
+        "partOfSpeech": "adjective",
+        "example": "The company made a strategic decision to expand into new markets."
+    },
+    {
+        "word": "realistic",
+        "pronounce": "/ ri:ə'lıstık/",
+        "meaning": "thực tế và có thể đạt được",
+        "partOfSpeech": "adjective",
+        "example": "You need to set realistic goals for yourself."
+    },
+    {
+        "word": "achievable",
+        "pronounce": "/ətli vəbl/",
+        "meaning": "có khả năng thực hiện được",
+        "partOfSpeech": "adjective",
+        "example": "Break down large tasks into smaller, achievable steps."
+    },
+    {
+        "word": "effectively",
+        "pronounce": "/1' fektivli/",
+        "meaning": "theo cách đạt được kết quả mong muốn",
+        "partOfSpeech": "adverb",
+        "example": "The new system works very effectively."
+    },
+    {
+        "word": "attendee",
+        "pronounce": "/ ten di:/",
+        "meaning": "một người tham dự một cuộc họp",
+        "partOfSpeech": "noun",
+        "example": "The conference had over 500 attendees."
+    },
+    {
+        "word": "schedule",
+        "pronounce": "/'skedzu:l/",
+        "meaning": "kế hoạch sự kiện",
+        "partOfSpeech": "noun",
+        "example": "Please check the schedule for the meeting times."
+    },
+    {
+        "word": "location",
+        "pronounce": "/lου kerſn/",
+        "meaning": "một địa điểm hoặc vị trí",
+        "partOfSpeech": "noun",
+        "example": "The company is moving to a new location."
+    },
+    {
+        "word": "venue",
+        "pronounce": "/'venju:/",
+        "meaning": "nơi diễn ra sự kiện",
+        "partOfSpeech": "noun",
+        "example": "The wedding venue was a beautiful old castle."
+    },
+    {
+        "word": "arrange",
+        "pronounce": "/ə'reind3/",
+        "meaning": "lập kế hoạch và tổ chức",
+        "partOfSpeech": "verb",
+        "example": "Can you arrange a meeting for next week?"
+    },
+    {
+        "word": "hold",
+        "pronounce": "/hould/",
+        "meaning": "tổ chức hoặc tiến hành",
+        "partOfSpeech": "verb",
+        "example": "The meeting will be held in the conference room."
+    },
+    {
+        "word": "participate",
+        "pronounce": "/pa:r'tısıpert/",
+        "meaning": "tham gia",
+        "partOfSpeech": "verb",
+        "example": "Everyone is encouraged to participate in the discussion."
+    },
+    {
+        "word": "register",
+        "pronounce": "/'redzıster/",
+        "meaning": "để ghi danh hoặc đăng ký",
+        "partOfSpeech": "verb",
+        "example": "You need to register for the conference online."
+    },
+    {
+        "word": "convenient",
+        "pronounce": "/kən vi:niənt/",
+        "meaning": "phù hợp tốt với nhu cầu của một người",
+        "partOfSpeech": "adjective",
+        "example": "The new supermarket is very convenient for me."
+    },
+    {
+        "word": "scheduled",
+        "pronounce": "/'skedzu:ld/",
+        "meaning": "lên kế hoạch hoặc sắp xếp cho",
+        "partOfSpeech": "adjective",
+        "example": "The flight is scheduled to depart at 10:00 AM."
+    },
+    {
+        "word": "confirmed",
+        "pronounce": "/kən'f3:rmd/",
+        "meaning": "được thành lập hoặc xác minh",
+        "partOfSpeech": "adjective",
+        "example": "Your booking is now confirmed."
+    },
+    {
+        "word": "international",
+        "pronounce": "/ intə næſnel/",
+        "meaning": "quốc tế",
+        "partOfSpeech": "adjective",
+        "example": "She works for an international company."
+    },
+    {
+        "word": "network",
+        "pronounce": "/netw3:rk/",
+        "meaning": "một nhóm các thiết bị được kết nối với nhau",
+        "partOfSpeech": "noun",
+        "example": "The office computers are all connected to a network."
+    },
+    {
+        "word": "software",
+        "pronounce": "/softwer/",
+        "meaning": "các chương trình được máy tính sử dụng",
+        "partOfSpeech": "noun",
+        "example": "You need to install new software on your computer."
+    },
+    {
+        "word": "hardware",
+        "pronounce": "/hardwer/",
+        "meaning": "các thành phần vật lý của máy tính",
+        "partOfSpeech": "noun",
+        "example": "Computer hardware includes the monitor, keyboard, and mouse."
+    },
+    {
+        "word": "virus",
+        "pronounce": "/'varres/",
+        "meaning": "một chương trình phần mềm độc hại",
+        "partOfSpeech": "noun",
+        "example": "My computer got infected with a virus."
+    },
+    {
+        "word": "access",
+        "pronounce": "/'ækses/",
+        "meaning": "để có được hoặc lấy",
+        "partOfSpeech": "verb",
+        "example": "You need a password to access the database."
+    },
+    {
+        "word": "install",
+        "pronounce": "/in'sto:l/",
+        "meaning": "để thiết lập phần mềm",
+        "partOfSpeech": "verb",
+        "example": "He will install the new software for you."
+    },
+    {
+        "word": "upgrade",
+        "pronounce": "/'Apgreid/",
+        "meaning": "để cải thiện hoặc cập nhật",
+        "partOfSpeech": "verb",
+        "example": "You should upgrade your computer to the latest operating system."
+    },
+    {
+        "word": "delete",
+        "pronounce": "/dı'li:t/",
+        "meaning": "để loại bỏ hoặc xóa",
+        "partOfSpeech": "verb",
+        "example": "Don't forget to delete any unnecessary files."
+    },
+    {
+        "word": "digital",
+        "pronounce": "/dIdzıtl/",
+        "meaning": "liên quan đến việc sử dụng công nghệ máy tính",
+        "partOfSpeech": "adjective",
+        "example": "We live in a digital age."
+    },
+    {
+        "word": "compatible",
+        "pronounce": "/kəm pætəbl/",
+        "meaning": "có thể làm việc cùng nhau",
+        "partOfSpeech": "adjective",
+        "example": "This software is not compatible with your operating system."
+    },
+    {
+        "word": "secure",
+        "pronounce": "/si kjur/",
+        "meaning": "thoát khỏi nguy hiểm hoặc đe dọa",
+        "partOfSpeech": "adjective",
+        "example": "Make sure your internet connection is secure."
+    },
+    {
+        "word": "efficiently",
+        "pronounce": "/1'fıfəntli/",
+        "meaning": "theo cách đạt được năng suất tối đa",
+        "partOfSpeech": "adverb",
+        "example": "The new system allows us to work more efficiently."
+    },
+    {
+        "word": "printer",
+        "pronounce": "/'printer/",
+        "meaning": "một máy in tài liệu",
+        "partOfSpeech": "noun",
+        "example": "The office needs a new color printer."
+    },
+    {
+        "word": "scanner",
+        "pronounce": "/'skænǝr/",
+        "meaning": "một thiết bị quét tài liệu",
+        "partOfSpeech": "noun",
+        "example": "I used the scanner to digitize old photos."
+    },
+    {
+        "word": "photocopier",
+        "pronounce": "/ foutou ka pier/",
+        "meaning": "một cái máy tạo ra các bản sao giấy",
+        "partOfSpeech": "noun",
+        "example": "The photocopier is out of paper."
+    },
+    {
+        "word": "fax",
+        "pronounce": "/fæks/",
+        "meaning": "một máy gửi tài liệu qua đường dây điện thoại",
+        "partOfSpeech": "noun",
+        "example": "Please send the document by fax."
+    },
+    {
+        "word": "operate",
+        "pronounce": "/'a:perext/",
+        "meaning": "để điều khiển chức năng của",
+        "partOfSpeech": "verb",
+        "example": "You need to learn how to operate this machine."
+    },
+    {
+        "word": "print",
+        "pronounce": "/print/",
+        "meaning": "để tạo ra văn bản hoặc hình ảnh bằng văn bản trên giấy",
+        "partOfSpeech": "verb",
+        "example": "Can you print this document for me?"
+    },
+    {
+        "word": "copy",
+        "pronounce": "/'ka:pi/",
+        "meaning": "để tạo một bản sao",
+        "partOfSpeech": "verb",
+        "example": "Please copy these pages for the meeting."
+    },
+    {
+        "word": "scan",
+        "pronounce": "/skæn/",
+        "meaning": "để chuyển đổi một tài liệu sang dạng kỹ thuật số",
+        "partOfSpeech": "verb",
+        "example": "She needs to scan her passport for the application."
+    },
+    {
+        "word": "functional",
+        "pronounce": "/fankfǝnl/",
+        "meaning": "thiết thực và hữu ích",
+        "partOfSpeech": "adjective",
+        "example": "The office layout is very functional."
+    },
+    {
+        "word": "advanced",
+        "pronounce": "/ǝd'vænst/",
+        "meaning": "phát triển cao hoặc phức tạp",
+        "partOfSpeech": "adjective",
+        "example": "This course is for advanced learners."
+    },
+    {
+        "word": "operational",
+        "pronounce": "/ a pə'reıfənl/",
+        "meaning": "trong tình trạng làm việc",
+        "partOfSpeech": "adjective",
+        "example": "The new system will be fully operational next week."
+    },
+    {
+        "word": "automatically",
+        "pronounce": "/   tə mætıkli/",
+        "meaning": "thực hiện mà không có sự can thiệp của con người",
+        "partOfSpeech": "adverb",
+        "example": "The doors open automatically."
+    },
+    {
+        "word": "procedure",
+        "pronounce": "/prəsi:dzər/",
+        "meaning": "một chuỗi các hành động đượC thực hiện theo một trình tự nhất định",
+        "partOfSpeech": "noun",
+        "example": "Follow the standard procedure for logging a complaint."
+    },
+    {
+        "word": "policy",
+        "pronounce": "/'pa:ləsi/",
+        "meaning": "một quá trình hành động được thông qua bởi một doanh nghiệp",
+        "partOfSpeech": "noun",
+        "example": "The company has a strict no-smoking policy."
+    },
+    {
+        "word": "document",
+        "pronounce": "/'da:kjəmənt/",
+        "meaning": "một mẫu văn bản, bản in hoặc điện tử",
+        "partOfSpeech": "noun",
+        "example": "Please read this document carefully before signing."
+    },
+    {
+        "word": "file",
+        "pronounce": "/fail/",
+        "meaning": "một bộ sưu tập tài liệu",
+        "partOfSpeech": "noun",
+        "example": "She kept all the important papers in a file."
+    },
+    {
+        "word": "follow",
+        "pronounce": "'/fa:lou/",
+        "meaning": "theo sau hoặc theo sau",
+        "partOfSpeech": "verb",
+        "example": "Please follow the instructions carefully."
+    },
+    {
+        "word": "file",
+        "pronounce": "/fail/",
+        "meaning": "để lưu trữ ở một nơi để dễ dàng truy cập",
+        "partOfSpeech": "verb",
+        "example": "She needs to file these reports by the end of the day."
+    },
+    {
+        "word": "organize",
+        "pronounce": "/'organaız/",
+        "meaning": "sắp xếp một cách có cấu trúc",
+        "partOfSpeech": "verb",
+        "example": "He helped to organize the event."
+    },
+    {
+        "word": "implement",
+        "pronounce": "/'Implı, ment/",
+        "meaning": "đưa vào hành động",
+        "partOfSpeech": "verb",
+        "example": "The company will implement the new policy next month."
+    },
+    {
+        "word": "systematic",
+        "pronounce": "/ siste mætık/",
+        "meaning": "thực hiện theo kế hoạch",
+        "partOfSpeech": "adjective",
+        "example": "They adopted a systematic approach to the problem."
+    },
+    {
+        "word": "efficient",
+        "pronounce": "/1'fıfənt/",
+        "meaning": "đạt được năng suất tối đa với nỗ lực lãng phí tối thiểu",
+        "partOfSpeech": "adjective",
+        "example": "The new machine is more efficient than the old one."
+    },
+    {
+        "word": "official",
+        "pronounce": "/  fısǝl/",
+        "meaning": "được ủy quyền hoặc phê duyệt bởi người có thẩm quyền",
+        "partOfSpeech": "adjective",
+        "example": "He made an official statement to the press."
+    },
+    {
+        "word": "normally",
+        "pronounce": "/fo:məli/",
+        "meaning": "theo cách thông trang trọng",
+        "partOfSpeech": "adverb",
+        "example": "Normally, I wake up at 7 AM."
+    },
+    {
+        "word": "device",
+        "pronounce": "/di'vais/",
+        "meaning": "một thiết bị được chế tạo cho một mục đích cụ thể",
+        "partOfSpeech": "noun",
+        "example": "A smartphone is a very useful device."
+    },
+    {
+        "word": "component",
+        "pronounce": "/kəm pounənt/",
+        "meaning": "một phần hoặc thành phần của một hệ thống lớn hơn",
+        "partOfSpeech": "noun",
+        "example": "The machine has several complex components."
+    },
+    {
+        "word": "circuit",
+        "pronounce": "/s3:rkıt/",
+        "meaning": "một đường dẫn kín cho dòng điện",
+        "partOfSpeech": "noun",
+        "example": "An electrical circuit allows current to flow."
+    },
+    {
+        "word": "voltage",
+        "pronounce": "/'voultid 3/",
+        "meaning": "một lực điện",
+        "partOfSpeech": "noun",
+        "example": "Be careful, this device operates at a high voltage."
+    },
+    {
+        "word": "transmit",
+        "pronounce": "/træns mit/",
+        "meaning": "để gửi tín hiệu điện tử",
+        "partOfSpeech": "verb",
+        "example": "The radio station transmits signals over a wide area."
+    },
+    {
+        "word": "convert",
+        "pronounce": "/kən'v3:rt/",
+        "meaning": "để thay đổi hình thức của một cái gì đó",
+        "partOfSpeech": "verb",
+        "example": "The machine can convert sunlight into electricity."
+    },
+    {
+        "word": "install",
+        "pronounce": "/in'sto:l/",
+        "meaning": "để thiết lập thiết bị hoặc phần mềm",
+        "partOfSpeech": "verb",
+        "example": "A technician will install the new air conditioner tomorrow."
+    },
+    {
+        "word": "operate",
+        "pronounce": "/'a:perext/",
+        "meaning": "để điều khiển hoạt động của một thiết bị",
+        "partOfSpeech": "verb",
+        "example": "Please read the manual before you operate the equipment."
+    },
+    {
+        "word": "electronic",
+        "pronounce": "/1 lek'tra:nık/",
+        "meaning": "liên quan đến các thiết bị hoặc mạch chạy bằng điện",
+        "partOfSpeech": "adjective",
+        "example": "He is an expert in electronic engineering."
+    },
+    {
+        "word": "digital",
+        "pronounce": "/dId31tl/",
+        "meaning": "liên quan đến hoặc liên quan đến công nghệ sử dụng số nhị phân",
+        "partOfSpeech": "adjective",
+        "example": "She prefers reading digital books on her tablet."
+    },
+    {
+        "word": "automated",
+        "pronounce": "/' :tə, mertıd/",
+        "meaning": "vận hành bằng thiết bị tự động",
+        "partOfSpeech": "adjective",
+        "example": "The factory uses an automated assembly line."
+    },
+    {
+        "word": "sophisticated",
+        "pronounce": "/sə fıstıkeıtıd/",
+        "meaning": "theo cách phức tạp",
+        "partOfSpeech": "adjective",
+        "example": "The new phone has a very sophisticated design."
+    },
+    {
+        "word": "letter",
+        "pronounce": "/'letər/",
+        "meaning": "một giao tiếp bằng văn bản hoặc in",
+        "partOfSpeech": "noun",
+        "example": "She received a letter from her friend."
+    },
+    {
+        "word": "email",
+        "pronounce": "/ i:merl/",
+        "meaning": "thư điện tử",
+        "partOfSpeech": "noun",
+        "example": "I will send you an email with the details."
+    },
+    {
+        "word": "memo",
+        "pronounce": "/'memou/",
+        "meaning": "một tin nhắn bằng văn bản",
+        "partOfSpeech": "noun",
+        "example": "The manager sent a memo to all employees."
+    },
+    {
+        "word": "recipient",
+        "pronounce": "/rı'sıpiənt/",
+        "meaning": "một người nhận được một cái gì đó",
+        "partOfSpeech": "noun",
+        "example": "The recipient of the award was very happy."
+    },
+    {
+        "word": "compose",
+        "pronounce": "/kəm pouz/",
+        "meaning": "để tạo hoặc viết",
+        "partOfSpeech": "verb",
+        "example": "She needs to compose an email to the client."
+    },
+    {
+        "word": "send",
+        "pronounce": "/send/",
+        "meaning": "khiến phải đi hoặc bị bắt",
+        "partOfSpeech": "verb",
+        "example": "Please send this package by express mail."
+    },
+    {
+        "word": "receive",
+        "pronounce": "/ri'si:v/",
+        "meaning": "để có được hoặc được cho",
+        "partOfSpeech": "verb",
+        "example": "Did you receive my message?"
+    },
+    {
+        "word": "reply",
+        "pronounce": "/rı' plai/",
+        "meaning": "để trả lời bằng lời nói hoặc văn bản",
+        "partOfSpeech": "verb",
+        "example": "Please reply to this email as soon as possible."
+    },
+    {
+        "word": "formal",
+        "pronounce": "/fo:rml/",
+        "meaning": "tuân theo các quy ước đã được thiết lập",
+        "partOfSpeech": "adjective",
+        "example": "You should wear formal attire to the event."
+    },
+    {
+        "word": "urgent",
+        "pronounce": "/ 3:rdzənt/",
+        "meaning": "yêu cầu hành động hoặc sự chú ý ngay lập tức",
+        "partOfSpeech": "adjective",
+        "example": "This is an urgent matter that needs immediate attention."
+    },
+    {
+        "word": "brief",
+        "pronounce": "/bri:f/",
+        "meaning": "ngắn trong thời gian hoặc mức độ",
+        "partOfSpeech": "adjective",
+        "example": "He gave a brief presentation about the project."
+    },
+    {
+        "word": "annually",
+        "pronounce": "/'ænjuǝli/",
+        "meaning": "hàng năm",
+        "partOfSpeech": "adverb",
+        "example": "The festival is held annually in the summer."
+    },
+    {
+        "word": "candidate",
+        "pronounce": "/'kændı, dext/",
+        "meaning": "một người đang xin việc",
+        "partOfSpeech": "noun",
+        "example": "There are many qualified candidates for the job."
+    },
+    {
+        "word": "resume",
+        "pronounce": "/'rezjumer/",
+        "meaning": "một tài liệu tóm tắt kinh nghiệm làm việc và trình độ của một người",
+        "partOfSpeech": "noun",
+        "example": "Please send your resume and a cover letter."
+    },
+    {
+        "word": "vacancy",
+        "pronounce": "/'verkənsi/",
+        "meaning": "một vị trí hoặc công việc trống",
+        "partOfSpeech": "noun",
+        "example": "There is a vacancy for a marketing manager."
+    },
+    {
+        "word": "qualification",
+        "pronounce": "/ kwa:lıfı kersn/",
+        "meaning": "một kỹ năng hoặc kinh nghiệm cần thiết cho một công việc",
+        "partOfSpeech": "noun",
+        "example": "What qualifications do you have for this job?"
+    },
+    {
+        "word": "recruit",
+        "pronounce": "/rı kru:t/",
+        "meaning": "để tìm và tuyển dụng những ứng viên phù hợp",
+        "partOfSpeech": "verb",
+        "example": "The company is trying to recruit new graduates."
+    },
+    {
+        "word": "advertise",
+        "pronounce": "/'ædvertaız/",
+        "meaning": "để thúc đẩy việc mở việc làm",
+        "partOfSpeech": "verb",
+        "example": "They decided to advertise the job vacancy in the local newspaper."
+    },
+    {
+        "word": "apply",
+        "pronounce": "/ə'plar/",
+        "meaning": "để thực hiện một yêu cầu chính thức cho một công việc",
+        "partOfSpeech": "verb",
+        "example": "She decided to apply for the new position."
+    },
+    {
+        "word": "shortlist",
+        "pronounce": "/fo:rt.list/",
+        "meaning": "để chọn một số lượng nhỏ các ứng cử viên từ tất cả các ứng viên",
+        "partOfSpeech": "verb",
+        "example": "We will shortlist the candidates and then conduct interviews."
+    },
+    {
+        "word": "suitable",
+        "pronounce": "/'su:təbl/",
+        "meaning": "thích hợp cho một công việc hoặc vai trò cụ thể",
+        "partOfSpeech": "adjective",
+        "example": "We are looking for a suitable candidate for this role."
+    },
+    {
+        "word": "experienced",
+        "pronounce": "/ık spiriǝnst/",
+        "meaning": "có kiến thức hoặc kỹ năng từ thực hành hoặc kinh nghiệm",
+        "partOfSpeech": "adjective",
+        "example": "He is an experienced manager with a proven track record."
+    },
+    {
+        "word": "competitive",
+        "pronounce": "/kəm petǝtıv/",
+        "meaning": "đặc trưng bởi sự cạnh tranh",
+        "partOfSpeech": "adjective",
+        "example": "The job market is very competitive these days."
+    },
+    {
+        "word": "successfully",
+        "pronounce": "/sək sesfəli/",
+        "meaning": "theo cách đạt được kết quả mong muốn",
+        "partOfSpeech": "adverb",
+        "example": "She successfully completed the project ahead of schedule."
+    },
+    {
+        "word": "application",
+        "pronounce": "/æplı kerſn/",
+        "meaning": "một yêu cầu chính thức cho việc làm",
+        "partOfSpeech": "noun",
+        "example": "Please fill out the application form completely."
+    },
+    {
+        "word": "interview",
+        "pronounce": "/'ınter vju:/",
+        "meaning": "một cuộc họp để thẩm vấn người xin việc",
+        "partOfSpeech": "noun",
+        "example": "She has a job interview next Monday."
+    },
+    {
+        "word": "reference",
+        "pronounce": "/refrəns/",
+        "meaning": "một người có thể giới thiệu một ứng cử viên",
+        "partOfSpeech": "noun",
+        "example": "You need to provide at least two references with your application."
+    },
+    {
+        "word": "portfolio",
+        "pronounce": "/po:rt fouliou/",
+        "meaning": "một bộ sưu tập các mẫu công việc",
+        "partOfSpeech": "noun",
+        "example": "She presented her portfolio to the hiring manager."
+    },
+    {
+        "word": "apply",
+        "pronounce": "/ə'plaı/",
+        "meaning": "để thực hiện một yêu cầu chính thức cho một công việc",
+        "partOfSpeech": "verb",
+        "example": "He plans to apply for several different jobs."
+    },
+    {
+        "word": "interview",
+        "pronounce": "/'inter vju:/",
+        "meaning": "để hỏi người xin việc",
+        "partOfSpeech": "verb",
+        "example": "The manager will interview the candidates tomorrow."
+    },
+    {
+        "word": "evaluate",
+        "pronounce": "/1'væljuert/",
+        "meaning": "để đánh giá giá trị hoặc chất lượng",
+        "partOfSpeech": "verb",
+        "example": "We need to evaluate the performance of our employees."
+    },
+    {
+        "word": "prepare",
+        "pronounce": "/pri per/",
+        "meaning": "chuẩn bị sẵn sàng cho một mục đích cụ thể",
+        "partOfSpeech": "verb",
+        "example": "You should prepare well for your job interview."
+    },
+    {
+        "word": "confident",
+        "pronounce": "/ka:nfıdənt/",
+        "meaning": "có sự tự tin",
+        "partOfSpeech": "adjective",
+        "example": "She felt confident about her chances of getting the job."
+    },
+    {
+        "word": "professional",
+        "pronounce": "/prǝ fefənl/",
+        "meaning": "liên quan đến hoặc phù hợp với một nghề nghiệp",
+        "partOfSpeech": "adjective",
+        "example": "It's important to maintain a professional attitude at work."
+    },
+    {
+        "word": "suitable",
+        "pronounce": "/su:təbl/",
+        "meaning": "thích hợp cho một vai trò hoặc tình huống cụ thể",
+        "partOfSpeech": "adjective",
+        "example": "His skills and experience make him suitable for the position."
+    },
+    {
+        "word": "thoroughly",
+        "pronounce": "/'03/:rοuli/",
+        "meaning": "một cách đầy đủ và chi tiết",
+        "partOfSpeech": "adverb",
+        "example": "Please read the contract thoroughly before signing."
+    },
+    {
+        "word": "hire",
+        "pronounce": "/ harer/",
+        "meaning": "một người đã được tuyển dụng",
+        "partOfSpeech": "noun",
+        "example": "The new hire will start next week."
+    },
+    {
+        "word": "orientation",
+        "pronounce": "/ :rien texfn/",
+        "meaning": "buổi giới thiệu dành cho nhân viên mới",
+        "partOfSpeech": "noun",
+        "example": "New employees must attend an orientation session."
+    },
+    {
+        "word": "training",
+        "pronounce": "/'treinin/",
+        "meaning": "quá trình học các kỹ năng mới",
+        "partOfSpeech": "noun",
+        "example": "The company provides extensive training for new staff."
+    },
+    {
+        "word": "probation",
+        "pronounce": "/prou beijn/",
+        "meaning": "thời gian thử việc cho nhân viên mới",
+        "partOfSpeech": "noun",
+        "example": "New employees are usually on probation for the first three months."
+    },
+    {
+        "word": "hire",
+        "pronounce": "/'harer/",
+        "meaning": "tuyển dụng ai đó",
+        "partOfSpeech": "verb",
+        "example": "The company plans to hire more staff next year."
+    },
+    {
+        "word": "train",
+        "pronounce": "/trein/",
+        "meaning": "để dạy hoặc phát triển kỹ năng",
+        "partOfSpeech": "verb",
+        "example": "They train their employees to provide excellent customer service."
+    },
+    {
+        "word": "coach",
+        "pronounce": "/kouts/",
+        "meaning": "để hướng dẫn và hướng dẫn",
+        "partOfSpeech": "verb",
+        "example": "A good manager will coach their team to success."
+    },
+    {
+        "word": "mentor",
+        "pronounce": "/mento:r/",
+        "meaning": "để tư vấn hoặc đào tạo một ai đó",
+        "partOfSpeech": "verb",
+        "example": "Experienced employees often mentor new recruits."
+    },
+    {
+        "word": "skilled",
+        "pronounce": "/skıld/",
+        "meaning": "có khả năng làm tốt điều gì đó",
+        "partOfSpeech": "adjective",
+        "example": "She is a skilled negotiator."
+    },
+    {
+        "word": "experienced",
+        "pronounce": "/ık'spiriǝnst/",
+        "meaning": "đã đạt được kiến thức hoặc kỹ năng",
+        "partOfSpeech": "adjective",
+        "example": "We are looking for an experienced software developer."
+    },
+    {
+        "word": "knowledgeable",
+        "pronounce": "/'nplıdzəbl/",
+        "meaning": "được thông tin và giáo dục tốt",
+        "partOfSpeech": "adjective",
+        "example": "Our staff are knowledgeable about all our products."
+    },
+    {
+        "word": "adequately",
+        "pronounce": "/'ædıkwətli/",
+        "meaning": "theo cách đầy đủ",
+        "partOfSpeech": "adverb",
+        "example": "Are you adequately prepared for the exam?"
+    },
+    {
+        "word": "salary",
+        "pronounce": "/'sæləri/",
+        "meaning": "một khoản thanh toán cố định thường xuyên cho công việc",
+        "partOfSpeech": "noun",
+        "example": "She receives a good salary for her work."
+    },
+    {
+        "word": "benefit",
+        "pronounce": "/'benifit/",
+        "meaning": "một lợi thế hoặc lợi nhuận thu được từ việc làm",
+        "partOfSpeech": "noun",
+        "example": "The job offers many benefits, including health insurance and a pension plan."
+    },
+    {
+        "word": "compensation",
+        "pronounce": "/kompensersn/",
+        "meaning": "cái gì đó, thường là tiền, được trao cho ai đó vì công việc",
+        "partOfSpeech": "noun",
+        "example": "The company offers a competitive compensation package."
+    },
+    {
+        "word": "deduction",
+        "pronounce": "/dı'dak n/",
+        "meaning": "một số tiền được trừ vào tiền lương",
+        "partOfSpeech": "noun",
+        "example": "There are several deductions from his monthly salary, such as tax and insurance."
+    },
+    {
+        "word": "earn",
+        "pronounce": "/3:rn/",
+        "meaning": "nhận tiền để đổi lấy công việc",
+        "partOfSpeech": "verb",
+        "example": "How much do you earn per month?"
+    },
+    {
+        "word": "negotiate",
+        "pronounce": "/nı goufiert/",
+        "meaning": "để thảo luận về các điều khoản và điều kiện",
+        "partOfSpeech": "verb",
+        "example": "He managed to negotiate a higher salary."
+    },
+    {
+        "word": "contribute",
+        "pronounce": "/kən trıbju:t/",
+        "meaning": "đưa (tiền hoặc nguồn lực) cho cái gì đó",
+        "partOfSpeech": "verb",
+        "example": "Many employees contribute to the company's pension scheme."
+    },
+    {
+        "word": "increase",
+        "pronounce": "/ın kri:s/",
+        "meaning": "để trở thành hoặc làm cho lớn hơn",
+        "partOfSpeech": "verb",
+        "example": "The company decided to increase salaries by 3%."
+    },
+    {
+        "word": "generous",
+        "pronounce": "/'dzenǝrǝs/",
+        "meaning": "sẵn sàng cho đi nhiều hơn",
+        "partOfSpeech": "adjective",
+        "example": "The company offers a generous benefits package."
+    },
+    {
+        "word": "competitive",
+        "pronounce": "/kəm petǝtıv/",
+        "meaning": "có sự cạnh tranh mạnh mẽ",
+        "partOfSpeech": "adjective",
+        "example": "They offer competitive salaries to attract the best employees."
+    },
+    {
+        "word": "additional",
+        "pronounce": "/ ə'dışənl/",
+        "meaning": "thêm hoặc bổ sung",
+        "partOfSpeech": "adjective",
+        "example": "Employees may receive additional bonuses for good performance."
+    },
+    {
+        "word": "significantly",
+        "pronounce": "/sıg'nıfıkəntli/",
+        "meaning": "một cách đủ lớn hoặc quan trọng",
+        "partOfSpeech": "adverb",
+        "example": "Salaries have increased significantly in recent years."
+    },
+    {
+        "word": "promotion",
+        "pronounce": "/prǝ moun/",
+        "meaning": "chuyển lên cấp bậc hoặc vị trí cao hơn",
+        "partOfSpeech": "noun",
+        "example": "She received a promotion to senior manager."
+    },
+    {
+        "word": "pension",
+        "pronounce": "'/ /",
+        "meaning": "một khoản thanh toán thường xuyên được thực hiện trong thời gian nghỉ hưu",
+        "partOfSpeech": "noun",
+        "example": "He is looking forward to receiving his pension when he retires."
+    },
+    {
+        "word": "award",
+        "pronounce": "/ word/",
+        "meaning": "một giải thưởng hoặc sự công nhận cho thành tích",
+        "partOfSpeech": "noun",
+        "example": "She received an award for her outstanding contribution to the company."
+    },
+    {
+        "word": "recognition",
+        "pronounce": "/ rekǝg nıfn/",
+        "meaning": "sự thừa nhận hoặc đánh giá cao",
+        "partOfSpeech": "noun",
+        "example": "Hard work deserves recognition."
+    },
+    {
+        "word": "promote",
+        "pronounce": "/prǝ mout/",
+        "meaning": "để thăng tiến trong cấp bậc hoặc vị trí",
+        "partOfSpeech": "verb",
+        "example": "The company decided to promote her to a management position."
+    },
+    {
+        "word": "award",
+        "pronounce": "/ word/",
+        "meaning": "trao giải thưởng hoặc sự công nhận",
+        "partOfSpeech": "verb",
+        "example": "The company will award bonuses to top-performing employees."
+    },
+    {
+        "word": "retire",
+        "pronounce": "/rı' tarǝr/",
+        "meaning": "rời bỏ công việc của một người và ngừng làm việc",
+        "partOfSpeech": "verb",
+        "example": "He plans to retire next year after 30 years with the company."
+    },
+    {
+        "word": "achieve",
+        "pronounce": "/ǝtfi:v/",
+        "meaning": "để đạt được một mục tiêu hoặc tiêu chuẩn",
+        "partOfSpeech": "verb",
+        "example": "She worked hard to achieve her goals."
+    },
+    {
+        "word": "deserving",
+        "pronounce": "/di'z3:rvin/",
+        "meaning": "xứng đáng với cái gì đó",
+        "partOfSpeech": "adjective",
+        "example": "She is a deserving candidate for the promotion."
+    },
+    {
+        "word": "eligible",
+        "pronounce": "/'elıdzəbl/",
+        "meaning": "đủ điều kiện hoặc được phép",
+        "partOfSpeech": "adjective",
+        "example": "You are eligible for a pension after 10 years of service."
+    },
+    {
+        "word": "outstanding",
+        "pronounce": "/aut'stændın/",
+        "meaning": "đặc biệt tốt",
+        "partOfSpeech": "adjective",
+        "example": "He has an outstanding record of achievement."
+    },
+    {
+        "word": "legally",
+        "pronounce": "/'li gəli/",
+        "meaning": "phù hợp với luật pháp",
+        "partOfSpeech": "adverb",
+        "example": "The company is legally required to provide a safe working environment."
+    },
+    {
+        "word": "product",
+        "pronounce": "/'prodʌkt/",
+        "meaning": "một mặt hàng được chào bán",
+        "partOfSpeech": "noun",
+        "example": "This is our latest product."
+    },
+    {
+        "word": "price",
+        "pronounce": "/prais/",
+        "meaning": "số tiền cần thiết cho một sản phẩm",
+        "partOfSpeech": "noun",
+        "example": "What is the price of this item?"
+    },
+    {
+        "word": "discount",
+        "pronounce": "/diskaunt/",
+        "meaning": "giảm giá",
+        "partOfSpeech": "noun",
+        "example": "They are offering a 10% discount on all items."
+    },
+    {
+        "word": "customer",
+        "pronounce": "/kastəmər/",
+        "meaning": "một người mua hàng hóa hoặc dịch vụ",
+        "partOfSpeech": "noun",
+        "example": "Our customers are very satisfied with our service."
+    },
+    {
+        "word": "purchase",
+        "pronounce": "/ p3:rtfǝs/",
+        "meaning": "mua cái gì đó",
+        "partOfSpeech": "verb",
+        "example": "She decided to purchase a new car."
+    },
+    {
+        "word": "browse",
+        "pronounce": "/brauz/",
+        "meaning": "nhìn vào các đồ vật một cách tinh CỜ",
+        "partOfSpeech": "verb",
+        "example": "I like to browse in bookstores on weekends."
+    },
+    {
+        "word": "bargain",
+        "pronounce": "/'ba:rgın/",
+        "meaning": "thương lượng giá của cái gì đó",
+        "partOfSpeech": "verb",
+        "example": "She tried to bargain with the seller for a lower price."
+    },
+    {
+        "word": "return",
+        "pronounce": "/r1't3:rn/",
+        "meaning": "trả lại thứ gì đó đã mua",
+        "partOfSpeech": "verb",
+        "example": "You can return the product within 30 days if you are not satisfied."
+    },
+    {
+        "word": "affordable",
+        "pronounce": "/ fərdəbl/",
+        "meaning": "giá cả hợp lý",
+        "partOfSpeech": "adjective",
+        "example": "We offer high-quality products at affordable prices."
+    },
+    {
+        "word": "available",
+        "pronounce": "/ə'veıləbl/",
+        "meaning": "có thể được sử dụng hoặc thu được",
+        "partOfSpeech": "adjective",
+        "example": "This product is currently not available."
+    },
+    {
+        "word": "competitive",
+        "pronounce": "/kəm'petǝtıv/",
+        "meaning": "được định giá hoặc được thiết kế để cạnh tranh với những người khác",
+        "partOfSpeech": "adjective",
+        "example": "The company offers competitive pricing on all its products."
+    },
+    {
+        "word": "economically",
+        "pronounce": "/ ɛkə'nomıkli/",
+        "meaning": "theo cách liên quan đến nền kinh tế",
+        "partOfSpeech": "adverb",
+        "example": "The country is developing economically."
+    },
+    {
+        "word": "supplier",
+        "pronounce": "/sə'plazər/",
+        "meaning": "một công ty cung cấp hàng hóa hoặc dịch vụ",
+        "partOfSpeech": "noun",
+        "example": "We have a good relationship with our main supplier."
+    },
+    {
+        "word": "inventory",
+        "pronounce": "/'inventori/",
+        "meaning": "một danh sách đầy đủ các hàng hóa trong kho",
+        "partOfSpeech": "noun",
+        "example": "The store needs to do an inventory check at the end of the month."
+    },
+    {
+        "word": "order",
+        "pronounce": "/ order/",
+        "meaning": "một yêu cầu về hàng hóa hoặc dịch VỤ",
+        "partOfSpeech": "noun",
+        "example": "She placed an order for new office supplies."
+    },
+    {
+        "word": "shipment",
+        "pronounce": "/fıpmənt/",
+        "meaning": "hàng hóa được gửi",
+        "partOfSpeech": "noun",
+        "example": "The shipment of goods is expected to arrive next week."
+    },
+    {
+        "word": "order",
+        "pronounce": "/ order/",
+        "meaning": "để yêu cầu hàng hóa hoặc dịch vụ",
+        "partOfSpeech": "verb",
+        "example": "You can order products online from our website."
+    },
+    {
+        "word": "deliver",
+        "pronounce": "/dı'lıvər/",
+        "meaning": "đưa hàng hóa tới một địa điểm",
+        "partOfSpeech": "verb",
+        "example": "The company promises to deliver goods within 24 hours."
+    },
+    {
+        "word": "restock",
+        "pronounce": "/ ri: stok/",
+        "meaning": "để bổ sung nguồn cung hàng hóa",
+        "partOfSpeech": "verb",
+        "example": "The supermarket needs to restock the shelves."
+    },
+    {
+        "word": "fulfill",
+        "pronounce": "/ful frl/",
+        "meaning": "để hoàn thành hoặc đáp ứng một đơn đặt hàng",
+        "partOfSpeech": "verb",
+        "example": "We aim to fulfill all orders within three working days."
+    },
+    {
+        "word": "sufficient",
+        "pronounce": "/sə fısnt/",
+        "meaning": "đủ đáp ứng nhu cầu",
+        "partOfSpeech": "adjective",
+        "example": "Do we have sufficient stock to meet demand?"
+    },
+    {
+        "word": "available",
+        "pronounce": "/ə'verləbl/",
+        "meaning": "sẵn sàng để sử dụng hoặc mua",
+        "partOfSpeech": "adjective",
+        "example": "The item you ordered is now available for collection."
+    },
+    {
+        "word": "backordered",
+        "pronounce": "/'bæk, :rdərd/",
+        "meaning": "đã đặt hàng nhưng chưa có",
+        "partOfSpeech": "adjective",
+        "example": "Unfortunately, that particular model is currently backordered."
+    },
+    {
+        "word": "conveniently",
+        "pronounce": "/kən vi:niəntli/",
+        "meaning": "thực hiện thuận tiện",
+        "partOfSpeech": "adverb",
+        "example": "The store is conveniently located near the train station."
+    },
+    {
+        "word": "cargo",
+        "pronounce": "/'ka:rgou/",
+        "meaning": "hàng hóa vận chuyển trên tàu, máy bay hoặc xe cơ giới",
+        "partOfSpeech": "noun",
+        "example": "The ship was carrying a cargo of timber."
+    },
+    {
+        "word": "freight",
+        "pronounce": "/frert/",
+        "meaning": "hàng hóa vận chuyển số lượng lớn",
+        "partOfSpeech": "noun",
+        "example": "The company specializes in air freight."
+    },
+    {
+        "word": "shipment",
+        "pronounce": "/ fıpment/",
+        "meaning": "một lô hàng được gửi bằng tàu, máy bay hoặc xe tải",
+        "partOfSpeech": "noun",
+        "example": "We are expecting a large shipment of goods tomorrow."
+    },
+    {
+        "word": "warehouse",
+        "pronounce": "/'werhaus/",
+        "meaning": "một tòa nhà lớn nơi lưu trữ hàng hóa",
+        "partOfSpeech": "noun",
+        "example": "The company has a large warehouse to store its products."
+    },
+    {
+        "word": "ship",
+        "pronounce": "/fIp/",
+        "meaning": "gửi hàng bằng phương thức vận tải",
+        "partOfSpeech": "verb",
+        "example": "We can ship the goods to your address."
+    },
+    {
+        "word": "deliver",
+        "pronounce": "/dı'lıvər/",
+        "meaning": "đưa hàng hóa tới nơi đến",
+        "partOfSpeech": "verb",
+        "example": "The courier will deliver the package this afternoon."
+    },
+    {
+        "word": "track",
+        "pronounce": "/træk/",
+        "meaning": "để theo dõi sự tiến bộ của một cái gì đó",
+        "partOfSpeech": "verb",
+        "example": "You can track your order online using the reference number."
+    },
+    {
+        "word": "package",
+        "pronounce": "/'pækıd3/",
+        "meaning": "xếp hàng hóa vào container để vận chuyển",
+        "partOfSpeech": "verb",
+        "example": "Please package the items carefully to avoid damage during transit."
+    },
+    {
+        "word": "international",
+        "pronounce": "/ inter næfənl/",
+        "meaning": "giữa hoặc liên quan đến các quốc gia khác nhau",
+        "partOfSpeech": "adjective",
+        "example": "The company offers international shipping services."
+    },
+    {
+        "word": "domestic",
+        "pronounce": "/deǝ'mestik/",
+        "meaning": "trong một quốc gia cụ thể",
+        "partOfSpeech": "adjective",
+        "example": "We offer both domestic and international flights."
+    },
+    {
+        "word": "express",
+        "pronounce": "/Ik'spres/",
+        "meaning": "nhanh chóng và trực tiếp",
+        "partOfSpeech": "adjective",
+        "example": "You can choose express delivery for an additional fee."
+    },
+    {
+        "word": "instantly",
+        "pronounce": "/Instantli/",
+        "meaning": "thực hiện ngay lập tức",
+        "partOfSpeech": "adverb",
+        "example": "The payment was processed instantly."
+    },
+    {
+        "word": "invoice",
+        "pronounce": "/'INVOIS/",
+        "meaning": "một tài liệu liệt kê hàng hóa hoặc dịch vụ được cung cấp và chi phí của chúng",
+        "partOfSpeech": "noun",
+        "example": "Please find attached the invoice for your recent order."
+    },
+    {
+        "word": "bill",
+        "pronounce": "/bil/",
+        "meaning": "một báo cáo về số tiền nợ hàng hóa hoặc dịch vụ",
+        "partOfSpeech": "noun",
+        "example": "Have you paid the electricity bill yet?"
+    },
+    {
+        "word": "payment",
+        "pronounce": "/'peimənt/",
+        "meaning": "hành động trả tiền",
+        "partOfSpeech": "noun",
+        "example": "We accept payment by credit card or bank transfer."
+    },
+    {
+        "word": "receipt",
+        "pronounce": "/rı si:t/",
+        "meaning": "một tài liệu xác nhận thanh toán",
+        "partOfSpeech": "noun",
+        "example": "Please keep your receipt as proof of purchase."
+    },
+    {
+        "word": "issue",
+        "pronounce": "/ Ifu:/",
+        "meaning": "để cung cấp hoặc phân phối một cái gì đó chính thức",
+        "partOfSpeech": "verb",
+        "example": "The bank will issue a new credit card to you."
+    },
+    {
+        "word": "charge",
+        "pronounce": "/tfa:rd3/",
+        "meaning": "để yêu cầu tiền như một mức giá cho hàng hóa hoặc dịch vụ",
+        "partOfSpeech": "verb",
+        "example": "How much do you charge for delivery?"
+    },
+    {
+        "word": "pay",
+        "pronounce": "/per/",
+        "meaning": "để đưa tiền cho hàng hóa hoặc dịch vụ",
+        "partOfSpeech": "verb",
+        "example": "You can pay your bill online."
+    },
+    {
+        "word": "settle",
+        "pronounce": "/setl/",
+        "meaning": "để trả những gì còn nợ",
+        "partOfSpeech": "verb",
+        "example": "Please settle your outstanding balance as soon as possible."
+    },
+    {
+        "word": "outstanding",
+        "pronounce": "/aut stændın/",
+        "meaning": "chưa được thanh toán, giải quyết hoặc giải quyết",
+        "partOfSpeech": "adjective",
+        "example": "There are still some outstanding payments to be made."
+    },
+    {
+        "word": "overdue",
+        "pronounce": "/ouver du:/",
+        "meaning": "không được thanh toán đúng thời gian dự kiến",
+        "partOfSpeech": "adjective",
+        "example": "Your library books are overdue."
+    },
+    {
+        "word": "accurate",
+        "pronounce": "/'ækjərət/",
+        "meaning": "đúng và không có lỗi",
+        "partOfSpeech": "adjective",
+        "example": "Please ensure that all the information on the invoice is accurate."
+    },
+    {
+        "word": "certified",
+        "pronounce": "/s3:tıfard/",
+        "meaning": "được chứng nhận",
+        "partOfSpeech": "adjective",
+        "example": "He is a certified public accountant."
+    },
+    {
+        "word": "inventory",
+        "pronounce": "/'ınvən to:ri/",
+        "meaning": "một danh sách đầy đủ các hàng hóa trong kho",
+        "partOfSpeech": "noun",
+        "example": "The store closes for one day a year to take inventory of its stock."
+    },
+    {
+        "word": "stock",
+        "pronounce": "/stpk/",
+        "meaning": "hàng hóa có sẵn để bán hoặc sử dụng",
+        "partOfSpeech": "noun",
+        "example": "We have a large stock of medical supplies."
+    },
+    {
+        "word": "warehouse",
+        "pronounce": "/'werhaus/",
+        "meaning": "một tòa nhà nơi hàng hóa được lưu trü",
+        "partOfSpeech": "noun",
+        "example": "The goods are stored in a large warehouse."
+    },
+    {
+        "word": "supply",
+        "pronounce": "/sə'plar/",
+        "meaning": "một số lượng của một cái gì đó có sẵn để sử dụng",
+        "partOfSpeech": "noun",
+        "example": "The company has a limited supply of the raw materials."
+    },
+    {
+        "word": "count",
+        "pronounce": "/kaunt/",
+        "meaning": "để xác định tổng số mặt hàng",
+        "partOfSpeech": "verb",
+        "example": "Let's count the number of chairs in the room."
+    },
+    {
+        "word": "check",
+        "pronounce": "/tfek/",
+        "meaning": "để kiểm tra hoặc kiểm tra",
+        "partOfSpeech": "verb",
+        "example": "You should always check your work for errors."
+    },
+    {
+        "word": "update",
+        "pronounce": "/ ap'dert/",
+        "meaning": "để mang lại một cái gì đó cập nhật",
+        "partOfSpeech": "verb",
+        "example": "Please update your contact information."
+    },
+    {
+        "word": "track",
+        "pronounce": "/træk/",
+        "meaning": "để theo dõi sự chuyển động hoặc tiến bộ của một cái gì đó",
+        "partOfSpeech": "verb",
+        "example": "We can track the package online."
+    },
+    {
+        "word": "dispose",
+        "pronounce": "/dı spauz/",
+        "meaning": "loại bỏ",
+        "partOfSpeech": "verb",
+        "example": "Please dispose of your trash in the designated bins."
+    },
+    {
+        "word": "remain",
+        "pronounce": "/rı'mein/",
+        "meaning": "còn lại",
+        "partOfSpeech": "verb",
+        "example": "Only a few cookies remain in the jar."
+    },
+    {
+        "word": "temporarily",
+        "pronounce": "/'temprǝrǝli/",
+        "meaning": "một cách tạm thời",
+        "partOfSpeech": "adverb",
+        "example": "The office will be temporarily closed for renovations."
+    },
+    {
+        "word": "consistently",
+        "pronounce": "/kən sıstəntli/",
+        "meaning": "một cách đáng tin cậy và ổn định",
+        "partOfSpeech": "adverb",
+        "example": "She consistently produces high-quality work."
+    },
+    {
+        "word": "account",
+        "pronounce": "/ə'kaunt/",
+        "meaning": "hồ sơ giao dịch tài chính",
+        "partOfSpeech": "noun",
+        "example": "He has a savings account at the local bank."
+    },
+    {
+        "word": "deposit",
+        "pronounce": "/dı pozit/",
+        "meaning": "tiền được gửi vào ngân hàng",
+        "partOfSpeech": "noun",
+        "example": "I made a deposit of $100 into my account."
+    },
+    {
+        "word": "balance",
+        "pronounce": "/'bæləns/",
+        "meaning": "số tiền trong tài khoản",
+        "partOfSpeech": "noun",
+        "example": "You can check your account balance online."
+    },
+    {
+        "word": "transaction",
+        "pronounce": "/træn zæk n/",
+        "meaning": "một ví dụ về mua hoặc bán",
+        "partOfSpeech": "noun",
+        "example": "All financial transactions are recorded in the ledger."
+    },
+    {
+        "word": "withdraw",
+        "pronounce": "/WIð dro:/",
+        "meaning": "rút tiền ra khỏi tài khoản",
+        "partOfSpeech": "verb",
+        "example": "She needs to withdraw some cash from the ATM."
+    },
+    {
+        "word": "deposit",
+        "pronounce": "/dı'pDzIt/",
+        "meaning": "để gửi tiền vào tài khoản",
+        "partOfSpeech": "verb",
+        "example": "You can deposit checks using the mobile banking app."
+    },
+    {
+        "word": "transfer",
+        "pronounce": "/ trænsfer/",
+        "meaning": "chuyển tiền từ tài khoản này sang tài khoản khác",
+        "partOfSpeech": "verb",
+        "example": "I need to transfer money from my savings to my checking account."
+    },
+    {
+        "word": "lend",
+        "pronounce": "/lend/",
+        "meaning": "đưa tiền cho ai đó với mong muốn được trả nợ",
+        "partOfSpeech": "verb",
+        "example": "The bank agreed to lend him the money for his new car."
+    },
+    {
+        "word": "sufficient",
+        "pronounce": "/sə fısnt/",
+        "meaning": "đủ đáp ứng nhu cầu",
+        "partOfSpeech": "adjective",
+        "example": "Do we have sufficient food for everyone?"
+    },
+    {
+        "word": "secure",
+        "pronounce": "/si kjur/",
+        "meaning": "được bảo vệ khỏi rủi ro hoặc nguy hiểm",
+        "partOfSpeech": "adjective",
+        "example": "Make sure your online passwords are secure."
+    },
+    {
+        "word": "financial",
+        "pronounce": "/far nænjl/",
+        "meaning": "liên quan đến tiền bạc hoặc tài chính",
+        "partOfSpeech": "adjective",
+        "example": "She is seeking financial advice from an expert."
+    },
+    {
+        "word": "online",
+        "pronounce": "/ pn'lain/",
+        "meaning": "trực tuyến",
+        "partOfSpeech": "adjective",
+        "example": "Many people do their banking online these days."
+    },
+    {
+        "word": "ledger",
+        "pronounce": "/'ledzer/",
+        "meaning": "một cuốn sách hoặc bộ sưu tập tài khoản tài chính khác",
+        "partOfSpeech": "noun",
+        "example": "The accountant carefully reviewed the company's ledger."
+    },
+    {
+        "word": "budget",
+        "pronounce": "/'badzit/",
+        "meaning": "ước tính thu nhập và chi tiêu",
+        "partOfSpeech": "noun",
+        "example": "We need to create a budget for our household expenses."
+    },
+    {
+        "word": "expense",
+        "pronounce": "/ik'spens/",
+        "meaning": "tiền chỉ cho cái gì đó",
+        "partOfSpeech": "noun",
+        "example": "Travel is a major expense for the company."
+    },
+    {
+        "word": "audit",
+        "pronounce": "/o:dit/",
+        "meaning": "kiểm tra chính thức các tài khoản",
+        "partOfSpeech": "noun",
+        "example": "The company undergoes an external audit every year."
+    },
+    {
+        "word": "audit",
+        "pronounce": "/o:dit/",
+        "meaning": "tiến hành kiểm tra tài chính chính thức",
+        "partOfSpeech": "verb",
+        "example": "The firm was hired to audit the company's accounts."
+    },
+    {
+        "word": "calculate",
+        "pronounce": "/'kælkjulert/",
+        "meaning": "để xác định số lượng hoặc số lượng",
+        "partOfSpeech": "verb",
+        "example": "Can you calculate the total cost for me?"
+    },
+    {
+        "word": "record",
+        "pronounce": "/rekord/",
+        "meaning": "để ghi lại các giao dịch tài chính",
+        "partOfSpeech": "verb",
+        "example": "It's important to record all sales accurately."
+    },
+    {
+        "word": "reconcile",
+        "pronounce": "/'rekənsaıl/",
+        "meaning": "để làm cho các tài khoản tài chính nhất quán",
+        "partOfSpeech": "verb",
+        "example": "She needs to reconcile her bank statement with her own records."
+    },
+    {
+        "word": "accurate",
+        "pronounce": "/'ækjərət/",
+        "meaning": "đúng và không có lỗi",
+        "partOfSpeech": "adjective",
+        "example": "The report must be accurate and up-to-date."
+    },
+    {
+        "word": "consistent",
+        "pronounce": "/kən'sıstənt/",
+        "meaning": "luôn hành động hoặc cư xử theo cùng một cách",
+        "partOfSpeech": "adjective",
+        "example": "His work is consistent and of high quality."
+    },
+    {
+        "word": "fiscal",
+        "pronounce": "/'fıskǝl/",
+        "meaning": "liên quan đến vấn đề tài chính",
+        "partOfSpeech": "adjective",
+        "example": "The government announced new fiscal policies."
+    },
+    {
+        "word": "meticulously",
+        "pronounce": "/mə'tıkjuləsli/",
+        "meaning": "một cách rất cần thận và chính xác",
+        "partOfSpeech": "adverb",
+        "example": "He meticulously checked every detail of the contract."
+    },
+    {
+        "word": "asset",
+        "pronounce": "/'æset/",
+        "meaning": "một tài nguyên thuộc sở hữu của một người hoặc công ty",
+        "partOfSpeech": "noun",
+        "example": "A company's assets can include buildings, machinery, and money."
+    },
+    {
+        "word": "portfolio",
+        "pronounce": "/po:rt fouliou/",
+        "meaning": "một loạt các khoản đầu tư được nắm giữ bởi một cá nhân hoặc tổ chức",
+        "partOfSpeech": "noun",
+        "example": "She has a diverse investment portfolio."
+    },
+    {
+        "word": "bond",
+        "pronounce": "/bond/",
+        "meaning": "một công cụ thu nhập cố định đại diện cho một khoản vay",
+        "partOfSpeech": "noun",
+        "example": "Government bonds are generally considered a safe investment."
+    },
+    {
+        "word": "stock",
+        "pronounce": "/stpk/",
+        "meaning": "một phần quyền sở hữu trong một công ty",
+        "partOfSpeech": "noun",
+        "example": "He invested his money in the stock market."
+    },
+    {
+        "word": "invest",
+        "pronounce": "/in vest/",
+        "meaning": "phân bổ tiền với kỳ vọng thu được lợi nhuận trong tương lai",
+        "partOfSpeech": "verb",
+        "example": "They plan to invest in new technology."
+    },
+    {
+        "word": "diversify",
+        "pronounce": "/dar v3:rsıfar/",
+        "meaning": "để dàn trải đầu tư vào các tài sản khác nhau",
+        "partOfSpeech": "verb",
+        "example": "It is important to diversify your investments to reduce risk."
+    },
+    {
+        "word": "risk",
+        "pronounce": "/risk/",
+        "meaning": "để gặp nguy hiểm hoặc mất mát",
+        "partOfSpeech": "verb",
+        "example": "If you don't diversify, you risk losing everything."
+    },
+    {
+        "word": "allocate",
+        "pronounce": "/'/æləkert/",
+        "meaning": "để phân phối nguồn lực hoặc nhiệm vụ",
+        "partOfSpeech": "verb",
+        "example": "The manager will allocate tasks to team members."
+    },
+    {
+        "word": "profitable",
+        "pronounce": "/'profitəbl/",
+        "meaning": "mang lại lợi ích tài chính",
+        "partOfSpeech": "adjective",
+        "example": "The new venture proved to be highly profitable."
+    },
+    {
+        "word": "secure",
+        "pronounce": "/si kjur/",
+        "meaning": "không có rủi ro hoặc nguy hiểm",
+        "partOfSpeech": "adjective",
+        "example": "They wanted a secure investment for their retirement fund."
+    },
+    {
+        "word": "speculative",
+        "pronounce": "/'spekjulətıv/",
+        "meaning": "có nguy cơ mất mát cao",
+        "partOfSpeech": "adjective",
+        "example": "Investing in new startups can be very speculative."
+    },
+    {
+        "word": "strategically",
+        "pronounce": "/strǝ'ti:dzıkli/",
+        "meaning": "theo cách liên quan đến kế hoạch dài hạn",
+        "partOfSpeech": "adverb",
+        "example": "The company strategically positioned itself in the market."
+    },
+    {
+        "word": "tax",
+        "pronounce": "/tæks/",
+        "meaning": "đóng góp bắt buộc vào nguồn thu ngân sách nhà nước",
+        "partOfSpeech": "noun",
+        "example": "Everyone has to pay income tax."
+    },
+    {
+        "word": "deduction",
+        "pronounce": "/dı'dak n/",
+        "meaning": "một khoản được trừ vào thu nhập để giảm thu nhập chịu thuế",
+        "partOfSpeech": "noun",
+        "example": "You can claim a tax deduction for business expenses."
+    },
+    {
+        "word": "refund",
+        "pronounce": "/ri:fand/",
+        "meaning": "tiền bị trả lại do thanh toán quá mức",
+        "partOfSpeech": "noun",
+        "example": "I am expecting a tax refund this year."
+    },
+    {
+        "word": "liability",
+        "pronounce": "/larə bılıti/",
+        "meaning": "trách nhiệm pháp lý về việc nộp thuế",
+        "partOfSpeech": "noun",
+        "example": "The company has a significant tax liability."
+    },
+    {
+        "word": "file",
+        "pronounce": "/fail/",
+        "meaning": "nộp tờ khai thuế",
+        "partOfSpeech": "verb",
+        "example": "You need to file your tax return by April 15th."
+    },
+    {
+        "word": "deduct",
+        "pronounce": "/dı'dakt/",
+        "meaning": "trừ đi tổng số",
+        "partOfSpeech": "verb",
+        "example": "You can deduct certain expenses from your taxable income."
+    },
+    {
+        "word": "withhold",
+        "pronounce": "/ hould/",
+        "meaning": "giữ lại một phần thu nhập để đóng thuế",
+        "partOfSpeech": "verb",
+        "example": "Employers are required to withhold income tax from employees' wages."
+    },
+    {
+        "word": "calculate",
+        "pronounce": "/'kælkjulert/",
+        "meaning": "để xác định số thuế phải nộp",
+        "partOfSpeech": "verb",
+        "example": "You can use a tax calculator to estimate your tax liability."
+    },
+    {
+        "word": "taxable",
+        "pronounce": "/'tæksəbl/",
+        "meaning": "phải chịu thuế",
+        "partOfSpeech": "adjective",
+        "example": "Not all income is taxable."
+    },
+    {
+        "word": "deductible",
+        "pronounce": "/dı'daktəbl/",
+        "meaning": "có thể được khấu trừ khỏi thu nhập chịu thuế",
+        "partOfSpeech": "adjective",
+        "example": "Charitable donations are often tax-deductible."
+    },
+    {
+        "word": "exempt",
+        "pronounce": "/1g'zempt/",
+        "meaning": "không có nghĩa vụ hoặc trách nhiệm pháp lý",
+        "partOfSpeech": "adjective",
+        "example": "Some organizations are exempt from paying taxes."
+    },
+    {
+        "word": "accurately",
+        "pronounce": "/'ækjərətli/",
+        "meaning": "một cách chính xác hoặc chính xác",
+        "partOfSpeech": "adverb",
+        "example": "It is important to fill out your tax forms accurately."
+    },
+    {
+        "word": "statement",
+        "pronounce": "/'stertmənt/",
+        "meaning": "một tài liệu hiển thị chi tiết tài chính",
+        "partOfSpeech": "noun",
+        "example": "You will receive a monthly bank statement."
+    },
+    {
+        "word": "balance sheet",
+        "pronounce": "/ bæləns fi:t/",
+        "meaning": "báo cáo về tài sản, nợ phải trả và vốn",
+        "partOfSpeech": "noun",
+        "example": "The company's balance sheet shows its financial position at a specific point in time."
+    },
+    {
+        "word": "income statement",
+        "pronounce": "/Inkam stertment/",
+        "meaning": "một tài liệu cho thấy thu nhập và chi phí",
+        "partOfSpeech": "noun",
+        "example": "The income statement reports a company's financial performance over a period of time."
+    },
+    {
+        "word": "revenue",
+        "pronounce": "/'revə nju:/",
+        "meaning": "thu nhập từ hoạt động kinh doanh thông thường",
+        "partOfSpeech": "noun",
+        "example": "The company's revenue increased by 10% last year."
+    },
+    {
+        "word": "report",
+        "pronounce": "/r1'pɔ:rt/",
+        "meaning": "để đưa ra một tài khoản nói hoặc viết về một cái gì đó",
+        "partOfSpeech": "verb",
+        "example": "The manager will report the findings to the board."
+    },
+    {
+        "word": "audit",
+        "pronounce": "/o:dit/",
+        "meaning": "để kiểm tra báo cáo tài chính",
+        "partOfSpeech": "verb",
+        "example": "An independent firm was brought in to audit the financial statements."
+    },
+    {
+        "word": "analyze",
+        "pronounce": "/'ænə laız/",
+        "meaning": "để kiểm tra dữ liệu để ra quyết định",
+        "partOfSpeech": "verb",
+        "example": "We need to analyze the market trends before launching a new product."
+    },
+    {
+        "word": "compile",
+        "pronounce": "/kəm paıl/",
+        "meaning": "để thu thập và tổ chức thông tin",
+        "partOfSpeech": "verb",
+        "example": "She will compile all the data into a single report."
+    },
+    {
+        "word": "financial",
+        "pronounce": "/far'nænjl/",
+        "meaning": "liên quan đến tiền bạc hoặc tài chính",
+        "partOfSpeech": "adjective",
+        "example": "He has a strong background in financial management."
+    },
+    {
+        "word": "accurate",
+        "pronounce": "/'ækjərət/",
+        "meaning": "đúng và không có lỗi",
+        "partOfSpeech": "adjective",
+        "example": "The financial statements must be accurate."
+    },
+    {
+        "word": "detailed",
+        "pronounce": "/ di:terld/",
+        "meaning": "có nhiều phần nhỏ hoặc sự kiện",
+        "partOfSpeech": "adjective",
+        "example": "The report provides a detailed analysis of the company's performance."
+    },
+    {
+        "word": "regularly",
+        "pronounce": "/'regjulərli/",
+        "meaning": "theo những khoảng thời gian nhất quán",
+        "partOfSpeech": "adverb",
+        "example": "Financial statements should be reviewed regularly."
+    },
+    {
+        "word": "property",
+        "pronounce": "/propǝti/",
+        "meaning": "bất động sản hoặc đất đai và các tòa nhà",
+        "partOfSpeech": "noun",
+        "example": "He owns several properties in the city."
+    },
+    {
+        "word": "lease",
+        "pronounce": "/li:s/",
+        "meaning": "hợp đồng cho thuê tài sản",
+        "partOfSpeech": "noun",
+        "example": "They signed a five-year lease for the office space."
+    },
+    {
+        "word": "tenant",
+        "pronounce": "/tenant/",
+        "meaning": "một người thuê tài sản",
+        "partOfSpeech": "noun",
+        "example": "The landlord is looking for a new tenant for the apartment."
+    },
+    {
+        "word": "landlord",
+        "pronounce": "/ lændlord/",
+        "meaning": "một người sở hữu tài sản cho thuê",
+        "partOfSpeech": "noun",
+        "example": "The landlord is responsible for maintaining the property."
+    },
+    {
+        "word": "rent",
+        "pronounce": "/rent/",
+        "meaning": "số tiền phải trả khi sử dụng tài sản",
+        "partOfSpeech": "noun",
+        "example": "The rent for this apartment is $1000 per month."
+    },
+    {
+        "word": "manage",
+        "pronounce": "/'mænid3/",
+        "meaning": "để giám sát hoạt động của một tài sản",
+        "partOfSpeech": "verb",
+        "example": "She manages several rental properties for her clients."
+    },
+    {
+        "word": "occupy",
+        "pronounce": "/Dkjupar/",
+        "meaning": "sử dụng hoặc sống trong một tài sản",
+        "partOfSpeech": "verb",
+        "example": "The new tenants will occupy the house next week."
+    },
+    {
+        "word": "renovate",
+        "pronounce": "/'renǝvert/",
+        "meaning": "để cải thiện hoặc cập nhật một tài sản",
+        "partOfSpeech": "verb",
+        "example": "They plan to renovate the old kitchen."
+    },
+    {
+        "word": "commercial",
+        "pronounce": "/kə mə rfəl/",
+        "meaning": "liên quan đến kinh doanh hoặc thương mại",
+        "partOfSpeech": "adjective",
+        "example": "This building is zoned for commercial use."
+    },
+    {
+        "word": "residential",
+        "pronounce": "/rezi denfǝl/",
+        "meaning": "liên quan đến không gian sống hoặc nhà cửa",
+        "partOfSpeech": "adjective",
+        "example": "The property is located in a quiet residential area."
+    },
+    {
+        "word": "spacious",
+        "pronounce": "/'sperses/",
+        "meaning": "có không gian rộng rãi",
+        "partOfSpeech": "adjective",
+        "example": "The apartment has a spacious living room."
+    },
+    {
+        "word": "functional",
+        "pronounce": "/fanksǝnl/",
+        "meaning": "phục vụ mục đích thực tế",
+        "partOfSpeech": "adjective",
+        "example": "The office layout is very functional."
+    },
+    {
+        "word": "properly",
+        "pronounce": "/ propǝli/",
+        "meaning": "theo cách đúng đắn và/hoặc phù hợp",
+        "partOfSpeech": "adverb",
+        "example": "Ensure that all equipment is properly maintained."
+    },
+    {
+        "word": "agenda",
+        "pronounce": "/ ə'dzende/",
+        "meaning": "danh sách các vấn đề sẽ được thảo luận tại cuộc họp",
+        "partOfSpeech": "noun",
+        "example": "The first item on the agenda is the budget review."
+    },
+    {
+        "word": "minutes",
+        "pronounce": "/mınıts/",
+        "meaning": "một bản ghi chép về những gì đã được thảo luận",
+        "partOfSpeech": "noun",
+        "example": "The secretary will take the minutes of the meeting."
+    },
+    {
+        "word": "committee",
+        "pronounce": "/kə mıti/",
+        "meaning": "một nhóm người được bổ nhiệm cho một chức năng cụ thể",
+        "partOfSpeech": "noun",
+        "example": "The safety committee meets once a month."
+    },
+    {
+        "word": "quorum",
+        "pronounce": "/kwɔ:rəm/",
+        "meaning": "số lượng thành viên tối thiểu cần thiết để tổ chức một cuộc họp",
+        "partOfSpeech": "noun",
+        "example": "We cannot vote on the proposal because we don't have a quorum."
+    },
+    {
+        "word": "convene",
+        "pronounce": "/kən vi:n/",
+        "meaning": "để tập hợp lại cho một cuộc họp",
+        "partOfSpeech": "verb",
+        "example": "The committee will convene next Tuesday at 10 AM."
+    },
+    {
+        "word": "vote",
+        "pronounce": "/vout/",
+        "meaning": "để bày tỏ một sự lựa chọn hoặc ý kiến",
+        "partOfSpeech": "verb",
+        "example": "The members will vote on the new proposal."
+    },
+    {
+        "word": "discuss",
+        "pronounce": "/di'sKAS/",
+        "meaning": "để nói về một chủ đề một cách chi tiết",
+        "partOfSpeech": "verb",
+        "example": "We need to discuss the project timeline."
+    },
+    {
+        "word": "adjourn",
+        "pronounce": "/ə'd33:rn/",
+        "meaning": "kết thúc một cuộc họp",
+        "partOfSpeech": "verb",
+        "example": "The chairman decided to adjourn the meeting until tomorrow."
+    },
+    {
+        "word": "formal",
+        "pronounce": "/fo:rmal/",
+        "meaning": "thực hiện theo các quy tắc hoặc nghi lễ",
+        "partOfSpeech": "adjective",
+        "example": "A formal report will be submitted to the board."
+    },
+    {
+        "word": "unanimous",
+        "pronounce": "/ju'nænıməs/",
+        "meaning": "hoàn toàn đồng ý",
+        "partOfSpeech": "adjective",
+        "example": "The committee reached a unanimous decision."
+    },
+    {
+        "word": "productive",
+        "pronounce": "/prǝ'daktiv/",
+        "meaning": "đạt được một số lượng hoặc kết quả đáng kể",
+        "partOfSpeech": "adjective",
+        "example": "We had a very productive meeting this morning."
+    },
+    {
+        "word": "executive",
+        "pronounce": "/1g'zekjǝtıv/",
+        "meaning": "liên quan đến việc quản lý một doanh nghiệp hoặc một tổ chức, và với việc lập kế hoạch và ra quyết định",
+        "partOfSpeech": "adjective",
+        "example": "The executive committee is responsible for making important decisions."
+    },
+    {
+        "word": "quality",
+        "pronounce": "/'kwoliti/",
+        "meaning": "tiêu chuẩn của một cái gì đó được đo so với những thứ khác",
+        "partOfSpeech": "noun",
+        "example": "We aim to provide products of the highest quality."
+    },
+    {
+        "word": "standard",
+        "pronounce": "/ stændǝrd/",
+        "meaning": "một mức độ chất lượng hoặc đạt được",
+        "partOfSpeech": "noun",
+        "example": "Our products meet all industry standards."
+    },
+    {
+        "word": "inspection",
+        "pronounce": "/in'spek n/",
+        "meaning": "kiểm tra hoặc xem xét cẩn thận",
+        "partOfSpeech": "noun",
+        "example": "A thorough inspection of the facility will be conducted."
+    },
+    {
+        "word": "defect",
+        "pronounce": "/'di:fekt/",
+        "meaning": "một thiếu sót, sự không hoàn hảo, hoặc thiểu",
+        "partOfSpeech": "noun",
+        "example": "The product was recalled due to a manufacturing defect."
+    },
+    {
+        "word": "inspect",
+        "pronounce": "/in'spekt/",
+        "meaning": "quan sát kỹ để kiểm tra chất lượng",
+        "partOfSpeech": "verb",
+        "example": "The engineer will inspect the machinery for any faults."
+    },
+    {
+        "word": "test",
+        "pronounce": "/test/",
+        "meaning": "thực hiện các biện pháp để kiểm tra chất lượng, hiệu suất hoặc độ tin cậy",
+        "partOfSpeech": "verb",
+        "example": "We need to test the software thoroughly before release."
+    },
+    {
+        "word": "comply",
+        "pronounce": "/kəm plaı/",
+        "meaning": "hành động theo quy tắc",
+        "partOfSpeech": "verb",
+        "example": "All businesses must comply with health and safety regulations."
+    },
+    {
+        "word": "correct",
+        "pronounce": "/kə'rekt/",
+        "meaning": "để loại bỏ lỗi hoặc khiếm khuyết",
+        "partOfSpeech": "verb",
+        "example": "Please correct any errors you find in the document."
+    },
+    {
+        "word": "consistent",
+        "pronounce": "/kən'sıstənt/",
+        "meaning": "hành động hoặc thực hiện theo cùng một cách theo thời gian",
+        "partOfSpeech": "adjective",
+        "example": "We strive for consistent quality in all our products."
+    },
+    {
+        "word": "defective",
+        "pronounce": "/dı'fektiv/",
+        "meaning": "không hoàn hảo hoặc bị lỗi",
+        "partOfSpeech": "adjective",
+        "example": "Customers can return any defective merchandise for a full refund."
+    },
+    {
+        "word": "high-quality",
+        "pronounce": "/hai 'kwplıti/",
+        "meaning": "đạt tiêu chuẩn rất tốt",
+        "partOfSpeech": "adjective",
+        "example": "The company is known for its high-quality products and services."
+    },
+    {
+        "word": "approved",
+        "pronounce": "/ə'pru:vd/",
+        "meaning": "được chấp thuận",
+        "partOfSpeech": "adjective",
+        "example": "The plan was approved by the management."
+    },
+    {
+        "word": "prototype",
+        "pronounce": "/'proute taip/",
+        "meaning": "mô hình đầu tiên của một cái gì đó mà từ đó những cái khác được phát triển",
+        "partOfSpeech": "noun",
+        "example": "The engineers are currently working on a prototype for the new car."
+    },
+    {
+        "word": "feature",
+        "pronounce": "/fi:tfər/",
+        "meaning": "một thuộc tính hoặc khía cạnh đặc biệt",
+        "partOfSpeech": "noun",
+        "example": "The new phone has several innovative features."
+    },
+    {
+        "word": "innovation",
+        "pronounce": "/ ınǝ versn/",
+        "meaning": "một phương pháp, ý tưởng hoặc sản phẩm mới",
+        "partOfSpeech": "noun",
+        "example": "The company encourages innovation and creativity."
+    },
+    {
+        "word": "specification",
+        "pronounce": "/ spesifi kerſn/",
+        "meaning": "mô tả chi tiết về thiết kế và vật liệu",
+        "partOfSpeech": "noun",
+        "example": "The product must meet all the design specifications."
+    },
+    {
+        "word": "develop",
+        "pronounce": "/dı'velǝp/",
+        "meaning": "để phát triển hoặc gây ra để phát triển",
+        "partOfSpeech": "verb",
+        "example": "The company is planning to develop a new software application."
+    },
+    {
+        "word": "design",
+        "pronounce": "/dı'zaın/",
+        "meaning": "để tạo ra kế hoạch hoặc bản vẽ",
+        "partOfSpeech": "verb",
+        "example": "She was asked to design the new company logo."
+    },
+    {
+        "word": "enhance",
+        "pronounce": "/in hæns/",
+        "meaning": "để cải thiện chất lượng hoặc giá trị",
+        "partOfSpeech": "verb",
+        "example": "The new features will enhance the user experience."
+    },
+    {
+        "word": "launch",
+        "pronounce": "/lo:ntf/",
+        "meaning": "để giới thiệu một sản phẩm hoặc dịch vụ mới",
+        "partOfSpeech": "verb",
+        "example": "The company will launch its new product next month."
+    },
+    {
+        "word": "innovative",
+        "pronounce": "/'ınə veıtıv/",
+        "meaning": "giới thiệu các phương pháp hoặc ý tưởng mới",
+        "partOfSpeech": "adjective",
+        "example": "They came up with an innovative solution to the problem."
+    },
+    {
+        "word": "marketable",
+        "pronounce": "/ma:rkıtəbl/",
+        "meaning": "có thể được bán",
+        "partOfSpeech": "adjective",
+        "example": "The product needs to be marketable to succeed."
+    },
+    {
+        "word": "competitive",
+        "pronounce": "/kəm petǝtıv/",
+        "meaning": "có khả năng cạnh tranh với người khác",
+        "partOfSpeech": "adjective",
+        "example": "The company offers competitive salaries to attract top talent."
+    },
+    {
+        "word": "enhanced",
+        "pronounce": "/ın ha:nst/",
+        "meaning": "tăng lên, cải thiện",
+        "partOfSpeech": "adjective",
+        "example": "The new version of the software has enhanced security features."
+    },
+    {
+        "word": "lease",
+        "pronounce": "/li:s/",
+        "meaning": "hợp đồng cho thuê tài sản",
+        "partOfSpeech": "noun",
+        "example": "Our current lease on the office expires next year."
+    },
+    {
+        "word": "tenant",
+        "pronounce": "/tenant/",
+        "meaning": "một người thuê tài sản từ chủ nhà",
+        "partOfSpeech": "noun",
+        "example": "The tenant is responsible for paying the monthly rent."
+    },
+    {
+        "word": "landlord",
+        "pronounce": "/ lænd lord/",
+        "meaning": "chủ sở hữu tài sản cho người thuê nhà thuê",
+        "partOfSpeech": "noun",
+        "example": "The landlord agreed to repair the leaking roof."
+    },
+    {
+        "word": "property",
+        "pronounce": "/'propərti/",
+        "meaning": "một cái gì đó thuộc sở hữu, thường là đất đai hoặc các tòa nhà",
+        "partOfSpeech": "noun",
+        "example": "He invested in several commercial properties."
+    },
+    {
+        "word": "lease",
+        "pronounce": "/li:s/",
+        "meaning": "cho thuê tài sản",
+        "partOfSpeech": "verb",
+        "example": "The company decided to lease a larger office space."
+    },
+    {
+        "word": "rent",
+        "pronounce": "/rent/",
+        "meaning": "trả tiền để sử dụng tài sản",
+        "partOfSpeech": "verb",
+        "example": "They rent an apartment in the city center."
+    },
+    {
+        "word": "occupy",
+        "pronounce": "/'Dkju, par/",
+        "meaning": "cư trú hoặc chiếm không gian",
+        "partOfSpeech": "verb",
+        "example": "The building is currently occupied by a law firm."
+    },
+    {
+        "word": "terminate",
+        "pronounce": "/t3:rminext/",
+        "meaning": "để chấm dứt hợp đồng thuê hoặc hợp đồng",
+        "partOfSpeech": "verb",
+        "example": "Either party can terminate the lease with 30 days' notice."
+    },
+    {
+        "word": "residential",
+        "pronounce": "/rezi'denfǝl/",
+        "meaning": "liên quan đến một khu vực nơi mọi người sinh sống",
+        "partOfSpeech": "adjective",
+        "example": "The new development includes both residential and commercial units."
+    },
+    {
+        "word": "commercial",
+        "pronounce": "/kə m3:rfl/",
+        "meaning": "liên quan đến hoạt động kinh doanh",
+        "partOfSpeech": "adjective",
+        "example": "The store is located in a busy commercial district."
+    },
+    {
+        "word": "vacant",
+        "pronounce": "/verkənt/",
+        "meaning": "không bị chiếm đóng hoặc đang được sử dụng",
+        "partOfSpeech": "adjective",
+        "example": "There are several vacant apartments in the building."
+    },
+    {
+        "word": "rent-free",
+        "pronounce": "/ rent 'fri:/",
+        "meaning": "miễn tiền thuê nhà",
+        "partOfSpeech": "adjective",
+        "example": "As part of the job offer, he received a rent-free apartment for the first year."
+    },
+    {
+        "word": "reservation",
+        "pronounce": "/ rezer versn/",
+        "meaning": "một sự sắp xếp để đảm bảo một cái bàn",
+        "partOfSpeech": "noun",
+        "example": "I'd like to make a dinner reservation for two people."
+    },
+    {
+        "word": "cuisine",
+        "pronounce": "/kwi'zi:n/",
+        "meaning": "một phong cách nấu ăn",
+        "partOfSpeech": "noun",
+        "example": "The restaurant is famous for its authentic Italian cuisine."
+    },
+    {
+        "word": "ambiance",
+        "pronounce": "/'æmbians/",
+        "meaning": "bầu không khí của một nơi",
+        "partOfSpeech": "noun",
+        "example": "The cafe has a relaxed and cozy ambiance."
+    },
+    {
+        "word": "service",
+        "pronounce": "/'S3: IVIS/",
+        "meaning": "sự hỗ trợ và tư vấn được cung cấp bởi một doanh nghiệp",
+        "partOfSpeech": "noun",
+        "example": "The hotel is known for its excellent customer service."
+    },
+    {
+        "word": "recommend",
+        "pronounce": "/ reka mend/",
+        "meaning": "gợi ý là tốt",
+        "partOfSpeech": "verb",
+        "example": "Can you recommend a good restaurant in this area?"
+    },
+    {
+        "word": "dine",
+        "pronounce": "/dain/",
+        "meaning": "ăn tối",
+        "partOfSpeech": "verb",
+        "example": "We often dine at our favorite local restaurant."
+    },
+    {
+        "word": "book",
+        "pronounce": "/buk/",
+        "meaning": "đặt chỗ trước",
+        "partOfSpeech": "verb",
+        "example": "It's advisable to book a table in advance, especially on weekends."
+    },
+    {
+        "word": "order",
+        "pronounce": "/order/",
+        "meaning": "yêu cầu một cái gì đó được thực hiện hoặc giao",
+        "partOfSpeech": "verb",
+        "example": "Are you ready to order your food now?"
+    },
+    {
+        "word": "request",
+        "pronounce": "/'kwest/",
+        "meaning": "yêu cầu",
+        "partOfSpeech": "verb",
+        "example": "You can request a window seat when you book your flight."
+    },
+    {
+        "word": "delicious",
+        "pronounce": "/dı lıfǝs/",
+        "meaning": "rất ngon",
+        "partOfSpeech": "adjective",
+        "example": "The cake was absolutely delicious."
+    },
+    {
+        "word": "high-class",
+        "pronounce": "/ fərdəbl/",
+        "meaning": "chất lượng tốt",
+        "partOfSpeech": "adjective",
+        "example": "They stayed at a high-class hotel during their vacation."
+    },
+    {
+        "word": "locally",
+        "pronounce": "/ ləkəli/",
+        "meaning": "địa phương",
+        "partOfSpeech": "adverb",
+        "example": "The restaurant sources its ingredients locally."
+    },
+    {
+        "word": "appetizer",
+        "pronounce": "/'æpı, taızər/",
+        "meaning": "một món ăn nhỏ phục vụ trước món chính",
+        "partOfSpeech": "noun",
+        "example": "We ordered some appetizers while waiting for our main courses."
+    },
+    {
+        "word": "entrée",
+        "pronounce": "/'a:ntrex/",
+        "meaning": "món chính của bữa ăn",
+        "partOfSpeech": "noun",
+        "example": "For her entrée, she chose the grilled salmon."
+    },
+    {
+        "word": "menu",
+        "pronounce": "/'menju:/",
+        "meaning": "danh sách các lựa chọn thực phẩm và đồ uống",
+        "partOfSpeech": "noun",
+        "example": "Could we see the dessert menu, please?"
+    },
+    {
+        "word": "check",
+        "pronounce": "/tfek/",
+        "meaning": "hóa đơn ở nhà hàng",
+        "partOfSpeech": "noun",
+        "example": "Can we have the check, please?"
+    },
+    {
+        "word": "complain",
+        "pronounce": "/kəm plein/",
+        "meaning": "phàn nàn",
+        "partOfSpeech": "verb",
+        "example": "Several customers complain about the slow service."
+    },
+    {
+        "word": "serve",
+        "pronounce": "/s3:rv/",
+        "meaning": "mang thức ăn hoặc đồ uống đến bàn",
+        "partOfSpeech": "verb",
+        "example": "The waiter will serve your drinks shortly."
+    },
+    {
+        "word": "tip",
+        "pronounce": "/tip/",
+        "meaning": "để cung cấp thêm tiền cho dịch vụ",
+        "partOfSpeech": "verb",
+        "example": "It's customary to tip the waiter if you're happy with the service."
+    },
+    {
+        "word": "reserve",
+        "pronounce": "/ΓΙ'Ζ3:ΓV/",
+        "meaning": "sắp xếp để có sẵn một cái bàn",
+        "partOfSpeech": "verb",
+        "example": "I'd like to reserve a table for Friday night."
+    },
+    {
+        "word": "savory",
+        "pronounce": "/'serveri/",
+        "meaning": "có vị mặn hoặc cay",
+        "partOfSpeech": "adjective",
+        "example": "She prefers savory snacks to sweet ones."
+    },
+    {
+        "word": "crowded",
+        "pronounce": "/'kraudıd/",
+        "meaning": "đầy người",
+        "partOfSpeech": "adjective",
+        "example": "The restaurant was too crowded, so we went somewhere else."
+    },
+    {
+        "word": "courteous",
+        "pronounce": "/k3:rties/",
+        "meaning": "lịch sự và tôn trọng",
+        "partOfSpeech": "adjective",
+        "example": "The staff were very courteous and helpful."
+    },
+    {
+        "word": "efficiently",
+        "pronounce": "/1'fıfəntli/",
+        "meaning": "theo cách đạt được năng suất tối đa với nỗ lực lãng phí tối thiểu",
+        "partOfSpeech": "adverb",
+        "example": "The kitchen staff worked efficiently to prepare all the orders."
+    },
+    {
+        "word": "delivery",
+        "pronounce": "/dı lıvəri/",
+        "meaning": "hành động đưa hàng hóa đến một địa điểm",
+        "partOfSpeech": "noun",
+        "example": "The restaurant offers free delivery for orders over $20."
+    },
+    {
+        "word": "beverage",
+        "pronounce": "/'bevǝrıdz/",
+        "meaning": "đồ uống",
+        "partOfSpeech": "noun",
+        "example": "What kind of beverages do you have?"
+    },
+    {
+        "word": "portion",
+        "pronounce": "/po:rfn/",
+        "meaning": "lượng thức ăn phục vụ cho một người",
+        "partOfSpeech": "noun",
+        "example": "The portions at this restaurant are very generous."
+    },
+    {
+        "word": "tray",
+        "pronounce": "/trex/",
+        "meaning": "một thùng phẳng, nông để đựng thức ăn và đồ uống",
+        "partOfSpeech": "noun",
+        "example": "The waiter carried the drinks on a tray."
+    },
+    {
+        "word": "pack",
+        "pronounce": "/pæk/",
+        "meaning": "để thực phẩm trong một thùng chứa để vận chuyển",
+        "partOfSpeech": "verb",
+        "example": "They pack the takeaway orders carefully to prevent spills."
+    },
+    {
+        "word": "prepare",
+        "pronounce": "/pri per/",
+        "meaning": "chuẩn bị sẵn thức ăn để ăn",
+        "partOfSpeech": "verb",
+        "example": "The chef is preparing a special dish tonight."
+    },
+    {
+        "word": "pick up",
+        "pronounce": "/рік /",
+        "meaning": "lấy mang về",
+        "partOfSpeech": "verb",
+        "example": "You can pick up your order in 20 minutes."
+    },
+    {
+        "word": "queue",
+        "pronounce": "/kju:/",
+        "meaning": "xếp hàng",
+        "partOfSpeech": "verb",
+        "example": "Customers had to queue for a table at the popular cafe."
+    },
+    {
+        "word": "separate",
+        "pronounce": "/'seprǝt/",
+        "meaning": "riêng lẻ",
+        "partOfSpeech": "adjective",
+        "example": "They requested separate checks for their meals."
+    },
+    {
+        "word": "convenient",
+        "pronounce": "/kən vi:niənt/",
+        "meaning": "dễ dàng tiếp cận, truy cập hoặc sử dụng",
+        "partOfSpeech": "adjective",
+        "example": "Ordering food online is very convenient."
+    },
+    {
+        "word": "quick",
+        "pronounce": "/kwIk/",
+        "meaning": "xảy ra hoặc thực hiện với tốc độ",
+        "partOfSpeech": "adjective",
+        "example": "They offer a quick lunch menu for busy office workers."
+    },
+    {
+        "word": "freshly",
+        "pronounce": "/'freli/",
+        "meaning": "được thực hiện hoặc sản xuất gần đây",
+        "partOfSpeech": "adverb",
+        "example": "The bread is freshly baked every morning."
+    },
+    {
+        "word": "chef",
+        "pronounce": "/ζεf/",
+        "meaning": "một đầu bếp chuyên nghiệp",
+        "partOfSpeech": "noun",
+        "example": "The restaurant hired a new chef from France."
+    },
+    {
+        "word": "recipe",
+        "pronounce": "/'resıpi/",
+        "meaning": "một bộ hướng dẫn nấu ăn",
+        "partOfSpeech": "noun",
+        "example": "She has a secret recipe for her famous chocolate cake."
+    },
+    {
+        "word": "cuisine",
+        "pronounce": "/kwi'zi:n/",
+        "meaning": "một phong cách nấu ăn",
+        "partOfSpeech": "noun",
+        "example": "He is an expert in Thai cuisine."
+    },
+    {
+        "word": "kitchen",
+        "pronounce": "/'kıtsın/",
+        "meaning": "một căn phòng nơi thức ăn được chuẩn bị",
+        "partOfSpeech": "noun",
+        "example": "The chef is busy in the kitchen preparing for dinner service."
+    },
+    {
+        "word": "prepare",
+        "pronounce": "/pri per/",
+        "meaning": "chuẩn bị sẵn sàng để nấu ăn",
+        "partOfSpeech": "verb",
+        "example": "It takes a long time to prepare a gourmet meal."
+    },
+    {
+        "word": "cook",
+        "pronounce": "/kuk/",
+        "meaning": "chuẩn bị thức ăn bằng cách hâm nóng nó",
+        "partOfSpeech": "verb",
+        "example": "He loves to cook for his family."
+    },
+    {
+        "word": "bake",
+        "pronounce": "/berk/",
+        "meaning": "nấu thức ăn bằng nhiệt khô trong lò",
+        "partOfSpeech": "verb",
+        "example": "She is going to bake a cake for her friend's birthday."
+    },
+    {
+        "word": "specialize",
+        "pronounce": "/'speşə laız/",
+        "meaning": "để tập trung vào một lĩnh vực cụ thể của nấu ăn",
+        "partOfSpeech": "verb",
+        "example": "This restaurant specializes in seafood dishes."
+    },
+    {
+        "word": "creative",
+        "pronounce": "/kri'ertIv/",
+        "meaning": "có khả năng tạo ra những ý tưởng hoặc những điều mới",
+        "partOfSpeech": "adjective",
+        "example": "The chef is very creative with his presentations."
+    },
+    {
+        "word": "skilled",
+        "pronounce": "/skıld/",
+        "meaning": "có khả năng làm tốt điều gì đó",
+        "partOfSpeech": "adjective",
+        "example": "He is a skilled chef with years of experience."
+    },
+    {
+        "word": "passionate",
+        "pronounce": "/'pæfənıt/",
+        "meaning": "có cảm xúc hoặc niềm tin mạnh mẽ",
+        "partOfSpeech": "adjective",
+        "example": "She is very passionate about cooking."
+    },
+    {
+        "word": "professionally",
+        "pronounce": "/prə fefənəli/",
+        "meaning": "theo cách liên quan đến một nghề nghiệp",
+        "partOfSpeech": "adverb",
+        "example": "The meal was professionally prepared and beautifully presented."
+    },
+    {
+        "word": "event",
+        "pronounce": "/1 vent/",
+        "meaning": "một dịp công cộng hoặc xã hội theo kế hoạch",
+        "partOfSpeech": "noun",
+        "example": "The company is organizing a special event for its employees."
+    },
+    {
+        "word": "venue",
+        "pronounce": "/'venju:/",
+        "meaning": "nơi diễn ra sự kiện",
+        "partOfSpeech": "noun",
+        "example": "They chose a beautiful outdoor venue for the wedding."
+    },
+    {
+        "word": "organizer",
+        "pronounce": "/  :rgə naızər/",
+        "meaning": "người lập kế hoạch và điều phối các sự kiện",
+        "partOfSpeech": "noun",
+        "example": "The event organizer did a fantastic job."
+    },
+    {
+        "word": "attendee",
+        "pronounce": "/ tendi:/",
+        "meaning": "người có mặt tại một sự kiện",
+        "partOfSpeech": "noun",
+        "example": "All attendees are requested to register upon arrival."
+    },
+    {
+        "word": "organize",
+        "pronounce": "/   :rgə naız/",
+        "meaning": "sắp xếp hoặc lên kế hoạch cho một sự kiện",
+        "partOfSpeech": "verb",
+        "example": "She has to organize a conference for 200 people."
+    },
+    {
+        "word": "schedule",
+        "pronounce": "/ skedzu:l/",
+        "meaning": "sắp xếp hoặc lập kế hoạch thời gian cho một sự kiện",
+        "partOfSpeech": "verb",
+        "example": "The meeting is scheduled for next Monday."
+    },
+    {
+        "word": "host",
+        "pronounce": "/houst/",
+        "meaning": "để cung cấp địa điểm cho một sự kiện",
+        "partOfSpeech": "verb",
+        "example": "Our city will host the international sports event next year."
+    },
+    {
+        "word": "attend",
+        "pronounce": "/ tend/",
+        "meaning": "có mặt tại một sự kiện",
+        "partOfSpeech": "verb",
+        "example": "Many people are expected to attend the concert."
+    },
+    {
+        "word": "successful",
+        "pronounce": "/sək sesfl/",
+        "meaning": "đã đạt được một mục tiêu hoặc mục tiêu",
+        "partOfSpeech": "adjective",
+        "example": "The fundraising event was very successful."
+    },
+    {
+        "word": "organized",
+        "pronounce": "/'organaızd/",
+        "meaning": "được sắp xếp một cách có hệ thống",
+        "partOfSpeech": "adjective",
+        "example": "The conference was well-organized and informative."
+    },
+    {
+        "word": "memorable",
+        "pronounce": "/ memərəbl/",
+        "meaning": "đáng ghi nhớ",
+        "partOfSpeech": "adjective",
+        "example": "It was a truly memorable occasion."
+    },
+    {
+        "word": "smoothly",
+        "pronounce": "/'smu:õli/",
+        "meaning": "không có vấn đề hoặc khó khăn",
+        "partOfSpeech": "adverb",
+        "example": "The entire event ran smoothly from start to finish."
+    },
+    {
+        "word": "itinerary",
+        "pronounce": "/aı tınə, reri/",
+        "meaning": "một tuyến đường hoặc lịch trình du lịch theo kế hoạch",
+        "partOfSpeech": "noun",
+        "example": "Our travel agent prepared a detailed itinerary for our trip to Europe."
+    },
+    {
+        "word": "passport",
+        "pronounce": "/'pæsport/",
+        "meaning": "một tài liệu chính thức cho du lịch quốc tế",
+        "partOfSpeech": "noun",
+        "example": "Please ensure your passport is valid before traveling abroad."
+    },
+    {
+        "word": "reservation",
+        "pronounce": "/rezer versn/",
+        "meaning": "đặt chỗ cho chuyến đi hoặc chỗ ở",
+        "partOfSpeech": "noun",
+        "example": "I made a hotel reservation for three nights."
+    },
+    {
+        "word": "fare",
+        "pronounce": "/feǝr/",
+        "meaning": "giá vé du lịch",
+        "partOfSpeech": "noun",
+        "example": "The train fare to London has increased recently."
+    },
+    {
+        "word": "depart",
+        "pronounce": "/di'pa:rt/",
+        "meaning": "rời đi, thường là trên một cuộc hành trình",
+        "partOfSpeech": "verb",
+        "example": "The flight is scheduled to depart at 10:00 AM."
+    },
+    {
+        "word": "arrive",
+        "pronounce": "/ raiv/",
+        "meaning": "để đến đích",
+        "partOfSpeech": "verb",
+        "example": "We expect to arrive at our destination by noon."
+    },
+    {
+        "word": "book",
+        "pronounce": "/buk/",
+        "meaning": "để đặt chỗ hoặc cuộc hẹn",
+        "partOfSpeech": "verb",
+        "example": "You should book your flights well in advance."
+    },
+    {
+        "word": "check-in",
+        "pronounce": "/'tſek in/",
+        "meaning": "đăng ký khi đến sân bay hoặc khách sạn",
+        "partOfSpeech": "verb",
+        "example": "Passengers are advised to check-in at least two hours before departure."
+    },
+    {
+        "word": "convenient",
+        "pronounce": "/kən vi:niənt/",
+        "meaning": "dễ sử dụng hoặc truy cập",
+        "partOfSpeech": "adjective",
+        "example": "The hotel is in a very convenient location near the train station."
+    },
+    {
+        "word": "scenic",
+        "pronounce": "/'si:nık/",
+        "meaning": "cung cấp cảnh quan đẹp",
+        "partOfSpeech": "adjective",
+        "example": "We took a scenic route along the coast."
+    },
+    {
+        "word": "comfortable",
+        "pronounce": "/ kamfərtəbl/",
+        "meaning": "mang lại sự thoải mái và thư giãn về thể chất",
+        "partOfSpeech": "adjective",
+        "example": "The train journey was very comfortable."
+    },
+    {
+        "word": "experienced",
+        "pronounce": "/ık'spıəriənst/",
+        "meaning": "trải nghiệm",
+        "partOfSpeech": "adjective",
+        "example": "She is an experienced traveler who has visited many countries."
+    },
+    {
+        "word": "flight",
+        "pronounce": "/flart/",
+        "meaning": "một cuộc hành trình được thực hiện bằng đường hàng không",
+        "partOfSpeech": "noun",
+        "example": "Our flight to New York was delayed by an hour."
+    },
+    {
+        "word": "boarding pass",
+        "pronounce": "/'bo:rdın pæs/",
+        "meaning": "một tài liệu cho phép một hành khách lên máy bay",
+        "partOfSpeech": "noun",
+        "example": "Please have your boarding pass and passport ready at the gate."
+    },
+    {
+        "word": "gate",
+        "pronounce": "/gert/",
+        "meaning": "khu vực nơi hành khách lên máy bay",
+        "partOfSpeech": "noun",
+        "example": "Flight BA2490 is now boarding at gate 17."
+    },
+    {
+        "word": "cabin",
+        "pronounce": "/'kæbin/",
+        "meaning": "nội thất của máy bay",
+        "partOfSpeech": "noun",
+        "example": "Please store your luggage in the overhead cabin."
+    },
+    {
+        "word": "baggage",
+        "pronounce": "/'bægid3/",
+        "meaning": "hành lý du lịch",
+        "partOfSpeech": "noun",
+        "example": "You can collect your baggage from carousel number 4."
+    },
+    {
+        "word": "depart",
+        "pronounce": "/di'pa:rt/",
+        "meaning": "rời đi, thường là từ sân bay",
+        "partOfSpeech": "verb",
+        "example": "The train will depart from platform 2."
+    },
+    {
+        "word": "land",
+        "pronounce": "/lænd/",
+        "meaning": "đến mặt đất từ trên không",
+        "partOfSpeech": "verb",
+        "example": "The plane is expected to land in 30 minutes."
+    },
+    {
+        "word": "check-in",
+        "pronounce": "/'tſek in/",
+        "meaning": "đăng ký tại sân bay trước khi lên máy bay",
+        "partOfSpeech": "verb",
+        "example": "You can check-in online to save time at the airport."
+    },
+    {
+        "word": "board",
+        "pronounce": "/bo:rd/",
+        "meaning": "lên máy bay",
+        "partOfSpeech": "verb",
+        "example": "Passengers are requested to board the aircraft through the front door."
+    },
+    {
+        "word": "take off",
+        "pronounce": "/ terk of/",
+        "meaning": "cất cánh",
+        "partOfSpeech": "verb",
+        "example": "The plane will take off as soon as the runway is clear."
+    },
+    {
+        "word": "domestic",
+        "pronounce": "/də'mestik/",
+        "meaning": "nội địa",
+        "partOfSpeech": "adjective",
+        "example": "The airline offers both domestic and international flights."
+    },
+    {
+        "word": "complimentary",
+        "pronounce": "/komplı mentri/",
+        "meaning": "miên phí",
+        "partOfSpeech": "adjective",
+        "example": "Complimentary drinks and snacks will be served during the flight."
+    },
+    {
+        "word": "on-time",
+        "pronounce": "/'pn taım/",
+        "meaning": "đến hoặc đi đúng giờ đã định",
+        "partOfSpeech": "adjective",
+        "example": "The flight arrived on-time despite the bad weather."
+    },
+    {
+        "word": "vehicle",
+        "pronounce": "/ vi:ǝkl/",
+        "meaning": "một phương tiện giao thông",
+        "partOfSpeech": "noun",
+        "example": "Motor vehicles are a major source of air pollution."
+    },
+    {
+        "word": "route",
+        "pronounce": "/ru:t/",
+        "meaning": "một con đường hoặc khóa học được thực hiện để đạt đến đích",
+        "partOfSpeech": "noun",
+        "example": "Which is the best route to the city center?"
+    },
+    {
+        "word": "fare",
+        "pronounce": "/feǝr/",
+        "meaning": "giá vé đi du lịch",
+        "partOfSpeech": "noun",
+        "example": "The bus fare has increased by 10% this year."
+    },
+    {
+        "word": "passenger",
+        "pronounce": "/'pæsındzə(r)/",
+        "meaning": "hành khách",
+        "partOfSpeech": "noun",
+        "example": "All passengers must wear seatbelts during takeoff and landing."
+    },
+    {
+        "word": "safety",
+        "pronounce": "/'serfti/",
+        "meaning": "sự an toàn",
+        "partOfSpeech": "noun",
+        "example": "Passenger safety is our top priority."
+    },
+    {
+        "word": "railway",
+        "pronounce": "/'reilwer/",
+        "meaning": "đướng sắt",
+        "partOfSpeech": "noun",
+        "example": "A new high-speed railway line is being built."
+    },
+    {
+        "word": "station",
+        "pronounce": "/'stersn/",
+        "meaning": "nhà ga",
+        "partOfSpeech": "noun",
+        "example": "I'll meet you at the train station."
+    },
+    {
+        "word": "transport",
+        "pronounce": "/ trænsport/",
+        "meaning": "mang theo hoặc di chuyển từ nơi này đến nơi khác",
+        "partOfSpeech": "verb",
+        "example": "The goods will be transported by road."
+    },
+    {
+        "word": "transfer",
+        "pronounce": "/ trænsf3:r/",
+        "meaning": "di chuyển từ nơi này đến nơi khác",
+        "partOfSpeech": "verb",
+        "example": "You will need to transfer to a different bus at the next stop."
+    },
+    {
+        "word": "commute",
+        "pronounce": "/kə'mju:t/",
+        "meaning": "đi du lịch thường xuyên đến và đi làm",
+        "partOfSpeech": "verb",
+        "example": "She commutes to work by train every day."
+    },
+    {
+        "word": "high-speed",
+        "pronounce": "/hai 'spi.d/",
+        "meaning": "tốc độ cao",
+        "partOfSpeech": "adjective",
+        "example": "The new high-speed train can travel at over 300 km/h."
+    },
+    {
+        "word": "costly",
+        "pronounce": "/'kpstli/",
+        "meaning": "nhiều tiền",
+        "partOfSpeech": "adjective",
+        "example": "Renovating the old house was a costly project."
+    },
+    {
+        "word": "reservation",
+        "pronounce": "/ rezǝr versn/",
+        "meaning": "đặt phòng hoặc dịch vụ",
+        "partOfSpeech": "noun",
+        "example": "Do you have a reservation for a room tonight?"
+    },
+    {
+        "word": "confirmation",
+        "pronounce": "/ konfər mezfn/",
+        "meaning": "xác minh rằng việc đặt chỗ đã được đảm bảo",
+        "partOfSpeech": "noun",
+        "example": "You will receive a confirmation email shortly after booking."
+    },
+    {
+        "word": "suite",
+        "pronounce": "/swi:t/",
+        "meaning": "một tập hợp các phòng để ở",
+        "partOfSpeech": "noun",
+        "example": "They booked the honeymoon suite for their wedding night."
+    },
+    {
+        "word": "amenities",
+        "pronounce": "/ə'mi:nıtiz/",
+        "meaning": "các tính năng hoặc dịch vụ được cung cấp để mang lại sự thoải mái",
+        "partOfSpeech": "noun",
+        "example": "The hotel offers a wide range of amenities, including a pool and gym."
+    },
+    {
+        "word": "rate",
+        "pronounce": "/rest/",
+        "meaning": "giá chỗ ở",
+        "partOfSpeech": "noun",
+        "example": "What is the nightly rate for a standard room?"
+    },
+    {
+        "word": "accommodation",
+        "pronounce": "/ ə kömə deıfn/",
+        "meaning": "một nơi để ở",
+        "partOfSpeech": "noun",
+        "example": "Finding suitable accommodation can be difficult during peak season."
+    },
+    {
+        "word": "upgrade",
+        "pronounce": "/Ap'greid/",
+        "meaning": "để cải thiện phòng hoặc dịch vụ tốt hơn",
+        "partOfSpeech": "verb",
+        "example": "They decided to upgrade their room to a suite."
+    },
+    {
+        "word": "modify",
+        "pronounce": "/'mpdıfaI/",
+        "meaning": "để thay đổi hoặc điều chỉnh việc đặt chỗ",
+        "partOfSpeech": "verb",
+        "example": "You can modify your booking online up to 24 hours before arrival."
+    },
+    {
+        "word": "inquire",
+        "pronounce": "/ın kwaıər/",
+        "meaning": "để hỏi về tình trạng sẵn có hoặc mức giá",
+        "partOfSpeech": "verb",
+        "example": "I would like to inquire about room availability for next weekend."
+    },
+    {
+        "word": "check-in",
+        "pronounce": "/ tſek in/",
+        "meaning": "đăng ký khi đến nơi",
+        "partOfSpeech": "verb",
+        "example": "You can check-in at the hotel from 2 PM onwards."
+    },
+    {
+        "word": "check-out",
+        "pronounce": "/'tjek aut/",
+        "meaning": "rời đi và thanh toán hóa đơn",
+        "partOfSpeech": "verb",
+        "example": "Guests are requested to check-out by 11 AM."
+    },
+    {
+        "word": "deluxe",
+        "pronounce": "/dı'laks/",
+        "meaning": "chất lượng cao và sang trọng",
+        "partOfSpeech": "adjective",
+        "example": "They stayed in a deluxe room with a sea view."
+    },
+    {
+        "word": "beforehand",
+        "pronounce": "/bi'fo.hænd/",
+        "meaning": "trước đó",
+        "partOfSpeech": "adverb",
+        "example": "It's always a good idea to book your tickets beforehand."
+    },
+    {
+        "word": "rental",
+        "pronounce": "/rental/",
+        "meaning": "một thỏa thuận để thuê một chiếc xe hơi",
+        "partOfSpeech": "noun",
+        "example": "We arranged a car rental for our holiday."
+    },
+    {
+        "word": "damage",
+        "pronounce": "/'dæmid3/",
+        "meaning": "thiệt hại",
+        "partOfSpeech": "noun",
+        "example": "The storm caused considerable damage to property."
+    },
+    {
+        "word": "insurance",
+        "pronounce": "/ın fuərəns/",
+        "meaning": "bảo hiểm cho những thiệt hại hoặc tai nạn",
+        "partOfSpeech": "noun",
+        "example": "It's important to have travel insurance when going abroad."
+    },
+    {
+        "word": "deposit",
+        "pronounce": "/di'pDzIt/",
+        "meaning": "một khoản thanh toán trả trước để đảm bảo tiền thuê",
+        "partOfSpeech": "noun",
+        "example": "You will need to pay a deposit when you rent the car."
+    },
+    {
+        "word": "rent",
+        "pronounce": "/rent/",
+        "meaning": "trả tiền cho việc sử dụng một chiếc xe hơi",
+        "partOfSpeech": "verb",
+        "example": "We decided to rent a car to explore the island."
+    },
+    {
+        "word": "return",
+        "pronounce": "/rı't3:rn/",
+        "meaning": "mang chiếc xe đã thuê về",
+        "partOfSpeech": "verb",
+        "example": "Please return the car with a full tank of gas."
+    },
+    {
+        "word": "pick up",
+        "pronounce": "/pik /",
+        "meaning": "để lấy xe thuê từ một địa điểm cụ thể",
+        "partOfSpeech": "verb",
+        "example": "You can pick up your rental car at the airport."
+    },
+    {
+        "word": "drop off",
+        "pronounce": "/drap pf/",
+        "meaning": "để trả xe thuê tại một địa điểm cụ thể",
+        "partOfSpeech": "verb",
+        "example": "We need to drop off the car at the city center office."
+    },
+    {
+        "word": "compact",
+        "pronounce": "/ kampækt/",
+        "meaning": "nhỏ và tiện lợi khi lái xe trong thành phố",
+        "partOfSpeech": "adjective",
+        "example": "A compact car is easier to park in crowded cities."
+    },
+    {
+        "word": "additional",
+        "pronounce": "/ dışənl/",
+        "meaning": "thêm",
+        "partOfSpeech": "adjective",
+        "example": "There is an additional charge for an extra driver."
+    },
+    {
+        "word": "standard",
+        "pronounce": "/'stændǝd/",
+        "meaning": "tiêu chuẩn",
+        "partOfSpeech": "adjective",
+        "example": "The standard rental agreement includes basic insurance."
+    },
+    {
+        "word": "luxury",
+        "pronounce": "/ Inkfəri/",
+        "meaning": "xa xỉ, đắt tiền",
+        "partOfSpeech": "adjective",
+        "example": "They rented a luxury villa for their vacation."
+    },
+    {
+        "word": "screening",
+        "pronounce": "/'skri:nın/",
+        "meaning": "buổi chiếu một bộ phim",
+        "partOfSpeech": "noun",
+        "example": "There will be a special screening of the director's new film."
+    },
+    {
+        "word": "genre",
+        "pronounce": "/3pnrǝ/",
+        "meaning": "một thể loại phim",
+        "partOfSpeech": "noun",
+        "example": "My favorite movie genre is science fiction."
+    },
+    {
+        "word": "ticket",
+        "pronounce": "/'tıkıt/",
+        "meaning": "một tấm vé cho phép vào xem phim",
+        "partOfSpeech": "noun",
+        "example": "Have you bought your ticket for the movie yet?"
+    },
+    {
+        "word": "plot",
+        "pronounce": "/plot/",
+        "meaning": "cốt truyện của một bộ phim",
+        "partOfSpeech": "noun",
+        "example": "The plot of the movie was quite complicated but engaging."
+    },
+    {
+        "word": "watch",
+        "pronounce": "/wpts/",
+        "meaning": "để xem một bộ phim",
+        "partOfSpeech": "verb",
+        "example": "We decided to watch a comedy last night."
+    },
+    {
+        "word": "direct",
+        "pronounce": "/dı'rekt/",
+        "meaning": "để giám sát việc sản xuất một bộ phim",
+        "partOfSpeech": "verb",
+        "example": "The movie was directed by a famous filmmaker."
+    },
+    {
+        "word": "star",
+        "pronounce": "/sta:r/",
+        "meaning": "để đảm nhận vai chính trong một bộ phim",
+        "partOfSpeech": "verb",
+        "example": "She will star in an upcoming Hollywood blockbuster."
+    },
+    {
+        "word": "premiere",
+        "pronounce": "/prı mıǝr/",
+        "meaning": "để hiển thị lần đầu tiên",
+        "partOfSpeech": "verb",
+        "example": "The new James Bond film will premiere next month."
+    },
+    {
+        "word": "entertaining",
+        "pronounce": "/ inte teının/",
+        "meaning": "cung cấp sự thích thú hoặc giải trí",
+        "partOfSpeech": "adjective",
+        "example": "It was a very entertaining movie with a great cast."
+    },
+    {
+        "word": "captivating",
+        "pronounce": "/'kæptivertin/",
+        "meaning": "thu hút và nắm giữ sự quan tâm",
+        "partOfSpeech": "adjective",
+        "example": "The documentary had a captivating storyline."
+    },
+    {
+        "word": "thrilling",
+        "pronounce": "/'θrɪlɪŋ/",
+        "meaning": "gây ra sự phấn khích hoặc niềm vui",
+        "partOfSpeech": "adjective",
+        "example": "The action movie had some thrilling chase scenes."
+    },
+    {
+        "word": "enjoyably",
+        "pronounce": "/ın'dzorǝbli/",
+        "meaning": "theo cách mang lại sự thích thú",
+        "partOfSpeech": "adverb",
+        "example": "We spent an enjoyably evening watching old films."
+    },
+    {
+        "word": "performance",
+        "pronounce": "/pər'fo:rməns/",
+        "meaning": "một chương trình trực tiếp hoặc vở kich",
+        "partOfSpeech": "noun",
+        "example": "The actor gave an outstanding performance in the play."
+    },
+    {
+        "word": "stage",
+        "pronounce": "/steidz/",
+        "meaning": "khu vực diễn viên biểu diễn",
+        "partOfSpeech": "noun",
+        "example": "The actors walked onto the stage to take their bows."
+    },
+    {
+        "word": "script",
+        "pronounce": "/skript/",
+        "meaning": "văn bản của một vở kịch",
+        "partOfSpeech": "noun",
+        "example": "She spent weeks memorizing her lines from the script."
+    },
+    {
+        "word": "audience",
+        "pronounce": "/ :diəns/",
+        "meaning": "mọi người đang xem buổi biểu diễn",
+        "partOfSpeech": "noun",
+        "example": "The audience applauded enthusiastically at the end of the show."
+    },
+    {
+        "word": "act",
+        "pronounce": "/ækt/",
+        "meaning": "biểu diễn trong một vở kịch",
+        "partOfSpeech": "verb",
+        "example": "He has been acting in theatre productions for over ten years."
+    },
+    {
+        "word": "rehearse",
+        "pronounce": "/rı h3:rs/",
+        "meaning": "để luyện tập biểu diễn",
+        "partOfSpeech": "verb",
+        "example": "The cast will rehearse the play every day this week."
+    },
+    {
+        "word": "direct",
+        "pronounce": "/dı'rekt/",
+        "meaning": "để giám sát việc sản xuất một vở kịch",
+        "partOfSpeech": "verb",
+        "example": "She is going to direct a new adaptation of a classic play."
+    },
+    {
+        "word": "perform",
+        "pronounce": "/pər form/",
+        "meaning": "để trình bày một vở kịch hoặc chương trình",
+        "partOfSpeech": "verb",
+        "example": "The students will perform a Shakespearean play next month."
+    },
+    {
+        "word": "dramatic",
+        "pronounce": "/drǝ mætık/",
+        "meaning": "liên quan đến kịch hoặc sân khấu",
+        "partOfSpeech": "adjective",
+        "example": "She is a member of the university's dramatic society."
+    },
+    {
+        "word": "engaging",
+        "pronounce": "/in geidzin/",
+        "meaning": "thú vị và hấp dẫn",
+        "partOfSpeech": "adjective",
+        "example": "The play was very engaging and held the audience's attention."
+    },
+    {
+        "word": "skilled",
+        "pronounce": "/skıld/",
+        "meaning": "có chuyên môn hoặc khả năng",
+        "partOfSpeech": "adjective",
+        "example": "The theatre company is composed of highly skilled actors."
+    },
+    {
+        "word": "passionately",
+        "pronounce": "/'pæfənətli/",
+        "meaning": "với cảm xúc mạnh mẽ hoặc sự nhiệt tình",
+        "partOfSpeech": "adverb",
+        "example": "She spoke passionately about the importance of live theatre."
+    },
+    {
+        "word": "concert",
+        "pronounce": "/'konsert/",
+        "meaning": "một buổi biểu diễn âm nhạc trực tiếp",
+        "partOfSpeech": "noun",
+        "example": "We bought tickets for the rock concert next Saturday."
+    },
+    {
+        "word": "melody",
+        "pronounce": "/'melədi/",
+        "meaning": "một chuỗi các nốt nhạc",
+        "partOfSpeech": "noun",
+        "example": "The song has a beautiful and memorable melody."
+    },
+    {
+        "word": "rhythm",
+        "pronounce": "/rığəm/",
+        "meaning": "kiểu nhịp trong âm nhạc",
+        "partOfSpeech": "noun",
+        "example": "The drummer kept a steady rhythm throughout the song."
+    },
+    {
+        "word": "genre",
+        "pronounce": "/3pnrǝ/",
+        "meaning": "một thể loại âm nhạc",
+        "partOfSpeech": "noun",
+        "example": "Jazz is his favorite musical genre."
+    },
+    {
+        "word": "perform",
+        "pronounce": "/pər form/",
+        "meaning": "chơi hoặc hát nhạc",
+        "partOfSpeech": "verb",
+        "example": "The band will perform their new songs at the festival."
+    },
+    {
+        "word": "compose",
+        "pronounce": "/kəm pouz/",
+        "meaning": "để tạo ra âm nhạc",
+        "partOfSpeech": "verb",
+        "example": "He composed his first symphony at the age of 20."
+    },
+    {
+        "word": "play",
+        "pronounce": "/plex/",
+        "meaning": "tạo ra âm nhạc bằng một nhạc cụ",
+        "partOfSpeech": "verb",
+        "example": "She can play several musical instruments, including the piano and violin."
+    },
+    {
+        "word": "rehearse",
+        "pronounce": "/r1'h3:rs/",
+        "meaning": "luyện tập âm nhạc",
+        "partOfSpeech": "verb",
+        "example": "The orchestra will rehearse for several hours before the concert."
+    },
+    {
+        "word": "harmonious",
+        "pronounce": "/ha:r morniəs/",
+        "meaning": "làm vui tai",
+        "partOfSpeech": "adjective",
+        "example": "The choir sang in harmonious accord."
+    },
+    {
+        "word": "lively",
+        "pronounce": "/latvli/",
+        "meaning": "tràn đầy năng lượng hoặc hứng thú",
+        "partOfSpeech": "adjective",
+        "example": "The band played a lively tune that got everyone dancing."
+    },
+    {
+        "word": "melodic",
+        "pronounce": "/mə'Indık/",
+        "meaning": "có một âm thanh dễ chịu",
+        "partOfSpeech": "adjective",
+        "example": "The song has a simple but very melodic quality."
+    },
+    {
+        "word": "musically",
+        "pronounce": "/ mjuzikli/",
+        "meaning": "theo cách liên quan đến âm nhạc",
+        "partOfSpeech": "adverb",
+        "example": "She is a very musically talented child."
+    },
+    {
+        "word": "exhibit",
+        "pronounce": "/1g Zıbıt/",
+        "meaning": "trưng bày nghệ thuật hoặc hiện vật",
+        "partOfSpeech": "noun",
+        "example": "The museum is hosting a new exhibit on ancient civilizations."
+    },
+    {
+        "word": "collection",
+        "pronounce": "/kə'lekſən/",
+        "meaning": "một nhóm đối tượng quan tâm",
+        "partOfSpeech": "noun",
+        "example": "He has an impressive collection of rare stamps."
+    },
+    {
+        "word": "artifact",
+        "pronounce": "/'a:rtrfækt/",
+        "meaning": "một đối tượng quan tâm lịch sử",
+        "partOfSpeech": "noun",
+        "example": "Archaeologists discovered several ancient artifacts at the excavation site."
+    },
+    {
+        "word": "curator",
+        "pronounce": "/kju'reıtə(r)/",
+        "meaning": "một người quản lý một bảo tàng",
+        "partOfSpeech": "noun",
+        "example": "The museum curator gave us a tour of the new exhibition."
+    },
+    {
+        "word": "display",
+        "pronounce": "/di'spler/",
+        "meaning": "để hiển thị các mục để xem",
+        "partOfSpeech": "verb",
+        "example": "The paintings will be displayed in the main gallery."
+    },
+    {
+        "word": "organize",
+        "pronounce": "/' :rgənaız/",
+        "meaning": "sắp xếp hoặc thiết lập",
+        "partOfSpeech": "verb",
+        "example": "She helped organize the art exhibition."
+    },
+    {
+        "word": "guide",
+        "pronounce": "/gard/",
+        "meaning": "để dẫn dắt hoặc hướng dẫn du khách",
+        "partOfSpeech": "verb",
+        "example": "A tour guide will guide you through the historic parts of the city."
+    },
+    {
+        "word": "present",
+        "pronounce": "/pri zent/",
+        "meaning": "để hiển thị hoặc triển lãm",
+        "partOfSpeech": "verb",
+        "example": "The museum will present a retrospective of the artist's work."
+    },
+    {
+        "word": "educational",
+        "pronounce": "/ɛdzu kerſenl/",
+        "meaning": "cung cấp kiến thức hoặc học tập",
+        "partOfSpeech": "adjective",
+        "example": "The museum offers various educational programs for children."
+    },
+    {
+        "word": "interactive",
+        "pronounce": "/ Inter æktıv/",
+        "meaning": "liên quan đến sự tham gia tích cực",
+        "partOfSpeech": "adjective",
+        "example": "The science museum has many interactive exhibits."
+    },
+    {
+        "word": "historic",
+        "pronounce": "/historik/",
+        "meaning": "liên quan đến lịch sử",
+        "partOfSpeech": "adjective",
+        "example": "The building is a designated historic landmark."
+    },
+    {
+        "word": "culturally",
+        "pronounce": "/kaltfərəli/",
+        "meaning": "theo cách liên quan đến văn hóa",
+        "partOfSpeech": "adverb",
+        "example": "The festival aims to promote culturally diverse performances."
+    },
+    {
+        "word": "journalism",
+        "pronounce": "/d33:rnəlızəm/",
+        "meaning": "hoạt động đưa tin",
+        "partOfSpeech": "noun",
+        "example": "She studied journalism at university and now works for a national newspaper."
+    },
+    {
+        "word": "broadcast",
+        "pronounce": "/'bro:dkæst/",
+        "meaning": "truyền tải thông tin hoặc giải trí",
+        "partOfSpeech": "verb",
+        "example": "The news will be broadcast live on television and radio."
+    },
+    {
+        "word": "press",
+        "pronounce": "/pres/",
+        "meaning": "báo chí và các phương tiện truyền thông khác",
+        "partOfSpeech": "noun",
+        "example": "The event received widespread coverage in the press."
+    },
+    {
+        "word": "publication",
+        "pronounce": "/pablı kerſn/",
+        "meaning": "một tài liệu in hoặc trực tuyến",
+        "partOfSpeech": "noun",
+        "example": "She is the editor of a well-known fashion publication."
+    },
+    {
+        "word": "report",
+        "pronounce": "/rı'po.rt/",
+        "meaning": "để cung cấp thông tin",
+        "partOfSpeech": "verb",
+        "example": "The journalist will report on the latest political developments."
+    },
+    {
+        "word": "interview",
+        "pronounce": "/'intervju:/",
+        "meaning": "hỏi ai đó để biết thông tin",
+        "partOfSpeech": "verb",
+        "example": "She is going to interview a famous actor for the magazine."
+    },
+    {
+        "word": "edit",
+        "pronounce": "/'edit/",
+        "meaning": "chuẩn bị tài liệu để xuất bản",
+        "partOfSpeech": "verb",
+        "example": "The editor will edit the article before it is published."
+    },
+    {
+        "word": "cover",
+        "pronounce": "/'kʌver/",
+        "meaning": "để báo cáo về một câu chuyện tin tức",
+        "partOfSpeech": "verb",
+        "example": "The newspaper will cover the election campaign extensively."
+    },
+    {
+        "word": "overload",
+        "pronounce": "/ˌoʊvərˈloʊd/",
+        "meaning": "quả tải",
+        "partOfSpeech": "verb",
+        "example": "Don't overload the washing machine, or it won't clean properly."
+    },
+    {
+        "word": "in-depth",
+        "pronounce": "/ in 'depe/",
+        "meaning": "sâu sắc",
+        "partOfSpeech": "adjective",
+        "example": "The newspaper provided an in-depth analysis of the economic situation."
+    },
+    {
+        "word": "informative",
+        "pronounce": "/ın formatıv/",
+        "meaning": "cung cấp thông tin hữu ích hoặc thú vị",
+        "partOfSpeech": "adjective",
+        "example": "The documentary was very informative and well-researched."
+    },
+    {
+        "word": "unbiased",
+        "pronounce": "/ʌn'barest/",
+        "meaning": "vô tư và không bị ảnh hưởng bởi cảm xúc cá nhân",
+        "partOfSpeech": "adjective",
+        "example": "Journalists should strive to provide unbiased reporting."
+    },
+    {
+        "word": "appointment",
+        "pronounce": "/ ə'pointment/",
+        "meaning": "một cuộc hẹn đã được lên lịch với bác sĩ",
+        "partOfSpeech": "noun",
+        "example": "I have a doctor's appointment at 3 PM tomorrow."
+    },
+    {
+        "word": "examination",
+        "pronounce": "/1g zæmı nerfn/",
+        "meaning": "kiểm tra y tế",
+        "partOfSpeech": "noun",
+        "example": "The doctor performed a thorough examination to diagnose the problem."
+    },
+    {
+        "word": "prescription",
+        "pronounce": "/pri'skrıpfn/",
+        "meaning": "giấy yêu cầu dùng thuốc của bác sĩ",
+        "partOfSpeech": "noun",
+        "example": "The doctor gave me a prescription for antibiotics."
+    },
+    {
+        "word": "diagnosis",
+        "pronounce": "/darǝg nousıS/",
+        "meaning": "xác định một căn bệnh",
+        "partOfSpeech": "noun",
+        "example": "Early diagnosis is crucial for effective treatment."
+    },
+    {
+        "word": "consult",
+        "pronounce": "/kən salt/",
+        "meaning": "để tìm kiếm lời khuyên hoặc điều trị",
+        "partOfSpeech": "verb",
+        "example": "You should consult your doctor if the symptoms persist."
+    },
+    {
+        "word": "treat",
+        "pronounce": "/tri:t/",
+        "meaning": "để cung cấp dịch vụ chăm sóc y tế",
+        "partOfSpeech": "verb",
+        "example": "The doctor will treat your injury with a special ointment."
+    },
+    {
+        "word": "examine",
+        "pronounce": "/1g zæmın/",
+        "meaning": "để kiểm tra hoặc điều tra",
+        "partOfSpeech": "verb",
+        "example": "The doctor needs to examine the patient to determine the cause of the pain."
+    },
+    {
+        "word": "prescribe",
+        "pronounce": "/pri skraib/",
+        "meaning": "giới thiệu thuốc",
+        "partOfSpeech": "verb",
+        "example": "The doctor may prescribe medication if necessary."
+    },
+    {
+        "word": "professional",
+        "pronounce": "/prǝ fefənl/",
+        "meaning": "liên quan đến một nghề nghiệp hoặc chuyên môn",
+        "partOfSpeech": "adjective",
+        "example": "It's important to seek professional medical advice."
+    },
+    {
+        "word": "thorough",
+        "pronounce": "/03:Γου/",
+        "meaning": "chi tiết và đầy đủ",
+        "partOfSpeech": "adjective",
+        "example": "The patient underwent a thorough medical check-up."
+    },
+    {
+        "word": "attentive",
+        "pronounce": "/ǝ'tentiv/",
+        "meaning": "chú ý kỹ",
+        "partOfSpeech": "adjective",
+        "example": "The nurses were very attentive to the patient's needs."
+    },
+    {
+        "word": "infected",
+        "pronounce": "/ın fektid/",
+        "meaning": "bị lây nhiễm",
+        "partOfSpeech": "adjective",
+        "example": "The wound became infected and required antibiotics."
+    },
+    {
+        "word": "appointment",
+        "pronounce": "/ə'pointment/",
+        "meaning": "một chuyến thăm theo lịch trình với một nha sĩ",
+        "partOfSpeech": "noun",
+        "example": "I need to make a dental appointment for a check-up."
+    },
+    {
+        "word": "cavity",
+        "pronounce": "/'kæviti/",
+        "meaning": "một khu vực bị hư hỏng trong răng",
+        "partOfSpeech": "noun",
+        "example": "The dentist found a small cavity in one of my teeth."
+    },
+    {
+        "word": "cleaning",
+        "pronounce": "/'kli:nın/",
+        "meaning": "loại bỏ mảng bám và cao răng",
+        "partOfSpeech": "noun",
+        "example": "Regular dental cleanings help prevent gum disease."
+    },
+    {
+        "word": "extraction",
+        "pronounce": "/ık'strækfən/",
+        "meaning": "loại bỏ một chiếc răng",
+        "partOfSpeech": "noun",
+        "example": "The patient needed a tooth extraction due to severe decay."
+    },
+    {
+        "word": "examine",
+        "pronounce": "/1g'zæmın/",
+        "meaning": "để kiểm tra tình trạng răng",
+        "partOfSpeech": "verb",
+        "example": "The dentist will examine your teeth for any problems."
+    },
+    {
+        "word": "fill",
+        "pronounce": "/fil/",
+        "meaning": "phục hồi răng bằng vật liệu",
+        "partOfSpeech": "verb",
+        "example": "The dentist needs to fill the cavity to prevent further decay."
+    },
+    {
+        "word": "extract",
+        "pronounce": "/'ekstrækt/",
+        "meaning": "lấy ra, nhổ ra",
+        "partOfSpeech": "verb",
+        "example": "The dentist had to extract a wisdom tooth."
+    },
+    {
+        "word": "clean",
+        "pronounce": "/kli:n/",
+        "meaning": "để loại bỏ bụi bẩn hoặc mảnh vụn",
+        "partOfSpeech": "verb",
+        "example": "The dental hygienist will clean and polish your teeth."
+    },
+    {
+        "word": "implant",
+        "pronounce": "/Im'pla:nt/",
+        "meaning": "cấy ghép",
+        "partOfSpeech": "noun",
+        "example": "Dental implants are a common solution for missing teeth."
+    },
+    {
+        "word": "policy",
+        "pronounce": "/'polisi/",
+        "meaning": "hợp đồng bảo hiểm bằng văn bản",
+        "partOfSpeech": "noun",
+        "example": "Please review the terms and conditions of your insurance policy."
+    },
+    {
+        "word": "coverage",
+        "pronounce": "/'kaveridz/",
+        "meaning": "sự bảo vệ được cung cấp bởi bảo hiểm",
+        "partOfSpeech": "noun",
+        "example": "Does your health insurance provide international coverage?"
+    },
+    {
+        "word": "premium",
+        "pronounce": "/'pri:miǝm/",
+        "meaning": "số tiền đã trả cho bảo hiểm",
+        "partOfSpeech": "noun",
+        "example": "The monthly premium for this insurance plan is quite high."
+    },
+    {
+        "word": "claim",
+        "pronounce": "/kleim/",
+        "meaning": "yêu cầu thanh toán từ hiểm",
+        "partOfSpeech": "noun",
+        "example": "She submitted an insurance claim for the damage to her car."
+    },
+    {
+        "word": "deductible",
+        "pronounce": "/dı'daktəbl/",
+        "meaning": "phần yêu cầu bồi thường bảo hiểm mà một người phải trả trong khi công ty bảo hiểm trả phần còn lại",
+        "partOfSpeech": "noun",
+        "example": "My car insurance policy has a $500 deductible."
+    },
+    {
+        "word": "insure",
+        "pronounce": "/ın fuǝr/",
+        "meaning": "để cung cấp sự bảo vệ tài chính",
+        "partOfSpeech": "verb",
+        "example": "It's important to insure your home against fire and theft."
+    },
+    {
+        "word": "reimburse",
+        "pronounce": "/ri:zm'b3:rs/",
+        "meaning": "để trả lại số tiền đã bỏ ra",
+        "partOfSpeech": "verb",
+        "example": "The company will reimburse you for your travel expenses."
+    },
+    {
+        "word": "cover",
+        "pronounce": "/kavǝr/",
+        "meaning": "đưa vào bảo hiểm",
+        "partOfSpeech": "verb",
+        "example": "Does this insurance policy cover dental treatments?"
+    },
+    {
+        "word": "enroll",
+        "pronounce": "/in roul/",
+        "meaning": "để đăng ký bảo hiểm",
+        "partOfSpeech": "verb",
+        "example": "You can enroll in the company's health insurance plan during the open enrollment period."
+    },
+    {
+        "word": "comprehensive",
+        "pronounce": "/ komprı hansıv/",
+        "meaning": "đáp ứng nhiều nhu cầu",
+        "partOfSpeech": "adjective",
+        "example": "They offer a comprehensive insurance package that covers all major risks."
+    },
+    {
+        "word": "qualified",
+        "pronounce": "/'kwplıfard/",
+        "meaning": "đủ điều kiện",
+        "partOfSpeech": "adjective",
+        "example": "You may be qualified for a discount on your insurance premium."
+    },
+    {
+        "word": "allowable",
+        "pronounce": "/ə'lavəbl/",
+        "meaning": "được cho phép bởi luật, quy định,",
+        "partOfSpeech": "adjective",
+        "example": "The insurance company will only pay for allowable expenses."
+    },
+    {
+        "word": "emergency",
+        "pronounce": "/1 m3:rdzənsi/",
+        "meaning": "một tình huống nghiêm trọng cần được chăm sóc ngay lập tức",
+        "partOfSpeech": "noun",
+        "example": "In case of an emergency, please call this number."
+    },
+    {
+        "word": "ward",
+        "pronounce": "/word/",
+        "meaning": "một bộ phận của bệnh viện dành cho bệnh nhân",
+        "partOfSpeech": "noun",
+        "example": "He is recovering in the surgical ward of the hospital."
+    },
+    {
+        "word": "admission",
+        "pronounce": "/ǝd'mıfən/",
+        "meaning": "quá trình được chấp nhận vào bệnh viện",
+        "partOfSpeech": "noun",
+        "example": "The hospital's admission process was very efficient."
+    },
+    {
+        "word": "treatment",
+        "pronounce": "/tri:tmənt/",
+        "meaning": "chăm sóc y tế được cung cấp cho bệnh nhân",
+        "partOfSpeech": "noun",
+        "example": "She is receiving treatment for a serious illness."
+    },
+    {
+        "word": "admit",
+        "pronounce": "/ǝd mit/",
+        "meaning": "tiếp nhận một bệnh nhân vào bệnh viện",
+        "partOfSpeech": "verb",
+        "example": "The patient was admitted to the hospital with a high fever."
+    },
+    {
+        "word": "discharge",
+        "pronounce": "/dıs'tfa rd3/",
+        "meaning": "đưa một bệnh nhân ra khỏi bệnh viện",
+        "partOfSpeech": "verb",
+        "example": "The doctor said he could be discharged from the hospital tomorrow."
+    },
+    {
+        "word": "diagnose",
+        "pronounce": "/ dareg nouz/",
+        "meaning": "để xác định tình trạng bệnh lý",
+        "partOfSpeech": "verb",
+        "example": "The doctor was unable to diagnose the cause of her symptoms."
+    },
+    {
+        "word": "immunize",
+        "pronounce": "/'Imjunaız/",
+        "meaning": "để bảo vệ một người hoặc một con vật khỏi bệnh tật, đặc biệt là bằng cách tiêm vắc-xin cho họ",
+        "partOfSpeech": "verb",
+        "example": "Children are usually immunized against common diseases."
+    },
+    {
+        "word": "allergic",
+        "pronounce": "/ə'l3:dzık/",
+        "meaning": "dị ứng",
+        "partOfSpeech": "adjective",
+        "example": "She is allergic to nuts and seafood."
+    },
+    {
+        "word": "abnormal",
+        "pronounce": "/æb no:ml/",
+        "meaning": "bất thường",
+        "partOfSpeech": "adjective",
+        "example": "The test results showed some abnormal readings."
+    },
+    {
+        "word": "clinical",
+        "pronounce": "/ klınıkl/",
+        "meaning": "liên quan đến chăm sóc và điều trị bệnh nhân",
+        "partOfSpeech": "adjective",
+        "example": "The new drug is undergoing clinical trials."
+    },
+    {
+        "word": "specialized",
+        "pronounce": "/ speşəlaızd/",
+        "meaning": "tập trung vào một lĩnh vực y học cụ thể",
+        "partOfSpeech": "adjective",
+        "example": "He is a specialized surgeon in heart conditions."
+    },
+    {
+        "word": "prescription",
+        "pronounce": "/pri skripsn/",
+        "meaning": "văn bản yêu cầu dùng thuốc",
+        "partOfSpeech": "noun",
+        "example": "You can get your prescription filled at any pharmacy."
+    },
+    {
+        "word": "medication",
+        "pronounce": "/ medi kerſen/",
+        "meaning": "thuốc dùng để điều trị bệnh",
+        "partOfSpeech": "noun",
+        "example": "He is taking medication for his high blood pressure."
+    },
+    {
+        "word": "pharmacist",
+        "pronounce": "/'fa:rməsıst/",
+        "meaning": "một chuyên gia phân phát thuốc",
+        "partOfSpeech": "noun",
+        "example": "The pharmacist can advise you on over-the-counter medications."
+    },
+    {
+        "word": "dosage",
+        "pronounce": "/'dousId3/",
+        "meaning": "số lượng thuốc cần dùng",
+        "partOfSpeech": "noun",
+        "example": "It's important to follow the correct dosage instructions."
+    },
+    {
+        "word": "dispense",
+        "pronounce": "/dis'pens/",
+        "meaning": "đưa thuốc",
+        "partOfSpeech": "verb",
+        "example": "The pharmacy will dispense your medication upon receiving the prescription."
+    },
+    {
+        "word": "administer",
+        "pronounce": "/ǝd'mınıstər/",
+        "meaning": "đưa thuốc cho bệnh nhân",
+        "partOfSpeech": "verb",
+        "example": "The nurse will administer the injection."
+    },
+    {
+        "word": "refill",
+        "pronounce": "/rı'fil/",
+        "meaning": "để bổ sung một đơn thuốc",
+        "partOfSpeech": "verb",
+        "example": "You can request a prescription refill online."
+    },
+    {
+        "word": "discontinue",
+        "pronounce": "/ dıskən'tınju:/",
+        "meaning": "ngừng lại nếu có gì bất thường",
+        "partOfSpeech": "verb",
+        "example": "You should discontinue use if you experience any adverse side effects."
+    },
+    {
+        "word": "accurate",
+        "pronounce": "/'ækjurət/",
+        "meaning": "chính xác và đúng đắn",
+        "partOfSpeech": "adjective",
+        "example": "It is crucial for pharmacists to provide accurate medication."
+    },
+    {
+        "word": "over-the-counter",
+        "pronounce": "/ouvərdə kaunter/",
+        "meaning": "có sẵn mà không cần toa",
+        "partOfSpeech": "adjective",
+        "example": "You can buy many pain relievers over-the-counter."
+    },
+    {
+        "word": "essential",
+        "pronounce": "/1'senfǝl/",
+        "meaning": "cần thiết và quan trọng",
+        "partOfSpeech": "adjective",
+        "example": "Vitamins are essential for good health."
+    },
+    {
+        "word": "safely",
+        "pronounce": "/'serfli/",
+        "meaning": "theo cách tránh gây hại",
+        "partOfSpeech": "adverb",
+        "example": "Always store medications safely out of reach of children."
+    }
+]

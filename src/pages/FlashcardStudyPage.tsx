@@ -16,7 +16,6 @@ const FlashcardStudyPage: React.FC = () => {
     isLoading, 
     error,
     nextCard,
-    prevCard,
     shuffleCards,
     markCard,
     isFlipped,
@@ -33,6 +32,8 @@ const FlashcardStudyPage: React.FC = () => {
     knownCards: 0,
     skippedCards: 0
   });
+  const [showInstructions, setShowInstructions] = useState(true);
+  const [swipeCount, setSwipeCount] = useState(0);
 
   // Record study time
   useEffect(() => {
@@ -55,6 +56,16 @@ const FlashcardStudyPage: React.FC = () => {
     };
   }, [currentUser, startTime, studySessionTime]);
 
+  const handleSwipeAction = () => {
+    const newSwipeCount = swipeCount + 1;
+    setSwipeCount(newSwipeCount);
+    
+    // Auto-hide instructions after 3 swipes
+    if (newSwipeCount >= 3 && showInstructions) {
+      setShowInstructions(false);
+    }
+  };
+
   const checkIfSessionCompleted = () => {
     // Check if we've reached the end of flashcards
     if (currentIndex >= flashcards.length - 1) {
@@ -70,6 +81,8 @@ const FlashcardStudyPage: React.FC = () => {
 
   const handleDifficult = async (word: VocabularyWord) => {
     if (!currentUser) return;
+    
+    handleSwipeAction(); // Track swipe for instruction auto-hide
     
     try {
       // Not well memorized - use performance 'difficult'
@@ -99,6 +112,8 @@ const FlashcardStudyPage: React.FC = () => {
   const handleKnown = async (word: VocabularyWord) => {
     if (!currentUser) return;
     
+    handleSwipeAction(); // Track swipe for instruction auto-hide
+    
     try {
       // Already memorized - use performance 'ok'
       await updateWordMasteryWithPerformance(currentUser.uid, word.id, 'ok');
@@ -126,6 +141,8 @@ const FlashcardStudyPage: React.FC = () => {
 
   const handleSkip = async (word: VocabularyWord) => {
     if (!currentUser) return;
+    
+    handleSwipeAction(); // Track swipe for instruction auto-hide
     
     try {
       // Already know this word, skip - use performance 'easy'
@@ -168,7 +185,7 @@ const FlashcardStudyPage: React.FC = () => {
           onClick={() => navigate('/')} 
           className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
-          Return to Dashboard
+          Return to Home
         </button>
       </div>
     );
@@ -244,6 +261,9 @@ const FlashcardStudyPage: React.FC = () => {
                   knownCards: 0,
                   skippedCards: 0
                 });
+                // Reset instruction panel state for new session
+                setShowInstructions(true);
+                setSwipeCount(0);
                 // Reset to first card for new session using SPA-friendly method
                 resetSession();
               }}
@@ -256,12 +276,6 @@ const FlashcardStudyPage: React.FC = () => {
               className="px-6 py-3 bg-gray-500 hover:bg-gray-600 text-white rounded-md font-medium text-sm transition-colors"
             >
               Back to Home
-            </button>
-            <button 
-              onClick={() => navigate('/add-word')}
-              className="px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-md font-medium text-sm transition-colors"
-            >
-              Add More Words
             </button>
           </div>
         </div>
@@ -284,7 +298,7 @@ const FlashcardStudyPage: React.FC = () => {
             onClick={() => navigate('/')}
             className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
-            Back to Dashboard
+            Back to Home
           </button>
         </div>
       </div>
@@ -296,22 +310,33 @@ const FlashcardStudyPage: React.FC = () => {
       </div>
 
       <div className="flex justify-center mb-6">
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center max-w-2xl">
-          <p className="text-sm text-blue-700 mb-2">
-            💡 <strong>Hướng dẫn:</strong> Click để lật thẻ
-          </p>
-          <div className="grid grid-cols-3 gap-2 text-xs text-blue-600">
-            <div className="bg-red-100 p-2 rounded">
-              <span className="text-red-700">← Trái:</span> Chưa nhớ kỹ
-            </div>
-            <div className="bg-green-100 p-2 rounded">
-              <span className="text-green-700">→ Phải:</span> Đã nhớ
-            </div>
-            <div className="bg-gray-100 p-2 rounded">
-              <span className="text-gray-700">↑ Lên:</span> Bỏ qua
+        {showInstructions && (
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center max-w-2xl relative">
+            <button
+              onClick={() => setShowInstructions(false)}
+              className="absolute top-2 right-2 text-blue-400 hover:text-blue-600 transition-colors cursor-pointer"
+              aria-label="Hide instructions"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <p className="text-sm text-blue-700 mb-2">
+              💡 <strong>Hướng dẫn:</strong> Click để lật thẻ
+            </p>
+            <div className="grid grid-cols-3 gap-2 text-xs text-blue-600">
+              <div className="bg-red-100 p-2 rounded">
+                <span className="text-red-700">← Trái:</span> Chưa nhớ kỹ
+              </div>
+              <div className="bg-green-100 p-2 rounded">
+                <span className="text-green-700">→ Phải:</span> Đã nhớ
+              </div>
+              <div className="bg-gray-100 p-2 rounded">
+                <span className="text-gray-700">↑ Lên:</span> Bỏ qua
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
 
       <div className="flex justify-center">
@@ -328,33 +353,6 @@ const FlashcardStudyPage: React.FC = () => {
               onSwipeRight={() => handleKnown(currentWord)}      // Already memorized
               onSwipeUp={() => handleSkip(currentWord)}          // Skip
             />
-          )}
-        </div>
-      </div>
-
-      <div className="mt-8 flex justify-between">
-        <div className="flex space-x-3 justify-center w-full">
-          {currentWord && (
-            <>
-              <button 
-                onClick={() => handleDifficult(currentWord)}
-                className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md font-medium text-sm"
-              >
-                ← Chưa nhớ kỹ
-              </button>
-              <button 
-                onClick={() => handleSkip(currentWord)}
-                className="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-md font-medium text-sm"
-              >
-                ↑ Bỏ qua
-              </button>
-              <button 
-                onClick={() => handleKnown(currentWord)}
-                className="px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-md font-medium text-sm"
-              >
-                → Đã nhớ
-              </button>
-            </>
           )}
         </div>
       </div>

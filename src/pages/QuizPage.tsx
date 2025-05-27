@@ -213,7 +213,7 @@ const QuizPage: React.FC = () => {
               onClick={() => navigate('/')} 
               className="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-md"
             >
-              Back to Dashboard
+              Back to Home
             </button>
           </div>
         </div>
@@ -231,7 +231,7 @@ const QuizPage: React.FC = () => {
           onClick={() => navigate('/')}
           className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
         >
-          Back to Dashboard
+          Back to Home
         </button>
       </div>
 

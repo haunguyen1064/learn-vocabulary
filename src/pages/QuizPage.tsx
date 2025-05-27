@@ -180,7 +180,7 @@ const QuizPage: React.FC = () => {
     const percentage = Math.round((score / questions.length) * 100);
     
     return (
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-4">
         <div className="max-w-lg mx-auto bg-white rounded-xl shadow-md p-8">
           <h2 className="text-2xl font-bold text-center mb-6">Quiz Results</h2>
           
@@ -224,7 +224,7 @@ const QuizPage: React.FC = () => {
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-4">
       <div className="mb-6 flex flex-col sm:flex-row justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-800 mb-4 sm:mb-0">Vocabulary Quiz</h1>
         <button 

@@ -181,7 +181,7 @@ const CollectionsPage: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-4">
       <div className="mb-6 flex flex-col sm:flex-row justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-800 mb-4 sm:mb-0">My Vocabulary Collections</h1>
         <div className="flex space-x-4">

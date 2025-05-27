@@ -12,7 +12,6 @@ const FlashcardStudyPage: React.FC = () => {
   const { 
     flashcards, 
     currentIndex, 
-    totalFlashcards, 
     isLoading, 
     error,
     nextCard,
@@ -20,6 +19,8 @@ const FlashcardStudyPage: React.FC = () => {
     markCard,
     isFlipped,
     flipCard,
+    removeFromSelectedFlashcards,
+    removeMasteredWordFromSession,
     resetSession
   } = useFlashcards();
 
@@ -56,6 +57,16 @@ const FlashcardStudyPage: React.FC = () => {
     };
   }, [currentUser, startTime, studySessionTime]);
 
+  // Initialize total cards count when flashcards are loaded
+  useEffect(() => {
+    if (flashcards.length > 0 && completionStats.totalCards === 0) {
+      setCompletionStats(prev => ({
+        ...prev,
+        totalCards: flashcards.length
+      }));
+    }
+  }, [flashcards.length, completionStats.totalCards]);
+
   const handleSwipeAction = () => {
     const newSwipeCount = swipeCount + 1;
     setSwipeCount(newSwipeCount);
@@ -63,19 +74,6 @@ const FlashcardStudyPage: React.FC = () => {
     // Auto-hide instructions after 3 swipes
     if (newSwipeCount >= 3 && showInstructions) {
       setShowInstructions(false);
-    }
-  };
-
-  const checkIfSessionCompleted = () => {
-    // Check if we've reached the end of flashcards
-    if (currentIndex >= flashcards.length - 1) {
-      setIsSessionCompleted(true);
-      
-      // Update final stats
-      setCompletionStats(prev => ({
-        ...prev,
-        totalCards: flashcards.length
-      }));
     }
   };
 
@@ -92,18 +90,23 @@ const FlashcardStudyPage: React.FC = () => {
       const newMasteryLevel = Math.max(0, word.masteryLevel - 1);
       markCard(word.id, newMasteryLevel);
       
-      // Update stats
-      setCompletionStats(prev => ({
-        ...prev,
-        difficultCards: prev.difficultCards + 1
-      }));
-      
-      // Check if session completed before moving to next card
-      if (currentIndex >= flashcards.length - 1) {
-        checkIfSessionCompleted();
-      } else {
-        nextCard();
-      }
+      // Update stats and check completion
+      setCompletionStats(prev => {
+        const newStats = {
+          ...prev,
+          difficultCards: prev.difficultCards + 1
+        };
+        
+        // Check if session completed with new stats
+        const totalProcessedCards = newStats.difficultCards + newStats.knownCards + newStats.skippedCards;
+        if (totalProcessedCards >= newStats.totalCards || flashcards.length === 0) {
+          setTimeout(() => setIsSessionCompleted(true), 0);
+        } else {
+          setTimeout(() => nextCard(), 0);
+        }
+        
+        return newStats;
+      });
     } catch (err) {
       console.error('Error marking word as difficult:', err);
     }
@@ -122,18 +125,23 @@ const FlashcardStudyPage: React.FC = () => {
       const newMasteryLevel = Math.min(5, word.masteryLevel + 1);
       markCard(word.id, newMasteryLevel);
       
-      // Update stats
-      setCompletionStats(prev => ({
-        ...prev,
-        knownCards: prev.knownCards + 1
-      }));
-      
-      // Check if session completed before moving to next card
-      if (currentIndex >= flashcards.length - 1) {
-        checkIfSessionCompleted();
-      } else {
-        nextCard();
-      }
+      // Update stats and check completion
+      setCompletionStats(prev => {
+        const newStats = {
+          ...prev,
+          knownCards: prev.knownCards + 1
+        };
+        
+        // Check if session completed with new stats
+        const totalProcessedCards = newStats.difficultCards + newStats.knownCards + newStats.skippedCards;
+        if (totalProcessedCards >= newStats.totalCards || flashcards.length === 0) {
+          setTimeout(() => setIsSessionCompleted(true), 0);
+        } else {
+          setTimeout(() => nextCard(), 0);
+        }
+        
+        return newStats;
+      });
     } catch (err) {
       console.error('Error marking word as known:', err);
     }
@@ -151,18 +159,28 @@ const FlashcardStudyPage: React.FC = () => {
       // Mark card as updated (set to mastered)
       markCard(word.id, 5);
       
-      // Update stats
-      setCompletionStats(prev => ({
-        ...prev,
-        skippedCards: prev.skippedCards + 1
-      }));
+      // Remove from selected flashcards since it's now mastered
+      removeFromSelectedFlashcards(word.id);
       
-      // Check if session completed before moving to next card
-      if (currentIndex >= flashcards.length - 1) {
-        checkIfSessionCompleted();
-      } else {
-        nextCard();
-      }
+      // Remove the mastered word from current session
+      removeMasteredWordFromSession(word.id);
+      
+      // Update stats and check completion
+      setCompletionStats(prev => {
+        const newStats = {
+          ...prev,
+          skippedCards: prev.skippedCards + 1
+        };
+        
+        // Check if session completed with new stats
+        const totalProcessedCards = newStats.difficultCards + newStats.knownCards + newStats.skippedCards;
+        if (totalProcessedCards >= newStats.totalCards) {
+          setTimeout(() => setIsSessionCompleted(true), 0);
+        }
+        // Note: Don't call nextCard() here since removeMasteredWordFromSession handles index adjustment
+        
+        return newStats;
+      });
     } catch (err) {
       console.error('Error skipping word:', err);
     }
@@ -211,7 +229,7 @@ const FlashcardStudyPage: React.FC = () => {
   // Show completion screen if session is completed
   if (isSessionCompleted) {
     return (
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-4">
         <div className="max-w-2xl mx-auto text-center">
           {/* Completion Header */}
           <div className="mb-8">
@@ -253,7 +271,7 @@ const FlashcardStudyPage: React.FC = () => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
-              onClick={() => {
+              onClick={async () => {
                 setIsSessionCompleted(false);
                 setCompletionStats({
                   totalCards: 0,
@@ -265,7 +283,7 @@ const FlashcardStudyPage: React.FC = () => {
                 setShowInstructions(true);
                 setSwipeCount(0);
                 // Reset to first card for new session using SPA-friendly method
-                resetSession();
+                await resetSession();
               }}
               className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md font-medium text-sm transition-colors"
             >
@@ -284,7 +302,7 @@ const FlashcardStudyPage: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-4">
       <div className="mb-6 flex flex-col sm:flex-row justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-800 mb-4 sm:mb-0">Study Flashcards</h1>
         <div className="flex space-x-4">
@@ -305,7 +323,7 @@ const FlashcardStudyPage: React.FC = () => {
 
       <div className="flex justify-center mb-4">
         <span className="text-sm text-gray-600">
-          Card {currentIndex + 1} of {totalFlashcards}
+          Card {Math.min((completionStats.difficultCards + completionStats.knownCards + completionStats.skippedCards) + 1, completionStats.totalCards)} of {completionStats.totalCards}
         </span>
       </div>
 
@@ -362,7 +380,11 @@ const FlashcardStudyPage: React.FC = () => {
         <div className="mt-2 h-2 bg-gray-200 rounded-full">
           <div 
             className="h-2 bg-indigo-600 rounded-full"
-            style={{ width: `${((currentIndex + 1) / totalFlashcards) * 100}%` }}
+            style={{ 
+              width: `${completionStats.totalCards > 0 
+                ? Math.min(((completionStats.difficultCards + completionStats.knownCards + completionStats.skippedCards) / completionStats.totalCards) * 100, 100)
+                : 0}%` 
+            }}
           ></div>
         </div>
         <p className="mt-2 text-sm text-gray-600">

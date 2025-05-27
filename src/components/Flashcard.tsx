@@ -48,7 +48,6 @@ const Flashcard: React.FC<FlashcardProps> = ({
             <div className="inline-block px-2 py-1 rounded-full bg-indigo-100 text-indigo-800 text-sm mb-4">
               {word.partOfSpeech}
             </div>
-            <p className="text-gray-700 text-center">{word.meaning}</p>
             
             {/* Selection checkbox */}
             {onSelect && (
@@ -71,10 +70,23 @@ const Flashcard: React.FC<FlashcardProps> = ({
           </div>
           
           {/* Back side of the card */}
-          <div  className="absolute w-full h-full rounded-xl p-6 flex flex-col justify-center items-center bg-indigo-600 text-white"
+          <div  className="absolute w-full h-full rounded-xl p-4 flex flex-col justify-center items-center bg-indigo-600 text-white"
               style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
-            <p className="text-lg mb-2">Example:</p>
-            <p className="text-white italic">"{word.example}"</p>
+            <div className="text-center space-y-4 max-w-full">
+              {/* Meaning section */}
+              <div className="bg-white/10 rounded-lg p-2 backdrop-blur-sm">
+                <h3 className="text-sm font-semibold text-indigo-100 mb-2 uppercase tracking-wide">Meaning</h3>
+                <p className="text-lg leading-relaxed">{word.meaning}</p>
+              </div>
+              
+              {/* Example section */}
+              {word.example && (
+                <div className="bg-white/10 rounded-lg p-2 backdrop-blur-sm">
+                  <h3 className="text-sm font-semibold text-indigo-100 mb-2 uppercase tracking-wide">Example</h3>
+                  <p className="text-base italic leading-relaxed">"{word.example}"</p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

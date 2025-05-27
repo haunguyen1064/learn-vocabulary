@@ -128,12 +128,12 @@ const HomePage: React.FC = () => {
       
       {/* Stats cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        <div className="bg-white rounded-lg shadow-sm p-6">
+        <div className="bg-white rounded-lg shadow-sm p-6 cursor-default select-none">
           <h3 className="text-lg font-medium text-gray-500">Total Words</h3>
           <p className="text-3xl font-bold text-gray-900 mt-2">{wordStats.total}</p>
         </div>
         
-        <div className="bg-white rounded-lg shadow-sm p-6">
+        <div className="bg-white rounded-lg shadow-sm p-6 cursor-default select-none">
           <h3 className="text-lg font-medium text-gray-500">New</h3>
           <div className="flex items-end mt-2">
             <p className="text-3xl font-bold text-blue-600">{wordStats.new}</p>
@@ -141,7 +141,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         
-        <div className="bg-white rounded-lg shadow-sm p-6">
+        <div className="bg-white rounded-lg shadow-sm p-6 cursor-default select-none">
           <h3 className="text-lg font-medium text-gray-500">Learning</h3>
           <div className="flex items-end mt-2">
             <p className="text-3xl font-bold text-yellow-600">{wordStats.learning}</p>
@@ -149,7 +149,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         
-        <div className="bg-white rounded-lg shadow-sm p-6">
+        <div className="bg-white rounded-lg shadow-sm p-6 cursor-default select-none">
           <h3 className="text-lg font-medium text-gray-500">Mastered</h3>
           <div className="flex items-end mt-2">
             <p className="text-3xl font-bold text-green-600">{wordStats.mastered}</p>
@@ -173,110 +173,6 @@ const HomePage: React.FC = () => {
           </svg>
           Practice Quiz
         </Link>
-        
-        <Link to="/add-word" className="btn btn-secondary flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clipRule="evenodd" />
-          </svg>
-          Add New Words
-        </Link>
-      </div>
-      
-      {/* Recent activity and collections */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Recent words */}
-        <div>
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-xl font-bold text-gray-900">Recent Words</h2>
-            <Link to="/flashcards" className="text-sm text-indigo-600 hover:text-indigo-800">
-              View all
-            </Link>
-          </div>
-          
-          <div className="bg-white shadow-sm rounded-lg divide-y">
-            {recentWords.length > 0 ? (
-              recentWords.map(word => (
-                <div key={word.id} className="p-4">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <div className="flex items-center">
-                        <h3 className="font-medium text-gray-900">{word.word}</h3>
-                        <span className="ml-2 text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded-full">
-                          {word.partOfSpeech}
-                        </span>
-                      </div>
-                      <p className="text-sm text-gray-600 mt-1">{word.meaning}</p>
-                    </div>
-                    <span 
-                      className={`text-xs px-2 py-1 rounded-full ${
-                        word.status === 'new' ? 'bg-blue-100 text-blue-800' : 
-                        word.status === 'learning' ? 'bg-yellow-100 text-yellow-800' : 
-                        'bg-green-100 text-green-800'
-                      }`}
-                    >
-                      {word.status}
-                    </span>
-                  </div>
-                </div>
-              ))
-            ) : (
-              <div className="p-4 text-center text-gray-500">
-                No words added yet. Start adding some vocabulary!
-              </div>
-            )}
-          </div>
-        </div>
-        
-        {/* Collections */}
-        <div>
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-xl font-bold text-gray-900">Your Collections</h2>
-            <Link to="/collections" className="text-sm text-indigo-600 hover:text-indigo-800">
-              View all
-            </Link>
-          </div>
-          
-          <div className="bg-white shadow-sm rounded-lg divide-y">
-            {collections.length > 0 ? (
-              collections.slice(0, 5).map(collection => (
-                <div key={collection.id} className="p-4">
-                  <Link to={`/collections/${collection.id}`} className="block hover:bg-gray-50 -m-4 p-4">
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <h3 className="font-medium text-gray-900">{collection.name}</h3>
-                        {collection.description && (
-                          <p className="text-sm text-gray-600 mt-1">{collection.description}</p>
-                        )}
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-sm text-gray-600">{collection.words.length} words</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              ))
-            ) : (
-              <div className="p-4 text-center text-gray-500">
-                No collections created yet. Create one to organize your vocabulary!
-              </div>
-            )}
-            
-            <div className="p-4">
-              <Link 
-                to="/collections/new"
-                className="flex justify-center items-center text-indigo-600 hover:text-indigo-800"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clipRule="evenodd" />
-                </svg>
-                Create new collection
-              </Link>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import { AuthProvider, useAuth } from './context/AuthContext'
+import { VocabularyProvider } from './context/VocabularyContext'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Header from './components/Header'
 import HomePage from './pages/HomePage'
@@ -27,8 +28,9 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 function App() {
   return (
     <AuthProvider>
-      <Router>
-        <div className="min-h-screen bg-gray-50">
+      <VocabularyProvider>
+        <Router>
+          <div className="min-h-screen bg-gray-50">
           <Header />
           <div className="container mx-auto px-4 py-6">
             <Routes>
@@ -44,6 +46,7 @@ function App() {
           </div>
         </div>
       </Router>
+      </VocabularyProvider>
     </AuthProvider>
   )
 }

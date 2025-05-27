@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useVocabulary } from '../context/VocabularyContext';
 import { getAllWords, getUserCollections } from '../services/vocabularyService';
 import type { VocabularyWord, Collection } from '../types/vocabulary';
 
 const HomePage: React.FC = () => {
   const { currentUser, userData } = useAuth();
+  const { refreshTrigger } = useVocabulary();
   const [wordStats, setWordStats] = useState({
     total: 0,
     new: 0,
@@ -16,47 +18,47 @@ const HomePage: React.FC = () => {
   const [recentWords, setRecentWords] = useState<VocabularyWord[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const loadData = async () => {
-      if (!currentUser) {
-        setIsLoading(false);
-        return;
-      }
-      
-      try {
-        // Load user words and collections
-        const [words, userCollections] = await Promise.all([
-          getAllWords(currentUser.uid),
-          getUserCollections(currentUser.uid)
-        ]);
-        
-        // Calculate word stats
-        const stats = {
-          total: words.length,
-          new: words.filter(word => word.status === 'new').length,
-          learning: words.filter(word => word.status === 'learning').length,
-          mastered: words.filter(word => word.status === 'mastered').length
-        };
-        
-        // Sort words by last reviewed date and get the 5 most recent
-        const sorted = [...words].sort((a, b) => {
-          const dateA = a.lastReviewed ? new Date(a.lastReviewed).getTime() : 0;
-          const dateB = b.lastReviewed ? new Date(b.lastReviewed).getTime() : 0;
-          return dateB - dateA;
-        });
-        
-        setWordStats(stats);
-        setCollections(userCollections);
-        setRecentWords(sorted.slice(0, 5));
-      } catch (error) {
-        console.error("Error loading home page data:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
+  const loadData = useCallback(async () => {
+    if (!currentUser) {
+      setIsLoading(false);
+      return;
+    }
     
-    loadData();
+    try {
+      // Load user words and collections
+      const [words, userCollections] = await Promise.all([
+        getAllWords(currentUser.uid),
+        getUserCollections(currentUser.uid)
+      ]);
+      
+      // Calculate word stats
+      const stats = {
+        total: words.length,
+        new: words.filter(word => word.status === 'new').length,
+        learning: words.filter(word => word.status === 'learning').length,
+        mastered: words.filter(word => word.status === 'mastered').length
+      };
+      
+      // Sort words by last reviewed date and get the 5 most recent
+      const sorted = [...words].sort((a, b) => {
+        const dateA = a.lastReviewed ? new Date(a.lastReviewed).getTime() : 0;
+        const dateB = b.lastReviewed ? new Date(b.lastReviewed).getTime() : 0;
+        return dateB - dateA;
+      });
+      
+      setWordStats(stats);
+      setCollections(userCollections);
+      setRecentWords(sorted.slice(0, 5));
+    } catch (error) {
+      console.error("Error loading home page data:", error);
+    } finally {
+      setIsLoading(false);
+    }
   }, [currentUser]);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData, refreshTrigger]); // Add refreshTrigger as dependency
   
   if (isLoading) {
     return (

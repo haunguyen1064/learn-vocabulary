@@ -8,6 +8,19 @@ const COLLECTIONS_COLLECTION = "collections";
 const WORDS_COLLECTION = "words";
 const USERS_COLLECTION = "users";
 
+// Global callback for vocabulary refresh
+let vocabularyRefreshCallback: (() => void) | null = null;
+
+export const setVocabularyRefreshCallback = (callback: () => void): void => {
+  vocabularyRefreshCallback = callback;
+};
+
+export const triggerVocabularyRefresh = (): void => {
+  if (vocabularyRefreshCallback) {
+    vocabularyRefreshCallback();
+  }
+};
+
 // Vocabulary words functions
 export const getAllWords = async (userId: string): Promise<VocabularyWord[]> => {
   try {
@@ -67,6 +80,10 @@ export const addWord = async (userId: string, wordData: Omit<VocabularyWord, "id
   try {
     const newWordRef = doc(collection(db, WORDS_COLLECTION));
     await setDoc(newWordRef, { ...wordData, userId });
+    
+    // Trigger vocabulary refresh for UI components
+    triggerVocabularyRefresh();
+    
     return newWordRef.id;
   } catch (error) {
     console.error("Error adding word:", error);
@@ -77,6 +94,9 @@ export const addWord = async (userId: string, wordData: Omit<VocabularyWord, "id
 export const updateWord = async (wordId: string, wordData: Partial<VocabularyWord>): Promise<void> => {
   try {
     await updateDoc(doc(db, WORDS_COLLECTION, wordId), wordData);
+    
+    // Trigger vocabulary refresh for UI components
+    triggerVocabularyRefresh();
   } catch (error) {
     console.error("Error updating word:", error);
     throw error;
@@ -90,6 +110,9 @@ export const updateWordStatus = async (wordId: string, status: WordStatus, maste
       masteryLevel,
       lastReviewed: new Date()
     });
+    
+    // Trigger vocabulary refresh for UI components
+    triggerVocabularyRefresh();
   } catch (error) {
     console.error("Error updating word status:", error);
     throw error;
@@ -99,6 +122,9 @@ export const updateWordStatus = async (wordId: string, status: WordStatus, maste
 export const deleteWord = async (wordId: string): Promise<void> => {
   try {
     await deleteDoc(doc(db, WORDS_COLLECTION, wordId));
+    
+    // Trigger vocabulary refresh for UI components
+    triggerVocabularyRefresh();
   } catch (error) {
     console.error("Error deleting word:", error);
     throw error;
@@ -317,6 +343,9 @@ export const addWordsInBatch = async (userId: string, words: Omit<VocabularyWord
     });
     
     await batch.commit();
+    
+    // Trigger vocabulary refresh for UI components
+    triggerVocabularyRefresh();
   } catch (error) {
     console.error("Error adding words in batch:", error);
     throw error;
@@ -346,6 +375,9 @@ export const importToeicVocabulary = async (userId: string): Promise<void> => {
     }
     
     console.log(`Successfully imported ${transformedWords.length} TOEIC vocabulary words for user ${userId}`);
+    
+    // Trigger vocabulary refresh for UI components
+    triggerVocabularyRefresh();
   } catch (error) {
     console.error("Error importing TOEIC vocabulary:", error);
     throw error;

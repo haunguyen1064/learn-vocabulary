@@ -33,7 +33,10 @@ const FlashcardStudyPage: React.FC = () => {
     knownCards: 0,
     skippedCards: 0
   });
-  const [showInstructions, setShowInstructions] = useState(true);
+  const [showInstructions, setShowInstructions] = useState(() => {
+    // Get saved preference from localStorage or default to true if not set
+    return localStorage.getItem('showFlashcardInstructions') !== 'false';
+  });
   const [swipeCount, setSwipeCount] = useState(0);
 
   // Record study time
@@ -74,6 +77,7 @@ const FlashcardStudyPage: React.FC = () => {
     // Auto-hide instructions after 3 swipes
     if (newSwipeCount >= 3 && showInstructions) {
       setShowInstructions(false);
+      localStorage.setItem('showFlashcardInstructions', 'false');
     }
   }, [swipeCount, showInstructions]);
 
@@ -279,8 +283,7 @@ const FlashcardStudyPage: React.FC = () => {
                   knownCards: 0,
                   skippedCards: 0
                 });
-                // Reset instruction panel state for new session
-                setShowInstructions(true);
+                // Reset swipe count but keep instruction preference
                 setSwipeCount(0);
                 // Reset to first card for new session using SPA-friendly method
                 await resetSession();
@@ -331,7 +334,10 @@ const FlashcardStudyPage: React.FC = () => {
         {showInstructions && (
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center max-w-2xl relative">
             <button
-              onClick={() => setShowInstructions(false)}
+              onClick={() => {
+                setShowInstructions(false);
+                localStorage.setItem('showFlashcardInstructions', 'false');
+              }}
               className="absolute top-2 right-2 text-blue-400 hover:text-blue-600 transition-colors cursor-pointer"
               aria-label="Hide instructions"
             >

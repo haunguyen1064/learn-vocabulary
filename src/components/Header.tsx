@@ -1,6 +1,10 @@
+import {
+  BrainCircuit,
+  LogOut
+} from 'lucide-react';
 import React from 'react';
-import { useAuth } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 interface HeaderProps {
   title?: string;
@@ -14,9 +18,9 @@ const Header: React.FC<HeaderProps> = ({ title = 'VocaFlash' }) => {
       <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-indigo-600 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
-            </svg>
+            <div className="bg-gradient-to-r from-indigo-500 to-purple-600 p-2 rounded-lg shadow-md mr-2">
+              <BrainCircuit size={24} className="text-white" strokeWidth={2} />
+            </div>
             <h1 className="text-xl font-bold text-gray-900">{title}</h1>
           </Link>
           
@@ -26,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ title = 'VocaFlash' }) => {
                 <Link to="/" className="text-gray-600 hover:text-gray-900">Home</Link>
               </li>
               <li>
-                <Link to="/flashcards" className="text-gray-600 hover:text-gray-900">Flashcards</Link>
+                <Link to="/flashcards" className="text-gray-600 hover:text-gray-900">Study</Link>
               </li>
               <li>
                 <Link to="/quiz" className="text-gray-600 hover:text-gray-900">Practice</Link>
@@ -41,12 +45,14 @@ const Header: React.FC<HeaderProps> = ({ title = 'VocaFlash' }) => {
         <div>
           {currentUser && userData ? (
             <div className="flex items-center">
-              <span className="text-sm text-gray-600 mr-4">{userData.displayName}</span>
+              <span className="text-sm text-gray-600 mr-3">{userData.displayName}</span>
               <button 
                 onClick={logoutUser}
-                className="text-sm px-3 py-2 rounded bg-gray-200 hover:bg-gray-300 text-gray-700"
+                className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition-colors"
+                title="Sign Out"
+                aria-label="Sign Out"
               >
-                Sign Out
+                <LogOut size={18} />
               </button>
             </div>
           ) : (

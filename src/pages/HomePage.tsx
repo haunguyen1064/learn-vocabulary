@@ -143,27 +143,60 @@ const HomePage: React.FC = () => {
         </div>
       </div>
       
+      {/* Section divider */}
+      <div className="mb-8">
+        <div className="flex items-center mb-4">
+          <h3 className="text-lg font-bold text-gray-800">Quick Actions</h3>
+          <div className="flex-grow ml-4 border-t border-gray-200"></div>
+        </div>
+        <p className="text-gray-600 mb-4">Choose what you want to do next</p>
+      </div>
+      
       {/* Quick actions */}
-      <div className="flex flex-wrap gap-4 mb-8">
-        <Link to="/add-word" className="btn btn-primary flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
-          </svg>
-          Add New Word
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        <Link 
+          to="/add-word" 
+          className="bg-white shadow-sm hover:shadow-md rounded-xl p-5 flex items-center transition-all duration-200 border border-transparent hover:border-indigo-100 group"
+        >
+          <div className="mr-4 p-3 bg-indigo-100 rounded-full group-hover:bg-indigo-200 transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-lg font-medium text-gray-800">Add New Word</h3>
+            <p className="text-sm text-gray-500">Expand your vocabulary</p>
+          </div>
         </Link>
         
-        <Link to="/select-flashcards" className="btn btn-primary flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
-          </svg>
-          Study Flashcards
+        <Link 
+          to="/select-flashcards" 
+          className="bg-white shadow-sm hover:shadow-md rounded-xl p-5 flex items-center transition-all duration-200 border border-transparent hover:border-blue-100 group"
+        >
+          <div className="mr-4 p-3 bg-blue-100 rounded-full group-hover:bg-blue-200 transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-lg font-medium text-gray-800">Study Flashcards</h3>
+            <p className="text-sm text-gray-500">Review and memorize words</p>
+          </div>
         </Link>
         
-        <Link to="/quiz" className="btn btn-primary flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-          </svg>
-          Practice Quiz
+        <Link 
+          to="/quiz" 
+          className="bg-white shadow-sm hover:shadow-md rounded-xl p-5 flex items-center transition-all duration-200 border border-transparent hover:border-yellow-100 group"
+        >
+          <div className="mr-4 p-3 bg-yellow-100 rounded-full group-hover:bg-yellow-200 transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-lg font-medium text-gray-800">Practice Quiz</h3>
+            <p className="text-sm text-gray-500">Test your knowledge</p>
+          </div>
         </Link>
       </div>
     </div>

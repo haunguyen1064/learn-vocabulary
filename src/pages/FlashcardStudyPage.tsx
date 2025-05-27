@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import Flashcard from '../components/Flashcard';
 import { useFlashcards } from '../hooks/useFlashcards';
 import { useAuth } from '../context/AuthContext';
 import type { VocabularyWord } from '../types/vocabulary';
-import { updateWordMasteryLevel, updateUserStudyStats } from '../services/vocabularyService';
+import { updateUserStudyStats, updateWordMasteryWithPerformance } from '../services/vocabularyService';
 
 const FlashcardStudyPage: React.FC = () => {
   const { currentUser } = useAuth();
@@ -48,22 +47,56 @@ const FlashcardStudyPage: React.FC = () => {
     };
   }, [currentUser, startTime, studySessionTime]);
 
-  const handleMastery = async (word: VocabularyWord, masteryLevel: number) => {
+  const handleDifficult = async (word: VocabularyWord) => {
     if (!currentUser) return;
     
     try {
-      const newMasteryLevel = Math.min(5, Math.max(0, word.masteryLevel + masteryLevel));
+      // Not well memorized - use performance 'difficult'
+      await updateWordMasteryWithPerformance(currentUser.uid, word.id, 'difficult');
       
-      // Update the word's mastery level
-      await updateWordMasteryLevel(currentUser.uid, word.id, newMasteryLevel);
-      
-      // Mark card as updated
+      // Mark card as updated (decrease mastery level)
+      const newMasteryLevel = Math.max(0, word.masteryLevel - 1);
       markCard(word.id, newMasteryLevel);
       
       // Move to the next card
       nextCard();
     } catch (err) {
-      console.error('Error updating mastery level:', err);
+      console.error('Error marking word as difficult:', err);
+    }
+  };
+
+  const handleKnown = async (word: VocabularyWord) => {
+    if (!currentUser) return;
+    
+    try {
+      // Already memorized - use performance 'ok'
+      await updateWordMasteryWithPerformance(currentUser.uid, word.id, 'ok');
+      
+      // Mark card as updated (increase mastery level moderately)
+      const newMasteryLevel = Math.min(5, word.masteryLevel + 1);
+      markCard(word.id, newMasteryLevel);
+      
+      // Move to the next card
+      nextCard();
+    } catch (err) {
+      console.error('Error marking word as known:', err);
+    }
+  };
+
+  const handleSkip = async (word: VocabularyWord) => {
+    if (!currentUser) return;
+    
+    try {
+      // Already know this word, skip - use performance 'easy'
+      await updateWordMasteryWithPerformance(currentUser.uid, word.id, 'easy');
+      
+      // Mark card as updated (set to mastered)
+      markCard(word.id, 5);
+      
+      // Move to the next card
+      nextCard();
+    } catch (err) {
+      console.error('Error skipping word:', err);
     }
   };
 
@@ -133,64 +166,62 @@ const FlashcardStudyPage: React.FC = () => {
         </span>
       </div>
 
+      <div className="flex justify-center mb-6">
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center max-w-2xl">
+          <p className="text-sm text-blue-700 mb-2">
+            💡 <strong>Hướng dẫn:</strong> Click để lật thẻ
+          </p>
+          <div className="grid grid-cols-3 gap-2 text-xs text-blue-600">
+            <div className="bg-red-100 p-2 rounded">
+              <span className="text-red-700">← Trái:</span> Chưa nhớ kỹ
+            </div>
+            <div className="bg-green-100 p-2 rounded">
+              <span className="text-green-700">→ Phải:</span> Đã nhớ
+            </div>
+            <div className="bg-gray-100 p-2 rounded">
+              <span className="text-gray-700">↑ Lên:</span> Bỏ qua
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="flex justify-center">
         <div className="w-full max-w-2xl">
-          <motion.div
+          <Flashcard 
             key={currentWord.id}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.3 }}
-          >
-            <Flashcard 
-              word={currentWord} 
-              isFlipped={isFlipped(currentWord.id)}
-              onFlip={() => {
-                flipCard(currentWord.id);
-              }}
-              // No onSelect prop here, so clicking on the card will use onFlip
-            />
-          </motion.div>
+            word={currentWord} 
+            isFlipped={isFlipped(currentWord.id)}
+            onFlip={() => {
+              flipCard(currentWord.id);
+            }}
+            onSwipeLeft={() => handleDifficult(currentWord)}   // Not well memorized
+            onSwipeRight={() => handleKnown(currentWord)}      // Already memorized
+            onSwipeUp={() => handleSkip(currentWord)}          // Skip
+          />
         </div>
       </div>
 
       <div className="mt-8 flex justify-between">
-        <button 
-          onClick={prevCard}
-          disabled={currentIndex === 0}
-          className={`px-4 py-2 rounded-md ${currentIndex === 0 ? 'bg-gray-300 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-700 text-white'}`}
-        >
-          Previous
-        </button>
-
-        <div className="flex space-x-2">
+        <div className="flex space-x-3 justify-center w-full">
           <button 
-            onClick={() => handleMastery(currentWord, -1)}
-            className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md"
+            onClick={() => handleDifficult(currentWord)}
+            className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md font-medium text-sm"
           >
-            Hard
+            ← Chưa nhớ kỹ
           </button>
           <button 
-            onClick={() => handleMastery(currentWord, 0)}
-            className="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-md"
+            onClick={() => handleSkip(currentWord)}
+            className="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-md font-medium text-sm"
           >
-            Good
+            ↑ Bỏ qua
           </button>
           <button 
-            onClick={() => handleMastery(currentWord, 1)}
-            className="px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-md"
+            onClick={() => handleKnown(currentWord)}
+            className="px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-md font-medium text-sm"
           >
-            Easy
+            → Đã nhớ
           </button>
         </div>
-
-        <button 
-          onClick={nextCard}
-          disabled={currentIndex === totalFlashcards - 1}
-          className={`px-4 py-2 rounded-md ${currentIndex === totalFlashcards - 1 ? 'bg-gray-300 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-700 text-white'}`}
-        >
-          Next
-        </button>
       </div>
 
       <div className="mt-8 bg-white p-4 rounded-lg shadow">

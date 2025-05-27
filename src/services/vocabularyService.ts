@@ -1,6 +1,7 @@
 import { db } from "./firebase";
 import { collection, doc, getDocs, getDoc, setDoc, updateDoc, query, where, arrayUnion, arrayRemove, deleteDoc, writeBatch } from "firebase/firestore";
 import type { VocabularyWord, Collection, WordStatus } from "../types/vocabulary";
+import { calculateNextReviewDate } from "../utils/spacedRepetition";
 import toeicVocabulary from "../assets/toeic/toeic_600_vocabulary.json";
 
 // Collections in Firestore
@@ -230,7 +231,7 @@ export const updateWordMasteryLevel = async (userId: string, wordId: string, new
     if (!wordDoc.exists()) {
       throw new Error(`Word with ID ${wordId} does not exist`);
     }
-    
+
     const wordData = wordDoc.data() as VocabularyWord;
     let newStatus: WordStatus = wordData.status;
     
@@ -242,14 +243,14 @@ export const updateWordMasteryLevel = async (userId: string, wordId: string, new
     } else {
       newStatus = 'new';
     }
-    
+
     await updateDoc(wordRef, {
       masteryLevel: newMasteryLevel,
       status: newStatus,
       lastReviewed: new Date(),
       timesReviewed: (wordData.timesReviewed || 0) + 1,
     });
-    
+
     // Update user's word status map
     await updateDoc(doc(db, USERS_COLLECTION, userId), {
       [`wordStatus.${wordId}`]: newStatus,
@@ -257,6 +258,71 @@ export const updateWordMasteryLevel = async (userId: string, wordId: string, new
     });
   } catch (error) {
     console.error("Error updating word mastery level:", error);
+    throw error;
+  }
+};
+
+// New function to update mastery level with spaced repetition
+export const updateWordMasteryWithPerformance = async (
+  userId: string, 
+  wordId: string, 
+  performance: 'difficult' | 'ok' | 'easy'
+): Promise<void> => {
+  try {
+    const wordRef = doc(db, WORDS_COLLECTION, wordId);
+    const wordDoc = await getDoc(wordRef);
+    
+    if (!wordDoc.exists()) {
+      throw new Error(`Word with ID ${wordId} does not exist`);
+    }
+
+    const wordData = wordDoc.data() as VocabularyWord;
+    let newMasteryLevel: number;
+    
+    // Calculate new mastery level based on performance
+    switch (performance) {
+      case 'difficult':
+        newMasteryLevel = Math.max(0, wordData.masteryLevel - 1);
+        break;
+      case 'ok':
+        newMasteryLevel = Math.min(5, wordData.masteryLevel + 1);
+        break;
+      case 'easy':
+        newMasteryLevel = 5; // Skip to mastered
+        break;
+      default:
+        newMasteryLevel = wordData.masteryLevel;
+    }
+    
+    // Calculate next review date using spaced repetition
+    const nextReviewDate = calculateNextReviewDate(newMasteryLevel, performance);
+    
+    let newStatus: WordStatus = wordData.status;
+    
+    // Update word status based on mastery level
+    if (newMasteryLevel >= 5) {
+      newStatus = 'mastered';
+    } else if (newMasteryLevel > 0) {
+      newStatus = 'learning';
+    } else {
+      newStatus = 'new';
+    }
+
+    await updateDoc(wordRef, {
+      masteryLevel: newMasteryLevel,
+      status: newStatus,
+      lastReviewed: new Date(),
+      nextReviewDate: nextReviewDate,
+      timesReviewed: (wordData.timesReviewed || 0) + 1,
+    });
+
+    // Update user's word status map
+    await updateDoc(doc(db, USERS_COLLECTION, userId), {
+      [`wordStatus.${wordId}`]: newStatus,
+      [`masteryLevels.${wordId}`]: newMasteryLevel
+    });
+  } catch (error) {
+    console.error("Error updating word mastery with performance:", error);
     throw error;
   }
 };

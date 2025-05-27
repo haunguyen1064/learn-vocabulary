@@ -1,6 +1,8 @@
 // This is a utility file for implementing the spaced repetition algorithm
 // It calculates when a word should next be reviewed based on its mastery level
 
+import type { VocabularyWord } from '../types/vocabulary';
+
 // Initial intervals between reviews in days
 const BASE_INTERVALS = {
   0: 0,   // New words should be reviewed immediately
@@ -34,7 +36,14 @@ export const calculateNextReviewDate = (
 };
 
 // Determine if a word is due for review
-export const isDueForReview = (lastReviewed: Date | undefined, masteryLevel: number): boolean => {
+export const isDueForReview = (lastReviewed: Date | undefined, masteryLevel: number, nextReviewDate?: Date): boolean => {
+  // If we have a nextReviewDate, use it
+  if (nextReviewDate) {
+    const now = new Date();
+    return now >= nextReviewDate;
+  }
+  
+  // Fallback to old logic if no nextReviewDate
   if (!lastReviewed) return true; // Never reviewed before
   
   const now = new Date();
@@ -57,20 +66,20 @@ export const calculateMasteryAdjustment = (
 };
 
 // Prioritize words for review
-export const prioritizeWordsForReview = (words: any[]): any[] => {
+export const prioritizeWordsForReview = (words: VocabularyWord[]): VocabularyWord[] => {
   // First, filter out fully mastered words (masteryLevel = 5 and not due for review)
   const filteredWords = words.filter(word => {
     // Include word if it's not mastered yet (masteryLevel < 5)
     if (word.masteryLevel < 5) return true;
     
     // Include mastered words only if they are due for review
-    return isDueForReview(word.lastReviewed, word.masteryLevel);
+    return isDueForReview(word.lastReviewed, word.masteryLevel, word.nextReviewDate);
   });
 
   return filteredWords.sort((a, b) => {
     // First, sort by due or not due
-    const aIsDue = isDueForReview(a.lastReviewed, a.masteryLevel);
-    const bIsDue = isDueForReview(b.lastReviewed, b.masteryLevel);
+    const aIsDue = isDueForReview(a.lastReviewed, a.masteryLevel, a.nextReviewDate);
+    const bIsDue = isDueForReview(b.lastReviewed, b.masteryLevel, b.nextReviewDate);
     
     if (aIsDue !== bIsDue) {
       return aIsDue ? -1 : 1;

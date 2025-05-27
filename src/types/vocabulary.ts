@@ -8,6 +8,7 @@ export interface VocabularyWord {
   status: WordStatus;
   masteryLevel: number; // 0-5, 0 = not started, 5 = mastered
   lastReviewed?: Date;
+  nextReviewDate?: Date; // When this word should be reviewed next
   timesReviewed: number;
   timesCorrect: number;
 }

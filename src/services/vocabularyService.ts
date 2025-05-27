@@ -424,7 +424,8 @@ export const importToeicVocabulary = async (userId: string): Promise<void> => {
     const transformedWords: Omit<VocabularyWord, "id">[] = toeicVocabulary.map((item) => ({
       word: item.word,
       partOfSpeech: item.partOfSpeech,
-      pronunciation: item.pronounce, // Store pronunciation in dedicated field
+      pronunciation: item.pronounce,
+      category: item.category,
       meaning: item.meaning,
       example: item.example,
       status: "new" as WordStatus,

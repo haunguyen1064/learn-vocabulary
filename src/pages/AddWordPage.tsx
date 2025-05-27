@@ -11,6 +11,8 @@ const AddWordPage: React.FC = () => {
   const [word, setWord] = useState('');
   const [partOfSpeech, setPartOfSpeech] = useState('noun');
   const [pronunciation, setPronunciation] = useState('');
+  const [category, setCategory] = useState('');
+  const [customCategory, setCustomCategory] = useState('');
   const [meaning, setMeaning] = useState('');
   const [example, setExample] = useState('');
   const [existingWords, setExistingWords] = useState<string[]>([]);
@@ -55,6 +57,25 @@ const AddWordPage: React.FC = () => {
     'phrasal verb'
   ];
 
+  const categoryOptions = [
+    'animals',
+    'food',
+    'business',
+    'technology',
+    'education',
+    'travel',
+    'health',
+    'sports',
+    'entertainment',
+    'nature',
+    'emotions',
+    'family',
+    'clothing',
+    'transportation',
+    'housing',
+    'custom'
+  ];
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -72,10 +93,18 @@ const AddWordPage: React.FC = () => {
     setIsSubmitting(true);
     
     try {
+      const finalCategory = category === 'custom' ? customCategory.trim() : category;
+      
+      if (!finalCategory) {
+        setError("Please select or enter a category.");
+        return;
+      }
+      
       const newWord: Omit<VocabularyWord, "id"> = {
         word: word.trim(),
         partOfSpeech,
         pronunciation: pronunciation.trim() || undefined,
+        category: finalCategory,
         meaning: meaning.trim(),
         example: example.trim(),
         status: 'new',
@@ -92,6 +121,8 @@ const AddWordPage: React.FC = () => {
       setWord('');
       setPartOfSpeech('noun');
       setPronunciation('');
+      setCategory('');
+      setCustomCategory('');
       setMeaning('');
       setExample('');
       
@@ -172,6 +203,46 @@ const AddWordPage: React.FC = () => {
           </div>
           
           <div className="mb-4">
+            <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-1">
+              Category
+            </label>
+            <select
+              id="category"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              className="mt-1 block w-full px-3 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+              required
+            >
+              <option value="">Select a category</option>
+              {categoryOptions.map(option => (
+                <option key={option} value={option}>
+                  {option === 'custom' ? 'Custom Category' : option.charAt(0).toUpperCase() + option.slice(1)}
+                </option>
+              ))}
+            </select>
+          </div>
+          
+          {category === 'custom' && (
+            <div className="mb-4">
+              <label htmlFor="custom-category" className="block text-sm font-medium text-gray-700 mb-1">
+                Custom Category
+              </label>
+              <input
+                id="custom-category"
+                type="text"
+                value={customCategory}
+                onChange={(e) => setCustomCategory(e.target.value)}
+                className="shadow-sm h-10 px-3 py-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                placeholder="Enter your custom category"
+                required
+              />
+              <p className="mt-1 text-xs text-gray-500">
+                Create a new category for this word
+              </p>
+            </div>
+          )}
+          
+          <div className="mb-4">
             <label htmlFor="pronunciation" className="block text-sm font-medium text-gray-700 mb-1">
               Pronunciation <span className="text-gray-500 text-xs">(optional)</span>
             </label>
@@ -225,6 +296,8 @@ const AddWordPage: React.FC = () => {
                 setWord('');
                 setPartOfSpeech('noun');
                 setPronunciation('');
+                setCategory('');
+                setCustomCategory('');
                 setMeaning('');
                 setExample('');
               }}

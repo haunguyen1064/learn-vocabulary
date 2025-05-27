@@ -3,6 +3,7 @@ export interface VocabularyWord {
   word: string;
   partOfSpeech: string; // noun, verb, adjective, etc.
   pronunciation?: string; // IPA pronunciation, e.g., "/ʃɪp/"
+  category: string; // e.g., "animals", "food", "contracts"
   meaning: string;
   example: string;
   status: WordStatus;

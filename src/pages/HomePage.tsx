@@ -2,8 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useVocabulary } from '../context/VocabularyContext';
-import { getAllWords, getUserCollections } from '../services/vocabularyService';
-import type { VocabularyWord, Collection } from '../types/vocabulary';
+import { getAllWords } from '../services/vocabularyService';
 
 const HomePage: React.FC = () => {
   const { currentUser, userData } = useAuth();
@@ -14,8 +13,6 @@ const HomePage: React.FC = () => {
     learning: 0,
     mastered: 0
   });
-  const [collections, setCollections] = useState<Collection[]>([]);
-  const [recentWords, setRecentWords] = useState<VocabularyWord[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const loadData = useCallback(async () => {
@@ -25,11 +22,8 @@ const HomePage: React.FC = () => {
     }
     
     try {
-      // Load user words and collections
-      const [words, userCollections] = await Promise.all([
-        getAllWords(currentUser.uid),
-        getUserCollections(currentUser.uid)
-      ]);
+      // Load user words
+      const words = await getAllWords(currentUser.uid);
       
       // Calculate word stats
       const stats = {
@@ -39,16 +33,7 @@ const HomePage: React.FC = () => {
         mastered: words.filter(word => word.status === 'mastered').length
       };
       
-      // Sort words by last reviewed date and get the 5 most recent
-      const sorted = [...words].sort((a, b) => {
-        const dateA = a.lastReviewed ? new Date(a.lastReviewed).getTime() : 0;
-        const dateB = b.lastReviewed ? new Date(b.lastReviewed).getTime() : 0;
-        return dateB - dateA;
-      });
-      
       setWordStats(stats);
-      setCollections(userCollections);
-      setRecentWords(sorted.slice(0, 5));
     } catch (error) {
       console.error("Error loading home page data:", error);
     } finally {
@@ -160,11 +145,18 @@ const HomePage: React.FC = () => {
       
       {/* Quick actions */}
       <div className="flex flex-wrap gap-4 mb-8">
+        <Link to="/add-word" className="btn btn-primary flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
+          </svg>
+          Add New Word
+        </Link>
+        
         <Link to="/select-flashcards" className="btn btn-primary flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
             <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
           </svg>
-          Select Flashcards
+          Study Flashcards
         </Link>
         
         <Link to="/quiz" className="btn btn-primary flex items-center">

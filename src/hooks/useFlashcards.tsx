@@ -120,6 +120,12 @@ export const useFlashcards = () => {
     );
   }, []);
   
+  // Reset study session
+  const resetSession = useCallback(() => {
+    setCurrentIndex(0);
+    setFlippedState({});
+  }, []);
+  
   return {
     flashcards,
     currentIndex,
@@ -132,6 +138,7 @@ export const useFlashcards = () => {
     prevCard,
     flipCard,
     shuffleCards,
-    markCard
+    markCard,
+    resetSession
   };
 };

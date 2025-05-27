@@ -20,11 +20,19 @@ const FlashcardStudyPage: React.FC = () => {
     shuffleCards,
     markCard,
     isFlipped,
-    flipCard
+    flipCard,
+    resetSession
   } = useFlashcards();
 
   const [studySessionTime, setStudySessionTime] = useState(0);
   const [startTime] = useState(Date.now());
+  const [isSessionCompleted, setIsSessionCompleted] = useState(false);
+  const [completionStats, setCompletionStats] = useState({
+    totalCards: 0,
+    difficultCards: 0,
+    knownCards: 0,
+    skippedCards: 0
+  });
 
   // Record study time
   useEffect(() => {
@@ -47,6 +55,19 @@ const FlashcardStudyPage: React.FC = () => {
     };
   }, [currentUser, startTime, studySessionTime]);
 
+  const checkIfSessionCompleted = () => {
+    // Check if we've reached the end of flashcards
+    if (currentIndex >= flashcards.length - 1) {
+      setIsSessionCompleted(true);
+      
+      // Update final stats
+      setCompletionStats(prev => ({
+        ...prev,
+        totalCards: flashcards.length
+      }));
+    }
+  };
+
   const handleDifficult = async (word: VocabularyWord) => {
     if (!currentUser) return;
     
@@ -58,8 +79,18 @@ const FlashcardStudyPage: React.FC = () => {
       const newMasteryLevel = Math.max(0, word.masteryLevel - 1);
       markCard(word.id, newMasteryLevel);
       
-      // Move to the next card
-      nextCard();
+      // Update stats
+      setCompletionStats(prev => ({
+        ...prev,
+        difficultCards: prev.difficultCards + 1
+      }));
+      
+      // Check if session completed before moving to next card
+      if (currentIndex >= flashcards.length - 1) {
+        checkIfSessionCompleted();
+      } else {
+        nextCard();
+      }
     } catch (err) {
       console.error('Error marking word as difficult:', err);
     }
@@ -76,8 +107,18 @@ const FlashcardStudyPage: React.FC = () => {
       const newMasteryLevel = Math.min(5, word.masteryLevel + 1);
       markCard(word.id, newMasteryLevel);
       
-      // Move to the next card
-      nextCard();
+      // Update stats
+      setCompletionStats(prev => ({
+        ...prev,
+        knownCards: prev.knownCards + 1
+      }));
+      
+      // Check if session completed before moving to next card
+      if (currentIndex >= flashcards.length - 1) {
+        checkIfSessionCompleted();
+      } else {
+        nextCard();
+      }
     } catch (err) {
       console.error('Error marking word as known:', err);
     }
@@ -93,8 +134,18 @@ const FlashcardStudyPage: React.FC = () => {
       // Mark card as updated (set to mastered)
       markCard(word.id, 5);
       
-      // Move to the next card
-      nextCard();
+      // Update stats
+      setCompletionStats(prev => ({
+        ...prev,
+        skippedCards: prev.skippedCards + 1
+      }));
+      
+      // Check if session completed before moving to next card
+      if (currentIndex >= flashcards.length - 1) {
+        checkIfSessionCompleted();
+      } else {
+        nextCard();
+      }
     } catch (err) {
       console.error('Error skipping word:', err);
     }
@@ -139,6 +190,84 @@ const FlashcardStudyPage: React.FC = () => {
   }
 
   const currentWord = flashcards[currentIndex];
+
+  // Show completion screen if session is completed
+  if (isSessionCompleted) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-2xl mx-auto text-center">
+          {/* Completion Header */}
+          <div className="mb-8">
+            <div className="mx-auto mb-4 w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+              <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h1 className="text-3xl font-bold text-gray-800 mb-2">🎉 Study Session Complete!</h1>
+            <p className="text-lg text-gray-600">Great job! You've finished studying all flashcards.</p>
+          </div>
+
+          {/* Study Stats */}
+          <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">Session Summary</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="text-center p-4 bg-blue-50 rounded-lg">
+                <div className="text-2xl font-bold text-blue-600">{completionStats.totalCards}</div>
+                <div className="text-sm text-blue-800">Total Cards</div>
+              </div>
+              <div className="text-center p-4 bg-red-50 rounded-lg">
+                <div className="text-2xl font-bold text-red-600">{completionStats.difficultCards}</div>
+                <div className="text-sm text-red-800">Need Review</div>
+              </div>
+              <div className="text-center p-4 bg-green-50 rounded-lg">
+                <div className="text-2xl font-bold text-green-600">{completionStats.knownCards}</div>
+                <div className="text-sm text-green-800">Memorized</div>
+              </div>
+              <div className="text-center p-4 bg-gray-50 rounded-lg">
+                <div className="text-2xl font-bold text-gray-600">{completionStats.skippedCards}</div>
+                <div className="text-sm text-gray-800">Skipped</div>
+              </div>
+            </div>
+            <div className="mt-4 p-4 bg-indigo-50 rounded-lg">
+              <div className="text-lg font-semibold text-indigo-800">Study Time: {studySessionTime} minutes</div>
+            </div>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              onClick={() => {
+                setIsSessionCompleted(false);
+                setCompletionStats({
+                  totalCards: 0,
+                  difficultCards: 0,
+                  knownCards: 0,
+                  skippedCards: 0
+                });
+                // Reset to first card for new session using SPA-friendly method
+                resetSession();
+              }}
+              className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md font-medium text-sm transition-colors"
+            >
+              Study Again
+            </button>
+            <button 
+              onClick={() => navigate('/')}
+              className="px-6 py-3 bg-gray-500 hover:bg-gray-600 text-white rounded-md font-medium text-sm transition-colors"
+            >
+              Back to Home
+            </button>
+            <button 
+              onClick={() => navigate('/add-word')}
+              className="px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-md font-medium text-sm transition-colors"
+            >
+              Add More Words
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -187,40 +316,46 @@ const FlashcardStudyPage: React.FC = () => {
 
       <div className="flex justify-center">
         <div className="w-full max-w-2xl">
-          <Flashcard 
-            key={currentWord.id}
-            word={currentWord} 
-            isFlipped={isFlipped(currentWord.id)}
-            onFlip={() => {
-              flipCard(currentWord.id);
-            }}
-            onSwipeLeft={() => handleDifficult(currentWord)}   // Not well memorized
-            onSwipeRight={() => handleKnown(currentWord)}      // Already memorized
-            onSwipeUp={() => handleSkip(currentWord)}          // Skip
-          />
+          {currentWord && (
+            <Flashcard 
+              key={currentWord.id}
+              word={currentWord} 
+              isFlipped={isFlipped(currentWord.id)}
+              onFlip={() => {
+                flipCard(currentWord.id);
+              }}
+              onSwipeLeft={() => handleDifficult(currentWord)}   // Not well memorized
+              onSwipeRight={() => handleKnown(currentWord)}      // Already memorized
+              onSwipeUp={() => handleSkip(currentWord)}          // Skip
+            />
+          )}
         </div>
       </div>
 
       <div className="mt-8 flex justify-between">
         <div className="flex space-x-3 justify-center w-full">
-          <button 
-            onClick={() => handleDifficult(currentWord)}
-            className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md font-medium text-sm"
-          >
-            ← Chưa nhớ kỹ
-          </button>
-          <button 
-            onClick={() => handleSkip(currentWord)}
-            className="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-md font-medium text-sm"
-          >
-            ↑ Bỏ qua
-          </button>
-          <button 
-            onClick={() => handleKnown(currentWord)}
-            className="px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-md font-medium text-sm"
-          >
-            → Đã nhớ
-          </button>
+          {currentWord && (
+            <>
+              <button 
+                onClick={() => handleDifficult(currentWord)}
+                className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md font-medium text-sm"
+              >
+                ← Chưa nhớ kỹ
+              </button>
+              <button 
+                onClick={() => handleSkip(currentWord)}
+                className="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-md font-medium text-sm"
+              >
+                ↑ Bỏ qua
+              </button>
+              <button 
+                onClick={() => handleKnown(currentWord)}
+                className="px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-md font-medium text-sm"
+              >
+                → Đã nhớ
+              </button>
+            </>
+          )}
         </div>
       </div>
 

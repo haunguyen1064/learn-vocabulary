@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Flashcard from '../components/Flashcard';
 import { useFlashcards } from '../hooks/useFlashcards';
@@ -67,7 +67,7 @@ const FlashcardStudyPage: React.FC = () => {
     }
   }, [flashcards.length, completionStats.totalCards]);
 
-  const handleSwipeAction = () => {
+  const handleSwipeAction = useCallback(() => {
     const newSwipeCount = swipeCount + 1;
     setSwipeCount(newSwipeCount);
     
@@ -75,9 +75,9 @@ const FlashcardStudyPage: React.FC = () => {
     if (newSwipeCount >= 3 && showInstructions) {
       setShowInstructions(false);
     }
-  };
+  }, [swipeCount, showInstructions]);
 
-  const handleDifficult = async (word: VocabularyWord) => {
+  const handleDifficult = useCallback(async (word: VocabularyWord) => {
     if (!currentUser) return;
     
     handleSwipeAction(); // Track swipe for instruction auto-hide
@@ -97,22 +97,22 @@ const FlashcardStudyPage: React.FC = () => {
           difficultCards: prev.difficultCards + 1
         };
         
-        // Check if session completed with new stats
-        const totalProcessedCards = newStats.difficultCards + newStats.knownCards + newStats.skippedCards;
-        if (totalProcessedCards >= newStats.totalCards || flashcards.length === 0) {
-          setTimeout(() => setIsSessionCompleted(true), 0);
-        } else {
-          setTimeout(() => nextCard(), 0);
-        }
-        
         return newStats;
       });
+
+      // Check completion and navigate separately to avoid state update conflicts
+      const newTotalProcessed = completionStats.difficultCards + 1 + completionStats.knownCards + completionStats.skippedCards;
+      if (newTotalProcessed >= completionStats.totalCards || flashcards.length === 0) {
+        setTimeout(() => setIsSessionCompleted(true), 100);
+      } else {
+        setTimeout(() => nextCard(), 100);
+      }
     } catch (err) {
       console.error('Error marking word as difficult:', err);
     }
-  };
+  }, [currentUser, handleSwipeAction, markCard, completionStats, flashcards.length, nextCard]);
 
-  const handleKnown = async (word: VocabularyWord) => {
+  const handleKnown = useCallback(async (word: VocabularyWord) => {
     if (!currentUser) return;
     
     handleSwipeAction(); // Track swipe for instruction auto-hide
@@ -132,22 +132,22 @@ const FlashcardStudyPage: React.FC = () => {
           knownCards: prev.knownCards + 1
         };
         
-        // Check if session completed with new stats
-        const totalProcessedCards = newStats.difficultCards + newStats.knownCards + newStats.skippedCards;
-        if (totalProcessedCards >= newStats.totalCards || flashcards.length === 0) {
-          setTimeout(() => setIsSessionCompleted(true), 0);
-        } else {
-          setTimeout(() => nextCard(), 0);
-        }
-        
         return newStats;
       });
+
+      // Check completion and navigate separately to avoid state update conflicts
+      const newTotalProcessed = completionStats.difficultCards + completionStats.knownCards + 1 + completionStats.skippedCards;
+      if (newTotalProcessed >= completionStats.totalCards || flashcards.length === 0) {
+        setTimeout(() => setIsSessionCompleted(true), 100);
+      } else {
+        setTimeout(() => nextCard(), 100);
+      }
     } catch (err) {
       console.error('Error marking word as known:', err);
     }
-  };
+  }, [currentUser, handleSwipeAction, markCard, completionStats, flashcards.length, nextCard]);
 
-  const handleSkip = async (word: VocabularyWord) => {
+  const handleSkip = useCallback(async (word: VocabularyWord) => {
     if (!currentUser) return;
     
     handleSwipeAction(); // Track swipe for instruction auto-hide
@@ -172,19 +172,19 @@ const FlashcardStudyPage: React.FC = () => {
           skippedCards: prev.skippedCards + 1
         };
         
-        // Check if session completed with new stats
-        const totalProcessedCards = newStats.difficultCards + newStats.knownCards + newStats.skippedCards;
-        if (totalProcessedCards >= newStats.totalCards) {
-          setTimeout(() => setIsSessionCompleted(true), 0);
-        }
-        // Note: Don't call nextCard() here since removeMasteredWordFromSession handles index adjustment
-        
         return newStats;
       });
+
+      // Check completion separately to avoid state update conflicts
+      const newTotalProcessed = completionStats.difficultCards + completionStats.knownCards + completionStats.skippedCards + 1;
+      if (newTotalProcessed >= completionStats.totalCards) {
+        setTimeout(() => setIsSessionCompleted(true), 100);
+      }
+      // Note: Don't call nextCard() here since removeMasteredWordFromSession handles index adjustment
     } catch (err) {
       console.error('Error skipping word:', err);
     }
-  };
+  }, [currentUser, handleSwipeAction, markCard, removeFromSelectedFlashcards, removeMasteredWordFromSession, completionStats]);
 
   if (isLoading) {
     return (
@@ -302,7 +302,7 @@ const FlashcardStudyPage: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-4">
+    <div className="container mx-auto px-4 py-4 overflow-x-hidden">
       <div className="mb-6 flex flex-col sm:flex-row justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-800 mb-4 sm:mb-0">Study Flashcards</h1>
         <div className="flex space-x-4">

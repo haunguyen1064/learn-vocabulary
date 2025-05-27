@@ -76,11 +76,19 @@ export const useFlashcards = () => {
         const prioritizedWords = prioritizeWordsForReview(allWords);
         const remainingSlots = MAX_WORDS_PER_SESSION - finalWords.length;
         
-        // Add words that are not already in finalWords
+        // Add words that are not already in finalWords, prioritizing learning words
         const existingIds = new Set(finalWords.map(word => word.id));
-        const additionalWords = prioritizedWords
-          .filter(word => !existingIds.has(word.id))
-          .slice(0, remainingSlots);
+        const availableWords = prioritizedWords.filter(word => !existingIds.has(word.id));
+        
+        // First, get learning words
+        const learningWords = availableWords.filter(word => word.status === 'learning');
+        const otherWords = availableWords.filter(word => word.status !== 'learning');
+        
+        // Take learning words first, then fill remaining slots with other words
+        const additionalWords = [
+          ...learningWords.slice(0, remainingSlots),
+          ...otherWords.slice(0, Math.max(0, remainingSlots - learningWords.length))
+        ];
         
         finalWords = [...finalWords, ...additionalWords];
       }
